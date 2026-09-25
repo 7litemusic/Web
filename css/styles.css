@@ -1,0 +1,533 @@
+/* ==========================================================================
+   7LITE MUSIC — OFFICIAL DESIGN SYSTEM STYLES
+   Concept: "Sonido que se siente" | Audio Engineering x Street Soul
+   ========================================================================== */
+
+/* Modern Color Scheme & Smooth Scrolling */
+:root {
+  color-scheme: dark;
+  --bg-carbon: #171717;
+  --surface-1: #1F1F1F;
+  --surface-2: #262626;
+  --border-subtle: #333333;
+  --text-primary: #FFFFFF;
+  --text-muted: #888888;
+  --text-meta: #A0A0A0;
+
+  /* Exclusive Channel Accents */
+  --accent-vibes: #4EFFAE;
+  --accent-flow: #00BFFF;
+  --accent-waves: #4E00FF;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  background-color: var(--bg-carbon);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
+  scroll-snap-align: start;
+}
+
+/* Custom Scrollbar (Engineered for High Contrast & Sleek Aesthetics) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 4px;
+  border: 1px solid #333333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3e3e3e;
+  border-color: #00BFFF;
+}
+
+/* Accessible focus visible outlines */
+:focus-visible {
+  outline: 2px solid #00BFFF;
+  outline-offset: 3px;
+}
+
+/* Technical Audio Grid Texture */
+.bg-tech-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-radial-vignette {
+  background: radial-gradient(circle at 50% 20%, rgba(0, 191, 255, 0.06) 0%, rgba(23, 23, 23, 0.95) 70%, #171717 100%);
+}
+
+/* Channel Ambient Glows */
+.glow-vibes {
+  box-shadow: 0 0 25px -5px rgba(78, 255, 174, 0.25);
+}
+.glow-vibes:hover {
+  box-shadow: 0 0 35px -2px rgba(78, 255, 174, 0.45);
+}
+
+.glow-flow {
+  box-shadow: 0 0 25px -5px rgba(0, 191, 255, 0.25);
+}
+.glow-flow:hover {
+  box-shadow: 0 0 35px -2px rgba(0, 191, 255, 0.45);
+}
+
+.glow-waves {
+  box-shadow: 0 0 25px -5px rgba(78, 0, 255, 0.28);
+}
+.glow-waves:hover {
+  box-shadow: 0 0 35px -2px rgba(78, 0, 255, 0.5);
+}
+
+/* Equalizer Bars Live Audio Animation */
+@keyframes eq-bounce-1 {
+  0%, 100% { height: 18%; }
+  50% { height: 85%; }
+}
+@keyframes eq-bounce-2 {
+  0%, 100% { height: 75%; }
+  50% { height: 25%; }
+}
+@keyframes eq-bounce-3 {
+  0%, 100% { height: 35%; }
+  50% { height: 95%; }
+}
+@keyframes eq-bounce-4 {
+  0%, 100% { height: 90%; }
+  50% { height: 40%; }
+}
+@keyframes eq-bounce-5 {
+  0%, 100% { height: 50%; }
+  50% { height: 80%; }
+}
+
+.animate-eq-1 { animation: eq-bounce-1 1.2s ease-in-out infinite; }
+.animate-eq-2 { animation: eq-bounce-2 0.9s ease-in-out infinite 0.2s; }
+.animate-eq-3 { animation: eq-bounce-3 1.4s ease-in-out infinite 0.1s; }
+.animate-eq-4 { animation: eq-bounce-4 1.1s ease-in-out infinite 0.3s; }
+.animate-eq-5 { animation: eq-bounce-5 1.3s ease-in-out infinite 0.15s; }
+
+/* Subtle pulse for zero-latency status */
+@keyframes status-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.92); }
+}
+
+.animate-status-dot {
+  animation: status-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Glassmorphism Surface Utilities */
+.glass-panel {
+  background: rgba(31, 31, 31, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(51, 51, 51, 0.85);
+}
+
+.glass-nav {
+  background: rgba(23, 23, 23, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(51, 51, 51, 0.7);
+}
+
+/* Modern Details & Summary for FAQ */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details[open] summary svg {
+  transform: rotate(180deg);
+}
+
+/* Audio Player Container Frame */
+.player-container-glow {
+  position: relative;
+}
+.player-container-glow::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(135deg, rgba(78, 255, 174, 0.2), rgba(0, 191, 255, 0.2), rgba(78, 0, 255, 0.2));
+  border-radius: 1.1rem;
+  z-index: -1;
+  opacity: 0.6;
+  filter: blur(6px);
+  transition: opacity 0.3s ease;
+}
+.player-container-glow:hover::before {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   INTERACTIVE WOW SUITE: MARQUEE, 3D TILT & AUDIO VISUALS
+   ========================================================================== */
+
+/* Infinite Marquee Ticker Tape */
+.marquee-wrapper {
+  overflow: hidden;
+  user-select: none;
+  display: flex;
+  gap: 2rem;
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: 2rem;
+  animation: marquee-scroll 28s linear infinite;
+}
+
+.marquee-wrapper:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-100% - 2rem)); }
+}
+
+/* 3D Tilt & Holographic Edge Glow */
+.card-tilt {
+  transform-style: preserve-3d;
+  will-change: transform;
+  position: relative;
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.card-tilt-content {
+  transform: translateZ(24px);
+  transform-style: preserve-3d;
+}
+
+.spotlight-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 10;
+  background: radial-gradient(
+    circle 320px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.08),
+    transparent 80%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-tilt:hover .spotlight-overlay {
+  opacity: 1;
+}
+
+/* Audio Canvas Background Styling */
+#audio-bg-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.55;
+  mix-blend-mode: screen;
+}
+
+/* Sound Wave Preview Bars in Cards */
+.sound-bar {
+  transform-origin: bottom;
+  transition: height 0.15s ease;
+}
+
+.playing .sound-bar:nth-child(1) { animation: eq-bounce-1 0.7s infinite; }
+.playing .sound-bar:nth-child(2) { animation: eq-bounce-2 0.8s infinite; }
+.playing .sound-bar:nth-child(3) { animation: eq-bounce-3 0.6s infinite; }
+.playing .sound-bar:nth-child(4) { animation: eq-bounce-4 0.9s infinite; }
+.playing .sound-bar:nth-child(5) { animation: eq-bounce-5 0.75s infinite; }
+
+/* Kinetic Shimmer Button Effect */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.btn-shimmer:hover::after {
+  left: 140%;
+}
+
+/* ==========================================================================
+   CYBERNETIC AUDIO LASER HUD CURSOR
+   ========================================================================== */
+@media (hover: hover) and (pointer: fine) {
+  body.has-custom-cursor,
+  body.has-custom-cursor a,
+  body.has-custom-cursor button,
+  body.has-custom-cursor input,
+  body.has-custom-cursor select,
+  body.has-custom-cursor textarea {
+    cursor: none !important;
+  }
+
+  .hud-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    will-change: transform;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .hud-cursor.visible {
+    opacity: 1;
+  }
+
+  .hud-cursor-dot {
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 6px;
+    height: 6px;
+    background-color: #00BFFF;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF;
+    transition: transform 0.15s ease, background-color 0.2s ease;
+  }
+
+  .hud-cursor-ring {
+    position: absolute;
+    top: -18px;
+    left: -18px;
+    width: 36px;
+    height: 36px;
+    border: 1px dashed rgba(0, 191, 255, 0.45);
+    border-radius: 50%;
+    transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                height 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                top 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                left 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.2s ease,
+                transform 0.2s ease;
+    animation: hud-ring-rotate 16s linear infinite;
+  }
+
+  @keyframes hud-ring-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .hud-cursor.hovering .hud-cursor-ring {
+    width: 52px;
+    height: 52px;
+    top: -26px;
+    left: -26px;
+    border-style: solid;
+    border-color: #4EFFAE;
+    box-shadow: 0 0 15px rgba(78, 255, 174, 0.3);
+  }
+
+  .hud-cursor.hovering .hud-cursor-dot {
+    background-color: #4EFFAE;
+    box-shadow: 0 0 12px #4EFFAE;
+    transform: scale(1.4);
+  }
+
+  .hud-cursor.clicking .hud-cursor-ring {
+    transform: scale(0.75);
+    border-color: #ffffff;
+  }
+
+  /* Sonic Ripple Pulse when clicking */
+  .hud-sonic-ripple {
+    position: fixed;
+    border-radius: 50%;
+    border: 1.5px solid #00BFFF;
+    pointer-events: none;
+    z-index: 9998;
+    animation: sonic-ripple-anim 0.65s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+  }
+
+  @keyframes sonic-ripple-anim {
+    0% {
+      width: 10px;
+      height: 10px;
+      opacity: 0.9;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+      width: 100px;
+      height: 100px;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(2.2);
+    }
+  }
+}
+
+/* ==========================================================================
+   STEMS STUDIO CONSOLE & VU METERS
+   ========================================================================== */
+.stem-channel-card {
+  background: linear-gradient(180deg, #242424 0%, #1a1a1a 100%);
+  border: 1px solid #333333;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stem-channel-card:hover {
+  border-color: #444444;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.stem-channel-card.active-channel {
+  border-color: rgba(0, 191, 255, 0.4);
+}
+
+/* Custom Studio Fader Styling */
+.stem-fader {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #141414;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #2a2a2a;
+  position: relative;
+}
+
+.stem-fader::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 24px;
+  background: linear-gradient(180deg, #444444 0%, #222222 50%, #111111 100%);
+  border: 1px solid #666666;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.stem-fader::-webkit-slider-thumb:hover {
+  border-color: #00BFFF;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.stem-fader::-moz-range-thumb {
+  width: 18px;
+  height: 24px;
+  background: linear-gradient(180deg, #444444 0%, #222222 50%, #111111 100%);
+  border: 1px solid #666666;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Dynamic Stereo LED VU Meter */
+.vu-meter-bar {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2px;
+  width: 7px;
+  height: 64px;
+  padding: 2px;
+  background: #111111;
+  border: 1px solid #282828;
+  border-radius: 3px;
+}
+
+.vu-segment {
+  width: 100%;
+  height: 5px;
+  background: #1f1f1f;
+  border-radius: 1px;
+  transition: background 0.08s ease;
+}
+
+.vu-segment.lit-green {
+  background: #4EFFAE;
+  box-shadow: 0 0 4px #4EFFAE;
+}
+
+.vu-segment.lit-yellow {
+  background: #ffd000;
+  box-shadow: 0 0 4px #ffd000;
+}
+
+.vu-segment.lit-red {
+  background: #ff3b30;
+  box-shadow: 0 0 6px #ff3b30;
+}
+
+/* ==========================================================================
+   MPC TAP TEMPO PAD
+   ========================================================================== */
+.mpc-pad {
+  position: relative;
+  background: radial-gradient(circle at 50% 40%, #2a2a2a, #161616);
+  border: 2px solid #333333;
+  box-shadow: inset 0 2px 6px rgba(255, 255, 255, 0.08),
+              0 8px 24px rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  transition: transform 0.08s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  user-select: none;
+}
+
+.mpc-pad:hover {
+  border-color: #00BFFF;
+  box-shadow: inset 0 2px 6px rgba(255, 255, 255, 0.12),
+              0 0 20px rgba(0, 191, 255, 0.2);
+}
+
+.mpc-pad:active,
+.mpc-pad.pad-hit {
+  transform: scale(0.96);
+  border-color: #4EFFAE;
+  box-shadow: inset 0 0 25px rgba(78, 255, 174, 0.4),
+              0 0 35px rgba(78, 255, 174, 0.4);
+}
+
+/* Seven-segment style LED Display */
+.bpm-led-display {
+  font-family: 'Space Grotesk', monospace, monospace;
+  background: #0d0d0d;
+  border: 1px solid #222222;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+
