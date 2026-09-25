@@ -1,0 +1,13 @@
+# 7lite Music — Official robots.txt
+# Comprehensive search engine indexing directives
+
+User-agent: *
+Allow: /
+
+# Prevent indexing of temporary or private folders if any
+Disallow: /scratch/
+Disallow: /.git/
+
+# Host & Sitemap Declaration
+Host: https://7litemusic.com
+Sitemap: https://7litemusic.com/sitemap.xml
