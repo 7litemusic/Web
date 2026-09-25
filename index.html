@@ -5,34 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
-  <title>7lite Music — Sonido que se siente | Tienda Oficial de Beats</title>
-  <meta name="description" content="7lite Music: Fusión de ingeniería, código y arte callejero. Catálogo oficial de instrumentales de alta precisión técnica: Vibes (R&B), Flow (Trap/Drill) y Waves (Reggaetón).">
-  <meta name="keywords" content="7lite Music, beats, instrumentales, comprar beats, trap beats, reggaeton beats, r&b beats, beatmaker honduras, beatstars, copan ruinas">
+  <title data-i18n="meta_title">7lite Music — Sound You Can Feel | Official Beat Store</title>
+  <meta name="description" content="7lite Music: Fusion of systems engineering, audio precision, and street culture. Official catalog of high-caliber instrumentals: Vibes (R&B), Flow (Trap/Drill), and Waves (Reggaetón).">
+  <meta name="keywords" content="7lite Music, beats, instrumentals, buy beats, trap beats, reggaeton beats, r&b beats, beatmaker honduras, beatstars, copan ruinas">
   <meta name="author" content="7lite Music">
   <meta name="theme-color" content="#171717">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://7litemusic.com/">
-  <meta property="og:title" content="7lite Music — Sonido que se siente | Beats de Élite">
-  <meta property="og:description" content="Precisión técnica y cero latencia al servicio de tu música. Explora los canales Vibes, Flow y Waves.">
+  <meta property="og:title" content="7lite Music — Sound You Can Feel | Elite Beats">
+  <meta property="og:description" content="Technical precision and zero latency for your music. Explore Vibes, Flow, and Waves channels.">
   <meta property="og:image" content="assets/Elite%20Mu7ic%20SVG%20Logo%20White.svg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://7litemusic.com/">
-  <meta property="twitter:title" content="7lite Music — Sonido que se siente">
-  <meta property="twitter:description" content="Ingeniería sonora y beats de alta fidelidad. Compra licencias oficiales instantáneas.">
+  <meta property="twitter:title" content="7lite Music — Sound You Can Feel">
+  <meta property="twitter:description" content="Sound engineering and high-fidelity beats. Buy official licenses instantly.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/Elite%20Mu7ic%20SVG%20Logo%20White.svg">
 
-  <!-- Google Fonts: Poppins (Encabezados) & Inter (Cuerpo y Metadatos) -->
+  <!-- Google Fonts: Poppins (Headers) & Inter (Body & Metadata) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS (CDN Oficial v3.4+) -->
+  <!-- Tailwind CSS (CDN Official v3.4+) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -72,7 +72,7 @@
     }
   </script>
 
-  <!-- Estilos Personalizados y Animaciones -->
+  <!-- Custom Styles & Animations -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -84,19 +84,19 @@
     <div class="hud-cursor-ring"></div>
   </div>
 
-  <!-- Fondo Interactivo de Audio Canvas, Textura de Ingeniería & Gradiente Radial -->
+  <!-- Interactive Audio Background Canvas & Grid Texture -->
   <canvas id="audio-bg-canvas"></canvas>
   <div class="fixed inset-0 bg-tech-grid opacity-25 pointer-events-none z-0"></div>
   <div class="fixed inset-0 bg-radial-vignette pointer-events-none z-0"></div>
 
   <!-- =========================================================================
-       1. NAVBAR MINIMALISTA
+       1. MINIMALIST NAVBAR
        ========================================================================= -->
   <header class="sticky top-0 z-50 glass-nav transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- Logotipo & Isotipo -->
-      <a href="#hero" class="flex items-center gap-3.5 group focus:outline-none" aria-label="7lite Music Inicio">
+      <!-- Logo & Isotype -->
+      <a href="#hero" class="flex items-center gap-3.5 group focus:outline-none" aria-label="7lite Music Home">
         <div class="w-10 h-10 transition-transform duration-300 group-hover:scale-105 flex-shrink-0 flex items-center justify-center">
           <img src="assets/Elite%20Mu7ic%20SVG%20Logo%20White.svg" alt="7lite Music Logo" class="w-full h-full object-contain">
         </div>
@@ -108,8 +108,8 @@
         </div>
       </a>
 
-      <!-- Navegación Desktop -->
-      <nav class="hidden md:flex items-center space-x-7" aria-label="Navegación Principal">
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-7" aria-label="Main Navigation">
         <a href="#canales" class="nav-link-desktop text-sm font-medium text-[#888888] hover:text-white transition-colors duration-200 py-1" data-i18n="nav_canales">
           Channels
         </a>
@@ -124,29 +124,29 @@
         </a>
       </nav>
 
-      <!-- Botón CTA WhatsApp Directo + Audio FX Toggle + Menú Móvil Hamburger -->
+      <!-- Right Controls: Language Switcher, Audio FX Toggle, WhatsApp CTA, Mobile Hamburger -->
       <div class="flex items-center gap-3">
         
         <!-- Language Switcher (Desktop) -->
         <div id="lang-switcher" class="flex items-center rounded-lg bg-[#1F1F1F] border border-[#333333] p-0.5 text-[11px] font-mono select-none" role="group" aria-label="Language / Idioma">
-          <button type="button" data-lang="en" class="lang-btn px-2.5 py-1 rounded-md transition-all font-bold text-white bg-[#333333] shadow-sm" aria-label="Switch to English">EN</button>
-          <button type="button" data-lang="es" class="lang-btn px-2.5 py-1 rounded-md transition-all font-semibold text-[#888888] hover:text-white" aria-label="Cambiar a Español">ES</button>
+          <button type="button" data-lang="en" class="lang-btn px-2.5 py-1 rounded-md transition-all font-bold text-white bg-[#333333] shadow-sm" aria-label="Switch to English" aria-pressed="true">EN</button>
+          <button type="button" data-lang="es" class="lang-btn px-2.5 py-1 rounded-md transition-all font-semibold text-[#888888] hover:text-white" aria-label="Cambiar a Español" aria-pressed="false">ES</button>
         </div>
 
         <!-- UI Audio FX Sound Toggle -->
         <button id="ui-sound-toggle" 
                 class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-[#1F1F1F] border border-[#333333] hover:border-[#00BFFF] text-[10px] font-mono text-[#A0A0A0] hover:text-white transition-all focus:outline-none"
-                title="Activar/Desactivar micro-sonidos analógicos de interfaz">
+                title="Toggle interface analog sound effects">
           <span id="ui-sound-led" class="w-1.5 h-1.5 rounded-full bg-[#4EFFAE] animate-pulse"></span>
           <span id="ui-sound-label">SFX: ON</span>
         </button>
 
-        <!-- CTA WhatsApp -->
-        <a href="https://wa.me/50498700953?text=Hola%207lite%20Music,%20me%20gustar%C3%ADa%20consultar%20sobre%20tus%20beats%20y%20proyectos." 
+        <!-- CTA WhatsApp Direct -->
+        <a href="https://wa.me/50498700953?text=Hi%207lite%20Music,%20I'd%20like%20to%20inquire%20about%20your%20beats%20and%20production%20services." 
            target="_blank" 
            rel="noopener noreferrer" 
            class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#1F1F1F] hover:bg-[#262626] border border-[#333333] hover:border-[#4EFFAE] text-xs font-semibold text-white tracking-wide transition-all duration-300 shadow-sm group"
-           aria-label="Contactar por WhatsApp">
+           aria-label="Contact via WhatsApp">
           <span class="w-2 h-2 rounded-full bg-[#4EFFAE] animate-status-dot"></span>
           <svg class="w-4 h-4 text-[#4EFFAE] group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
             <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.585 1.961.914 2.791.915h.005c3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.586-5.766-5.768-5.766zm9.969 5.766c0 5.518-4.482 10-10 10-1.748 0-3.385-.45-4.819-1.242L2 22l1.509-5.111C2.678 15.485 2.2 13.799 2.2 11.938c0-5.518 4.482-10 10-10s10 4.482 10 10z"/>
@@ -157,7 +157,7 @@
         <!-- Mobile Menu Toggle Button -->
         <button id="mobile-menu-btn" 
                 class="md:hidden p-2 rounded-lg bg-[#1F1F1F] border border-[#333333] text-neutral-300 hover:text-white focus:outline-none" 
-                aria-label="Abrir menú de navegación" 
+                aria-label="Toggle navigation menu" 
                 aria-expanded="false">
           <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
@@ -170,7 +170,7 @@
 
     </div>
 
-    <!-- Menú Desplegable Móvil -->
+    <!-- Mobile Dropdown Menu -->
     <div id="mobile-menu" class="hidden md:hidden glass-panel border-x-0 border-b border-[#333333] px-6 py-6 transition-all duration-300">
       <nav class="flex flex-col space-y-4">
         <!-- Language Switcher (Mobile) -->
@@ -194,7 +194,7 @@
           Direct Contact
         </a>
         <div class="pt-2">
-          <a href="https://wa.me/50498700953?text=Hola%207lite%20Music,%20me%20gustar%C3%ADa%20consultar%20sobre%20beats%20y%20proyectos." 
+          <a href="https://wa.me/50498700953?text=Hi%207lite%20Music,%20I'd%20like%20to%20inquire%20about%20your%20beats%20and%20production%20services." 
              target="_blank" 
              rel="noopener noreferrer" 
              class="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-[#4EFFAE] text-black font-semibold text-sm hover:opacity-90 transition-opacity">
@@ -223,35 +223,35 @@
         <div class="text-center max-w-4xl mx-auto">
           
           <h1 class="font-heading font-black text-4xl sm:text-6xl lg:text-7xl tracking-tight text-white uppercase leading-[1.08] mb-6">
-            <span class="text-scramble cursor-pointer block" data-original-text="SONIDO QUE">SONIDO QUE</span>
-            <span class="bg-gradient-to-r from-white via-neutral-200 to-[#888888] bg-clip-text text-transparent text-scramble cursor-pointer block" data-original-text="SE SIENTE.">SE SIENTE.</span>
+            <span class="text-scramble cursor-pointer block" data-original-text="SOUND YOU" data-i18n="hero_scramble_1">SOUND YOU</span>
+            <span class="bg-gradient-to-r from-white via-neutral-200 to-[#888888] bg-clip-text text-transparent text-scramble cursor-pointer block" data-original-text="CAN FEEL." data-i18n="hero_scramble_2">CAN FEEL.</span>
           </h1>
 
-          <p class="font-body text-base sm:text-lg md:text-xl text-neutral-300 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
-            Instrumentales de alto calibre producidas con precisión técnica y listas para romper en plataformas.
+          <p class="font-body text-base sm:text-lg md:text-xl text-neutral-300 max-w-2xl mx-auto mb-10 leading-relaxed font-normal" data-i18n="hero_sub">
+            High-caliber instrumentals produced with technical precision and ready to conquer streaming platforms.
           </p>
 
           <!-- Action Buttons -->
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5">
             
-            <!-- Explorar Beats (Scroll to BeatStars Player) -->
+            <!-- Explore Beats (Scroll to BeatStars Player) -->
             <a href="#catalogo" 
                class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white text-black font-heading font-bold text-sm tracking-wider uppercase hover:bg-neutral-200 transition-all duration-300 shadow-xl shadow-white/5 group">
               <svg class="w-4 h-4 text-black group-hover:translate-x-0.5 transition-transform" fill="currentColor" viewBox="0 0 24 24">
                 <polygon points="5 3 19 12 5 21 5 3"/>
               </svg>
-              <span>Explorar Beats</span>
+              <span data-i18n="hero_btn_explore">Explore Beats</span>
             </a>
 
-            <!-- Consultar Exclusivas (WhatsApp Direct) -->
-            <a href="https://wa.me/50498700953?text=Hola%207lite%20Music,%20me%20interesa%20consultar%20sobre%20la%20adquisici%C3%B3n%20de%20beats%20exclusivos%20o%20producci%C3%B3n%20a%20medida." 
+            <!-- Inquire Exclusive (WhatsApp Direct) -->
+            <a href="https://wa.me/50498700953?text=Hi%207lite%20Music,%20I'm%20interested%20in%20inquiring%20about%20exclusive%20beats%20or%20custom%20production." 
                target="_blank" 
                rel="noopener noreferrer" 
                class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-[#1F1F1F] hover:bg-[#262626] border border-[#333333] hover:border-neutral-500 font-heading font-semibold text-sm tracking-wider uppercase text-white transition-all duration-300 group">
               <svg class="w-4 h-4 text-[#00BFFF] group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
               </svg>
-              <span>Consultar Exclusivas</span>
+              <span data-i18n="hero_btn_exclusive">Inquire Exclusive</span>
             </a>
 
           </div>
@@ -267,33 +267,33 @@
         <div class="marquee-content flex items-center gap-8">
           <span class="flex items-center gap-2 text-white font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-[#4EFFAE] animate-ping"></span> 7LITE MUSIC</span>
           <span class="text-neutral-600">///</span>
-          <span class="text-[#00BFFF] font-semibold">CERO LATENCIA</span>
+          <span class="text-[#00BFFF] font-semibold" data-i18n="ticker_zero_latency">ZERO LATENCY</span>
           <span class="text-neutral-600">///</span>
-          <span>AUDIO MASTER 24-BIT / 96kHz</span>
+          <span data-i18n="ticker_audio_master">24-BIT / 96kHz MASTER AUDIO</span>
           <span class="text-neutral-600">///</span>
           <span class="text-[#4EFFAE]">VIBES • FLOW • WAVES</span>
           <span class="text-neutral-600">///</span>
-          <span>DESCARGA INMEDIATA SIN VOCAL TAGS</span>
+          <span data-i18n="ticker_instant_dl">INSTANT UNTAGGED DOWNLOAD</span>
           <span class="text-neutral-600">///</span>
-          <span class="text-[#a074ff]">PRODUCIDO EN COPÁN RUINAS</span>
+          <span class="text-[#a074ff]" data-i18n="ticker_produced_in">PRODUCED IN COPÁN RUINAS</span>
           <span class="text-neutral-600">///</span>
-          <span>ROYALTY COMPOSITION READY</span>
+          <span data-i18n="ticker_royalty_ready">ROYALTY COMPOSITION READY</span>
           <span class="text-neutral-600">///</span>
         </div>
         <div class="marquee-content flex items-center gap-8" aria-hidden="true">
           <span class="flex items-center gap-2 text-white font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-[#4EFFAE] animate-ping"></span> 7LITE MUSIC</span>
           <span class="text-neutral-600">///</span>
-          <span class="text-[#00BFFF] font-semibold">CERO LATENCIA</span>
+          <span class="text-[#00BFFF] font-semibold" data-i18n="ticker_zero_latency">ZERO LATENCY</span>
           <span class="text-neutral-600">///</span>
-          <span>AUDIO MASTER 24-BIT / 96kHz</span>
+          <span data-i18n="ticker_audio_master">24-BIT / 96kHz MASTER AUDIO</span>
           <span class="text-neutral-600">///</span>
           <span class="text-[#4EFFAE]">VIBES • FLOW • WAVES</span>
           <span class="text-neutral-600">///</span>
-          <span>DESCARGA INMEDIATA SIN VOCAL TAGS</span>
+          <span data-i18n="ticker_instant_dl">INSTANT UNTAGGED DOWNLOAD</span>
           <span class="text-neutral-600">///</span>
-          <span class="text-[#a074ff]">PRODUCIDO EN COPÁN RUINAS</span>
+          <span class="text-[#a074ff]" data-i18n="ticker_produced_in">PRODUCED IN COPÁN RUINAS</span>
           <span class="text-neutral-600">///</span>
-          <span>ROYALTY COMPOSITION READY</span>
+          <span data-i18n="ticker_royalty_ready">ROYALTY COMPOSITION READY</span>
           <span class="text-neutral-600">///</span>
         </div>
       </div>
@@ -301,7 +301,7 @@
 
 
     <!-- =======================================================================
-         3. SHOWCASE DE CANALES (100% VH)
+         3. SOUND CHANNELS SHOWCASE (100% VH)
          ======================================================================= -->
     <section id="canales" class="min-h-screen min-h-[100dvh] flex flex-col justify-center py-16 md:py-24 bg-[#171717] border-t border-[#262626] relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -322,7 +322,7 @@
         <!-- 3 Master Cards Grid (Standardized Architecture & YouTube Direct Access) -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
           
-          <!-- RUTA 1: VIBES (Verde Neón #4EFFAE) -->
+          <!-- ROUTE 1: VIBES (Neon Green #4EFFAE) -->
           <article class="card-tilt bg-[#1F1F1F] rounded-2xl p-7 border border-[#333333] hover:border-[#4EFFAE] transition-all duration-300 flex flex-col justify-between group glow-vibes h-full">
             <div class="card-tilt-content flex flex-col justify-between h-full">
               <!-- Top Content Block -->
@@ -370,7 +370,7 @@
           </article>
 
 
-          <!-- RUTA 2: FLOW (Celeste Flow #00BFFF) -->
+          <!-- ROUTE 2: FLOW (Sky Blue #00BFFF) -->
           <article class="card-tilt bg-[#1F1F1F] rounded-2xl p-7 border border-[#333333] hover:border-[#00BFFF] transition-all duration-300 flex flex-col justify-between group glow-flow h-full">
             <div class="card-tilt-content flex flex-col justify-between h-full">
               <!-- Top Content Block -->
@@ -418,7 +418,7 @@
           </article>
 
 
-          <!-- RUTA 3: WAVES (Morado Waves #4E00FF) -->
+          <!-- ROUTE 3: WAVES (Purple #4E00FF) -->
           <article class="card-tilt bg-[#1F1F1F] rounded-2xl p-7 border border-[#333333] hover:border-[#4E00FF] transition-all duration-300 flex flex-col justify-between group glow-waves h-full">
             <div class="card-tilt-content flex flex-col justify-between h-full">
               <!-- Top Content Block -->
@@ -472,7 +472,7 @@
 
 
     <!-- =======================================================================
-         4. BEAT STORE OFICIAL (100% VH)
+         4. OFFICIAL BEAT STORE (100% VH)
          ======================================================================= -->
     <section id="catalogo" class="min-h-screen min-h-[100dvh] flex flex-col justify-center py-16 md:py-20 bg-[#171717] border-t border-[#262626]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -481,13 +481,13 @@
         <div class="text-center max-w-3xl mx-auto mb-12">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1F1F1F] border border-[#333333] text-[11px] font-mono text-[#888888] tracking-widest uppercase mb-4">
             <span class="w-2 h-2 rounded-full bg-[#4EFFAE] animate-ping"></span>
-            CATÁLOGO OFICIAL EN VIVO
+            <span data-i18n="catalog_badge">OFFICIAL LIVE CATALOG</span>
           </div>
-          <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight uppercase mb-4">
-            Beat Store Oficial
+          <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight uppercase mb-4" data-i18n="catalog_title">
+            Official Beat Store
           </h2>
-          <p class="text-sm sm:text-base text-[#888888] max-w-xl mx-auto">
-            Escucha en tiempo real, añade al carrito y descarga tus archivos limpios sin tags de voz al instante de forma automatizada y segura.
+          <p class="text-sm sm:text-base text-[#888888] max-w-xl mx-auto" data-i18n="catalog_sub">
+            Listen in real time, add to cart, and download clean files without voice tags instantly in an automated, secure process.
           </p>
         </div>
 
@@ -512,7 +512,7 @@
             </div>
           </div>
 
-          <!-- Embedded BeatStars Official Iframe (Exact code from requirements) -->
+          <!-- Embedded BeatStars Official Iframe -->
           <div class="w-full bg-[#171717] min-h-[800px] flex items-center justify-center">
             <iframe src="https://player.beatstars.com/?storeId=153004" 
                     width="100%" 
@@ -530,10 +530,10 @@
               <svg class="w-4 h-4 text-[#00BFFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
-              <span>Aceptamos Tarjeta de Crédito/Débito, PayPal y transferencias seguras.</span>
+              <span data-i18n="catalog_payment_note">We accept Credit/Debit Cards, PayPal, and secure transfers.</span>
             </div>
             <a href="#licencias" class="text-white hover:text-[#00BFFF] underline underline-offset-4 transition-colors">
-              Consultar detalles de cada tipo de licencia &rarr;
+              <span data-i18n="catalog_license_details_link">Consult details for each license type &rarr;</span>
             </a>
           </div>
 
@@ -547,31 +547,31 @@
     <div class="py-3 bg-[#1A1A1A] border-y border-[#333333] relative overflow-hidden z-20">
       <div class="marquee-wrapper font-mono text-xs text-[#A0A0A0] tracking-widest uppercase">
         <div class="marquee-content flex items-center gap-8">
-          <span class="flex items-center gap-2 text-white font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-[#00BFFF] animate-ping"></span> LICENCIAS OFICIALES</span>
+          <span class="flex items-center gap-2 text-white font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-[#00BFFF] animate-ping"></span> <span data-i18n="ticker_official_lic">OFFICIAL LICENSES</span></span>
           <span class="text-neutral-600">///</span>
-          <span class="text-[#4EFFAE]">WAV MASTER 24-BIT</span>
+          <span class="text-[#4EFFAE]" data-i18n="ticker_wav_master">24-BIT WAV MASTER</span>
           <span class="text-neutral-600">///</span>
-          <span>TRACKOUT STEMS DISPONIBLES</span>
+          <span data-i18n="ticker_stems_available">TRACKOUT STEMS AVAILABLE</span>
           <span class="text-neutral-600">///</span>
-          <span class="text-white font-semibold">100% REGALÍAS PARA EL ARTISTA</span>
+          <span class="text-white font-semibold" data-i18n="ticker_royalties_artist">100% ROYALTIES FOR THE ARTIST</span>
           <span class="text-neutral-600">///</span>
           <span class="text-[#a074ff]">SPOTIFY • APPLE MUSIC • TIKTOK • YOUTUBE</span>
           <span class="text-neutral-600">///</span>
-          <span>CONTRATO INMEDIATO DESCARGABLE</span>
+          <span data-i18n="ticker_downloadable_contract">INSTANT DOWNLOADABLE CONTRACT</span>
           <span class="text-neutral-600">///</span>
         </div>
         <div class="marquee-content flex items-center gap-8" aria-hidden="true">
-          <span class="flex items-center gap-2 text-white font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-[#00BFFF] animate-ping"></span> LICENCIAS OFICIALES</span>
+          <span class="flex items-center gap-2 text-white font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-[#00BFFF] animate-ping"></span> <span data-i18n="ticker_official_lic">OFFICIAL LICENSES</span></span>
           <span class="text-neutral-600">///</span>
-          <span class="text-[#4EFFAE]">WAV MASTER 24-BIT</span>
+          <span class="text-[#4EFFAE]" data-i18n="ticker_wav_master">24-BIT WAV MASTER</span>
           <span class="text-neutral-600">///</span>
-          <span>TRACKOUT STEMS DISPONIBLES</span>
+          <span data-i18n="ticker_stems_available">TRACKOUT STEMS AVAILABLE</span>
           <span class="text-neutral-600">///</span>
-          <span class="text-white font-semibold">100% REGALÍAS PARA EL ARTISTA</span>
+          <span class="text-white font-semibold" data-i18n="ticker_royalties_artist">100% ROYALTIES FOR THE ARTIST</span>
           <span class="text-neutral-600">///</span>
           <span class="text-[#a074ff]">SPOTIFY • APPLE MUSIC • TIKTOK • YOUTUBE</span>
           <span class="text-neutral-600">///</span>
-          <span>CONTRATO INMEDIATO DESCARGABLE</span>
+          <span data-i18n="ticker_downloadable_contract">INSTANT DOWNLOADABLE CONTRACT</span>
           <span class="text-neutral-600">///</span>
         </div>
       </div>
@@ -579,7 +579,7 @@
 
 
     <!-- =======================================================================
-         5. GUÍA DE LICENCIAS Y PRECIOS (100% VH)
+         5. LICENSE GUIDE & PRICING (100% VH)
          ======================================================================= -->
     <section id="licencias" class="min-h-screen min-h-[100dvh] flex flex-col justify-center py-16 md:py-24 bg-[#171717] border-t border-[#262626]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -603,40 +603,40 @@
             <svg class="w-4 h-4 text-[#00BFFF] group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
             </svg>
-            <span>Comparar las 5 Licencias en Pantalla Completa &rarr;</span>
+            <span data-i18n="licenses_btn_compare">Compare All 5 Licenses Fullscreen &rarr;</span>
           </button>
         </div>
 
         <!-- 5 Tiers Grid (Compact & Elegant Proportions) -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
           
-          <!-- 1. LICENCIA BÁSICA ($19.99) -->
+          <!-- 1. BASIC LICENSE ($19.99) -->
           <div class="card-tilt bg-[#1F1F1F] rounded-2xl p-5 border border-[#333333] hover:border-neutral-500 transition-all duration-300 flex flex-col justify-between">
             <div class="card-tilt-content flex flex-col justify-between h-full">
               <div>
                 <div class="flex items-center justify-between mb-1">
-                  <span class="text-[10px] font-mono font-semibold text-[#888888] uppercase">Entrada</span>
-                  <span class="px-2 py-0.5 rounded bg-[#262626] border border-[#383838] text-[10px] font-mono text-neutral-300">MP3</span>
+                  <span class="text-[10px] font-mono font-semibold text-[#888888] uppercase" data-i18n="lic_tier_entry">Entry</span>
+                  <span class="px-2 py-0.5 rounded bg-[#262626] border border-[#383838] text-[10px] font-mono text-neutral-300" data-i18n="lic_1_format">MP3</span>
                 </div>
-                <h3 class="font-heading font-bold text-lg text-white mb-1">Básica</h3>
+                <h3 class="font-heading font-bold text-lg text-white mb-1" data-i18n="lic_1_name">Basic</h3>
                 <div class="flex items-baseline gap-1 mb-4">
                   <span class="font-heading font-extrabold text-2xl text-white">$19.99</span>
-                  <span class="text-[10px] text-[#888888] font-mono">/ beat</span>
+                  <span class="text-[10px] text-[#888888] font-mono" data-i18n="lic_per_beat">/ beat</span>
                 </div>
 
                 <!-- Compact Highlights -->
                 <ul class="space-y-2 text-xs text-neutral-300 mb-5">
                   <li class="flex items-start gap-2">
                     <svg class="w-3.5 h-3.5 text-[#4EFFAE] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                    <span>Grabación vocal comercial</span>
+                    <span data-i18n="lic_1_pt1">Commercial vocal recording</span>
                   </li>
                   <li class="flex items-start gap-2 text-[#888888]">
                     <svg class="w-3.5 h-3.5 text-neutral-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-                    <span>0 streams / 0 copias (Maquetas)</span>
+                    <span data-i18n="lic_1_pt2">0 streams / 0 copies (Demos)</span>
                   </li>
                   <li class="flex items-start gap-2">
                     <svg class="w-3.5 h-3.5 text-[#4EFFAE] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                    <span>1 Video & shows no lucrativos</span>
+                    <span data-i18n="lic_1_pt3">1 Music Video & non-profit shows</span>
                   </li>
                 </ul>
               </div>
@@ -644,10 +644,10 @@
               <div>
                 <a href="#catalogo" 
                    class="btn-shimmer w-full py-2.5 px-3 rounded-lg bg-[#262626] hover:bg-white text-white hover:text-black font-heading font-semibold text-xs tracking-wider uppercase text-center border border-[#333333] transition-colors block">
-                  Elegir Básica
+                  <span data-i18n="lic_1_btn">Select Basic</span>
                 </a>
                 <button type="button" class="btn-trigger-compare mt-2.5 text-[10px] font-mono text-[#888888] hover:text-[#00BFFF] transition-colors flex items-center justify-center gap-1 w-full">
-                  <span>Ver términos completos</span>
+                  <span data-i18n="lic_view_terms">View full terms</span>
                   <span>&rarr;</span>
                 </button>
               </div>
@@ -655,33 +655,33 @@
           </div>
 
 
-          <!-- 2. LICENCIA ESTÁNDAR ($39.99) -->
+          <!-- 2. STANDARD LICENSE ($39.99) -->
           <div class="card-tilt bg-[#1F1F1F] rounded-2xl p-5 border border-[#333333] hover:border-[#00BFFF] transition-all duration-300 flex flex-col justify-between">
             <div class="card-tilt-content flex flex-col justify-between h-full">
               <div>
                 <div class="flex items-center justify-between mb-1">
-                  <span class="text-[10px] font-mono font-semibold text-[#00BFFF] uppercase">Starter</span>
-                  <span class="px-2 py-0.5 rounded bg-[#262626] border border-[#383838] text-[10px] font-mono text-[#00BFFF]">WAV + MP3</span>
+                  <span class="text-[10px] font-mono font-semibold text-[#00BFFF] uppercase" data-i18n="lic_tier_starter">Starter</span>
+                  <span class="px-2 py-0.5 rounded bg-[#262626] border border-[#383838] text-[10px] font-mono text-[#00BFFF]" data-i18n="lic_2_format">WAV + MP3</span>
                 </div>
-                <h3 class="font-heading font-bold text-lg text-white mb-1">Estándar</h3>
+                <h3 class="font-heading font-bold text-lg text-white mb-1" data-i18n="lic_2_name">Standard</h3>
                 <div class="flex items-baseline gap-1 mb-4">
                   <span class="font-heading font-extrabold text-2xl text-white">$39.99</span>
-                  <span class="text-[10px] text-[#888888] font-mono">/ beat</span>
+                  <span class="text-[10px] text-[#888888] font-mono" data-i18n="lic_per_beat">/ beat</span>
                 </div>
 
                 <!-- Compact Highlights -->
                 <ul class="space-y-2 text-xs text-neutral-300 mb-5">
                   <li class="flex items-start gap-2">
                     <svg class="w-3.5 h-3.5 text-[#00BFFF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                    <span>Hasta <strong>100,000 streams</strong></span>
+                    <span data-i18n="lic_2_pt3">Up to <strong>100,000 streams</strong></span>
                   </li>
                   <li class="flex items-start gap-2">
                     <svg class="w-3.5 h-3.5 text-[#00BFFF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                    <span>Hasta <strong>5,000 copias</strong> / descargas</span>
+                    <span data-i18n="lic_2_pt2">Up to <strong>5,000 copies</strong> / downloads</span>
                   </li>
                   <li class="flex items-start gap-2">
                     <svg class="w-3.5 h-3.5 text-[#00BFFF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                    <span>1 Video & grabación comercial</span>
+                    <span data-i18n="lic_2_pt1">1 Video & commercial recording</span>
                   </li>
                 </ul>
               </div>
@@ -689,10 +689,10 @@
               <div>
                 <a href="#catalogo" 
                    class="btn-shimmer w-full py-2.5 px-3 rounded-lg bg-[#262626] hover:bg-[#00BFFF] text-white hover:text-black font-heading font-semibold text-xs tracking-wider uppercase text-center border border-[#333333] hover:border-[#00BFFF] transition-colors block">
-                  Elegir Estándar
+                  <span data-i18n="lic_2_btn">Select Standard</span>
                 </a>
                 <button type="button" class="btn-trigger-compare mt-2.5 text-[10px] font-mono text-[#888888] hover:text-[#00BFFF] transition-colors flex items-center justify-center gap-1 w-full">
-                  <span>Ver términos completos</span>
+                  <span data-i18n="lic_view_terms">View full terms</span>
                   <span>&rarr;</span>
                 </button>
               </div>
@@ -700,39 +700,39 @@
           </div>
 
 
-          <!-- 3. LICENCIA PREMIUM ($59.99) - <span data-i18n="lic_most_popular">MOST POPULAR</span> -->
+          <!-- 3. PREMIUM LICENSE ($59.99) - MOST POPULAR -->
           <div class="card-tilt bg-[#1F1F1F] rounded-2xl p-5 border-2 border-[#4EFFAE] shadow-xl shadow-[#4EFFAE]/10 flex flex-col justify-between relative transform lg:-translate-y-2">
             
-            <!-- Badge Recomendada -->
-            <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#4EFFAE] text-black font-mono font-bold text-[9px] tracking-widest uppercase px-2.5 py-0.5 rounded-full shadow-md z-20">
-              MÁS POPULAR
+            <!-- Recommended Badge -->
+            <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#4EFFAE] text-black font-mono font-bold text-[9px] tracking-widest uppercase px-2.5 py-0.5 rounded-full shadow-md z-20" data-i18n="lic_most_popular">
+              MOST POPULAR
             </div>
 
             <div class="card-tilt-content flex flex-col justify-between h-full">
               <div>
                 <div class="flex items-center justify-between mb-1 mt-1">
-                  <span class="text-[10px] font-mono font-semibold text-[#4EFFAE] uppercase">Estudio Pro</span>
-                  <span class="px-2 py-0.5 rounded bg-[#4EFFAE]/10 border border-[#4EFFAE]/30 text-[10px] font-mono text-[#4EFFAE] font-bold">WAV + STEMS</span>
+                  <span class="text-[10px] font-mono font-semibold text-[#4EFFAE] uppercase" data-i18n="lic_tier_pro">Studio Pro</span>
+                  <span class="px-2 py-0.5 rounded bg-[#4EFFAE]/10 border border-[#4EFFAE]/30 text-[10px] font-mono text-[#4EFFAE] font-bold" data-i18n="lic_3_format">WAV + STEMS</span>
                 </div>
-                <h3 class="font-heading font-bold text-lg text-white mb-1">Premium</h3>
+                <h3 class="font-heading font-bold text-lg text-white mb-1" data-i18n="lic_3_name">Premium</h3>
                 <div class="flex items-baseline gap-1 mb-4">
                   <span class="font-heading font-extrabold text-2xl text-white">$59.99</span>
-                  <span class="text-[10px] text-[#888888] font-mono">/ beat</span>
+                  <span class="text-[10px] text-[#888888] font-mono" data-i18n="lic_per_beat">/ beat</span>
                 </div>
 
                 <!-- Compact Highlights -->
                 <ul class="space-y-2 text-xs text-neutral-200 mb-5">
                   <li class="flex items-start gap-2">
                     <svg class="w-3.5 h-3.5 text-[#4EFFAE] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                    <span><strong>Trackout STEMS</strong> (Pistas separadas)</span>
+                    <span data-i18n="lic_3_pt4"><strong>Trackout STEMS</strong> (Separated tracks)</span>
                   </li>
                   <li class="flex items-start gap-2">
                     <svg class="w-3.5 h-3.5 text-[#4EFFAE] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                    <span>Hasta <strong>500,000 streams</strong></span>
+                    <span data-i18n="lic_3_pt3">Up to <strong>500,000 streams</strong></span>
                   </li>
                   <li class="flex items-start gap-2">
                     <svg class="w-3.5 h-3.5 text-[#4EFFAE] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                    <span>Radio (2 estaciones) & shows con lucro</span>
+                    <span data-i18n="lic_3_pt1">Radio (2 stations) & paid shows</span>
                   </li>
                 </ul>
               </div>
@@ -740,10 +740,10 @@
               <div>
                 <a href="#catalogo" 
                    class="btn-shimmer w-full py-2.5 px-3 rounded-lg bg-[#4EFFAE] hover:bg-[#36f09e] text-black font-heading font-bold text-xs tracking-wider uppercase text-center shadow-lg transition-colors block">
-                  Elegir Premium
+                  <span data-i18n="lic_3_btn">Select Premium</span>
                 </a>
                 <button type="button" class="btn-trigger-compare mt-2.5 text-[10px] font-mono text-[#4EFFAE] hover:underline transition-colors flex items-center justify-center gap-1 w-full">
-                  <span>Ver términos completos</span>
+                  <span data-i18n="lic_view_terms">View full terms</span>
                   <span>&rarr;</span>
                 </button>
               </div>
@@ -751,33 +751,33 @@
           </div>
 
 
-          <!-- 4. LICENCIA ILIMITADA ($119.99) -->
+          <!-- 4. UNLIMITED LICENSE ($119.99) -->
           <div class="card-tilt bg-[#1F1F1F] rounded-2xl p-5 border border-[#333333] hover:border-[#a074ff] transition-all duration-300 flex flex-col justify-between">
             <div class="card-tilt-content flex flex-col justify-between h-full">
               <div>
                 <div class="flex items-center justify-between mb-1">
-                  <span class="text-[10px] font-mono font-semibold text-[#a074ff] uppercase">Sin Techo</span>
-                  <span class="px-2 py-0.5 rounded bg-[#a074ff]/10 border border-[#a074ff]/30 text-[10px] font-mono text-[#a074ff] font-bold">WAV + STEMS</span>
+                  <span class="text-[10px] font-mono font-semibold text-[#a074ff] uppercase" data-i18n="lic_tier_unlimited">No Ceiling</span>
+                  <span class="px-2 py-0.5 rounded bg-[#a074ff]/10 border border-[#a074ff]/30 text-[10px] font-mono text-[#a074ff] font-bold" data-i18n="lic_4_format">WAV + STEMS</span>
                 </div>
-                <h3 class="font-heading font-bold text-lg text-white mb-1">Ilimitada</h3>
+                <h3 class="font-heading font-bold text-lg text-white mb-1" data-i18n="lic_4_name">Unlimited</h3>
                 <div class="flex items-baseline gap-1 mb-4">
                   <span class="font-heading font-extrabold text-2xl text-white">$119.99</span>
-                  <span class="text-[10px] text-[#888888] font-mono">/ beat</span>
+                  <span class="text-[10px] text-[#888888] font-mono" data-i18n="lic_per_beat">/ beat</span>
                 </div>
 
                 <!-- Compact Highlights -->
                 <ul class="space-y-2 text-xs text-neutral-300 mb-5">
                   <li class="flex items-start gap-2">
                     <svg class="w-3.5 h-3.5 text-[#a074ff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                    <span>Streams & copias <strong>ILIMITADOS</strong></span>
+                    <span data-i18n="lic_4_pt1">Streams & copies <strong>UNLIMITED</strong></span>
                   </li>
                   <li class="flex items-start gap-2">
                     <svg class="w-3.5 h-3.5 text-[#a074ff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                    <span>Radio & videos <strong>ILIMITADOS</strong></span>
+                    <span data-i18n="lic_4_pt3">Radio & videos <strong>UNLIMITED</strong></span>
                   </li>
                   <li class="flex items-start gap-2">
                     <svg class="w-3.5 h-3.5 text-[#a074ff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                    <span><strong>Trackout STEMS</strong> incluidos</span>
+                    <span data-i18n="lic_4_pt4"><strong>Trackout STEMS</strong> included</span>
                   </li>
                 </ul>
               </div>
@@ -785,10 +785,10 @@
               <div>
                 <a href="#catalogo" 
                    class="btn-shimmer w-full py-2.5 px-3 rounded-lg bg-[#262626] hover:bg-[#a074ff] text-white hover:text-black font-heading font-semibold text-xs tracking-wider uppercase text-center border border-[#333333] hover:border-[#a074ff] transition-colors block">
-                  Elegir Ilimitada
+                  <span data-i18n="lic_4_btn">Select Unlimited</span>
                 </a>
                 <button type="button" class="btn-trigger-compare mt-2.5 text-[10px] font-mono text-[#888888] hover:text-[#00BFFF] transition-colors flex items-center justify-center gap-1 w-full">
-                  <span>Ver términos completos</span>
+                  <span data-i18n="lic_view_terms">View full terms</span>
                   <span>&rarr;</span>
                 </button>
               </div>
@@ -796,45 +796,45 @@
           </div>
 
 
-          <!-- 5. LICENCIA EXCLUSIVA (NEGOCIABLE) -->
+          <!-- 5. EXCLUSIVE LICENSE (NEGOTIABLE) -->
           <div class="card-tilt bg-[#1F1F1F] rounded-2xl p-5 border border-[#333333] hover:border-white transition-all duration-300 flex flex-col justify-between">
             <div class="card-tilt-content flex flex-col justify-between h-full">
               <div>
                 <div class="flex items-center justify-between mb-1">
-                  <span class="text-[10px] font-mono font-semibold text-white uppercase">Propiedad</span>
-                  <span class="px-2 py-0.5 rounded bg-white/10 border border-white/30 text-[10px] font-mono text-white font-bold">SESIÓN PRO</span>
+                  <span class="text-[10px] font-mono font-semibold text-white uppercase" data-i18n="lic_tier_ownership">Ownership</span>
+                  <span class="px-2 py-0.5 rounded bg-white/10 border border-white/30 text-[10px] font-mono text-white font-bold" data-i18n="lic_format_pro">PRO SESSION</span>
                 </div>
-                <h3 class="font-heading font-bold text-lg text-white mb-1">Exclusiva</h3>
+                <h3 class="font-heading font-bold text-lg text-white mb-1" data-i18n="lic_5_name">Exclusive</h3>
                 <div class="flex items-baseline gap-1 mb-4">
-                  <span class="font-heading font-extrabold text-2xl text-white">Negociable</span>
+                  <span class="font-heading font-extrabold text-2xl text-white" data-i18n="lic_negotiate">Negotiate</span>
                 </div>
 
                 <!-- Compact Highlights -->
                 <ul class="space-y-2 text-xs text-neutral-300 mb-5">
                   <li class="flex items-start gap-2">
                     <svg class="w-3.5 h-3.5 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                    <span><strong>100% Derechos y Propiedad</strong></span>
+                    <span data-i18n="lic_5_pt1"><strong>100% Rights and Ownership</strong></span>
                   </li>
                   <li class="flex items-start gap-2">
                     <svg class="w-3.5 h-3.5 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                    <span>Retiro inmediato de tienda pública</span>
+                    <span data-i18n="lic_5_pt2">Immediate removal from public store</span>
                   </li>
                   <li class="flex items-start gap-2">
                     <svg class="w-3.5 h-3.5 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                    <span>Contrato de cesión & sesión completa</span>
+                    <span data-i18n="lic_5_pt3">Transfer agreement & full session</span>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <a href="https://wa.me/50498700953?text=Hola%207lite%20Music,%20me%20interesa%20negociar%20una%20Licencia%20Exclusiva" 
+                <a href="https://wa.me/50498700953?text=Hi%207lite%20Music,%20I'm%20interested%20in%20negotiating%20an%20Exclusive%20License" 
                    target="_blank" 
                    rel="noopener noreferrer" 
                    class="btn-exclusive-wa btn-shimmer w-full py-2.5 px-3 rounded-lg bg-white text-black hover:bg-neutral-200 font-heading font-bold text-xs tracking-wider uppercase text-center transition-colors block">
-                  Negociar Exclusiva
+                  <span data-i18n="lic_5_btn">Negotiate Exclusive</span>
                 </a>
                 <button type="button" class="btn-trigger-compare mt-2.5 text-[10px] font-mono text-[#888888] hover:text-white transition-colors flex items-center justify-center gap-1 w-full">
-                  <span>Ver términos completos</span>
+                  <span data-i18n="lic_view_terms">View full terms</span>
                   <span>&rarr;</span>
                 </button>
               </div>
@@ -843,11 +843,12 @@
 
         </div>
 
-        <!-- Preguntas Frecuentes Rápidas sobre Licencias -->
+
+        <!-- Artist Frequently Asked Questions -->
         <div class="mt-16 max-w-3xl mx-auto space-y-4">
           <div class="text-center mb-6">
-            <span class="text-[11px] font-mono text-[#00BFFF] uppercase tracking-widest block mb-1">TRANSPARENCIA TOTAL</span>
-            <h4 class="font-heading font-black text-xl sm:text-2xl text-white uppercase">Preguntas Frecuentes de Artistas</h4>
+            <span class="text-[11px] font-mono text-[#00BFFF] uppercase tracking-widest block mb-1" data-i18n="faq_badge">TOTAL TRANSPARENCY</span>
+            <h4 class="font-heading font-black text-xl sm:text-2xl text-white uppercase" data-i18n="faq_title">Artist Frequently Asked Questions</h4>
           </div>
 
           <!-- FAQ Item 01 -->
@@ -855,8 +856,8 @@
             <summary class="faq-summary">
               <div class="flex items-center gap-3">
                 <span class="text-xs font-mono text-[#4EFFAE] font-bold">01 //</span>
-                <span class="font-heading font-bold text-xs sm:text-sm text-white group-hover:text-[#4EFFAE] transition-colors">
-                  ¿Cómo recibo los archivos una vez completado el pago?
+                <span class="font-heading font-bold text-xs sm:text-sm text-white group-hover:text-[#4EFFAE] transition-colors" data-i18n="faq_q1">
+                  How do I receive the files after payment is complete?
                 </span>
               </div>
               <div class="faq-icon-pill">
@@ -866,8 +867,8 @@
               </div>
             </summary>
             <div class="faq-content">
-              <div class="pt-3 border-t border-[#2a2a2a] text-xs text-[#888888] leading-relaxed">
-                La entrega es <strong class="text-white">inmediata y 100% automatizada</strong> a través de BeatStars. Recibirás los enlaces de descarga directa sin tags de voz en tu correo electrónico segundos después de completar tu pago, junto con el contrato oficial de licencia.
+              <div class="pt-3 border-t border-[#2a2a2a] text-xs text-[#888888] leading-relaxed" data-i18n="faq_a1">
+                Delivery is <strong class="text-white">instant and 100% automated</strong> via BeatStars. You will receive direct, untagged download links in your email seconds after completing checkout, alongside the official license agreement.
               </div>
             </div>
           </details>
@@ -877,8 +878,8 @@
             <summary class="faq-summary">
               <div class="flex items-center gap-3">
                 <span class="text-xs font-mono text-[#00BFFF] font-bold">02 //</span>
-                <span class="font-heading font-bold text-xs sm:text-sm text-white group-hover:text-[#00BFFF] transition-colors">
-                  ¿Qué son los Stems y por qué convienen para mi canción?
+                <span class="font-heading font-bold text-xs sm:text-sm text-white group-hover:text-[#00BFFF] transition-colors" data-i18n="faq_q2">
+                  What are Stems and why do they matter for my song?
                 </span>
               </div>
               <div class="faq-icon-pill">
@@ -888,8 +889,8 @@
               </div>
             </summary>
             <div class="faq-content">
-              <div class="pt-3 border-t border-[#2a2a2a] text-xs text-[#888888] leading-relaxed">
-                Los <strong class="text-white">Stems son los canales de audio aislados</strong> del beat (bombo, caja, 808, sintetizadores, guitarras, etc.). Permiten a tu ingeniero de mezcla moldear la instrumental alrededor de tu voz, ajustar niveles individuales y lograr un acabado comercial insuperable para plataformas.
+              <div class="pt-3 border-t border-[#2a2a2a] text-xs text-[#888888] leading-relaxed" data-i18n="faq_a2">
+                <strong class="text-white">Stems are the isolated audio tracks</strong> of the beat (kick, snare, 808, synths, guitars, etc.). They allow your mix engineer to sculpt the instrumental around your vocals, adjust individual levels, and achieve a radio-ready commercial sound.
               </div>
             </div>
           </details>
@@ -899,8 +900,8 @@
             <summary class="faq-summary">
               <div class="flex items-center gap-3">
                 <span class="text-xs font-mono text-[#a074ff] font-bold">03 //</span>
-                <span class="font-heading font-bold text-xs sm:text-sm text-white group-hover:text-[#a074ff] transition-colors">
-                  ¿Puedo actualizar mi licencia a un nivel superior en el futuro?
+                <span class="font-heading font-bold text-xs sm:text-sm text-white group-hover:text-[#a074ff] transition-colors" data-i18n="faq_q3">
+                  Can I upgrade my license to a higher tier in the future?
                 </span>
               </div>
               <div class="faq-icon-pill">
@@ -910,8 +911,8 @@
               </div>
             </summary>
             <div class="faq-content">
-              <div class="pt-3 border-t border-[#2a2a2a] text-xs text-[#888888] leading-relaxed">
-                ¡Totalmente! Si compraste una licencia Estándar y tu canción supera los 50,000 streams, <strong class="text-white">solo pagas la diferencia</strong> para subir a Premium o Ilimitada. Solo escríbenos directamente por WhatsApp y actualizamos tu contrato.
+              <div class="pt-3 border-t border-[#2a2a2a] text-xs text-[#888888] leading-relaxed" data-i18n="faq_a3">
+                Absolutely! If you bought a Standard license and your song surpasses stream thresholds, <strong class="text-white">you only pay the difference</strong> to upgrade to Premium or Unlimited. Simply contact us directly via WhatsApp and we will update your contract.
               </div>
             </div>
           </details>
@@ -922,7 +923,7 @@
 
 
     <!-- =======================================================================
-         6. CONTACTO DIRECTO (100% VH)
+         6. DIRECT CONTACT (100% VH)
          ======================================================================= -->
     <section id="contacto" class="min-h-screen min-h-[100dvh] flex flex-col justify-center py-16 md:py-24 bg-[#171717] border-t border-[#262626]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -935,13 +936,13 @@
             <div class="lg:col-span-7">
               <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#262626] border border-[#333333] text-[11px] font-mono text-[#00BFFF] tracking-widest uppercase mb-4">
                 <span class="w-1.5 h-1.5 rounded-full bg-[#00BFFF] animate-ping"></span>
-                TRANSMISIÓN DIRECTA
+                <span data-i18n="contact_badge">DIRECT TRANSMISSION</span>
               </div>
-              <h2 class="font-heading font-black text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight uppercase mb-3">
-                Hablemos de tu próximo lanzamiento
+              <h2 class="font-heading font-black text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight uppercase mb-3" data-i18n="contact_title">
+                Let's Talk About Your Next Release
               </h2>
-              <p class="text-xs sm:text-sm text-[#888888] mb-6 leading-relaxed">
-                Envía tus requerimientos, enlaces a maquetas o consulta sobre licencias exclusivas. Respuesta rápida y directa a tu bandeja de entrada.
+              <p class="text-xs sm:text-sm text-[#888888] mb-6 leading-relaxed" data-i18n="contact_sub">
+                Send your requirements, demo links, or ask about exclusive licenses. Fast and direct response to your inbox.
               </p>
 
               <!-- Formspree Functional Form -->
@@ -1002,7 +1003,7 @@
                               aria-expanded="false">
                         <span class="flex items-center gap-2.5 truncate" id="selected-option-label">
                           <span class="w-2 h-2 rounded-full bg-[#ffd000] flex-shrink-0" id="selected-option-dot"></span>
-                          <span class="truncate font-medium" id="selected-option-text">Licencia Exclusiva / Negociación</span>
+                          <span class="truncate font-medium" id="selected-option-text" data-i18n="opt_exclusive">Exclusive License / Negotiation</span>
                         </span>
                         <svg class="custom-select-chevron w-4 h-4 text-[#888888] group-hover:text-white transition-transform duration-300 flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -1016,66 +1017,66 @@
                         
                         <div class="custom-option px-3 py-2.5 rounded-xl cursor-pointer flex items-center justify-between text-xs text-white is-selected" 
                              data-value="Licencia Exclusiva" 
-                             data-label="Licencia Exclusiva / Negociación"
+                             data-label="Exclusive License / Negotiation"
                              data-dot="#ffd000">
                           <div class="flex items-center gap-2.5 truncate">
                             <span class="w-2 h-2 rounded-full bg-[#ffd000] flex-shrink-0"></span>
-                            <span class="font-medium truncate">Licencia Exclusiva / Negociación</span>
+                            <span class="font-medium truncate" data-i18n="opt_exclusive">Exclusive License / Negotiation</span>
                           </div>
                           <span class="option-check text-[#ffd000] font-bold text-xs ml-2">✓</span>
                         </div>
 
                         <div class="custom-option px-3 py-2.5 rounded-xl cursor-pointer flex items-center justify-between text-xs text-white" 
                              data-value="Canal Vibes (Smooth R&B)" 
-                             data-label="Canal Vibes — Smooth R&B"
+                             data-label="Channel Vibes — Smooth R&B"
                              data-dot="#4EFFAE">
                           <div class="flex items-center gap-2.5 truncate">
                             <span class="w-2 h-2 rounded-full bg-[#4EFFAE] flex-shrink-0"></span>
-                            <span class="font-medium truncate">Canal Vibes — Smooth R&B</span>
+                            <span class="font-medium truncate" data-i18n="opt_vibes">Channel Vibes — Smooth R&B</span>
                           </div>
                           <span class="option-check hidden text-[#4EFFAE] font-bold text-xs ml-2">✓</span>
                         </div>
 
                         <div class="custom-option px-3 py-2.5 rounded-xl cursor-pointer flex items-center justify-between text-xs text-white" 
                              data-value="Canal Flow (Trap/Drill)" 
-                             data-label="Canal Flow — Trap & Drill"
+                             data-label="Channel Flow — Trap & Drill"
                              data-dot="#00BFFF">
                           <div class="flex items-center gap-2.5 truncate">
                             <span class="w-2 h-2 rounded-full bg-[#00BFFF] flex-shrink-0"></span>
-                            <span class="font-medium truncate">Canal Flow — Trap & Drill</span>
+                            <span class="font-medium truncate" data-i18n="opt_flow">Channel Flow — Trap & Drill</span>
                           </div>
                           <span class="option-check hidden text-[#00BFFF] font-bold text-xs ml-2">✓</span>
                         </div>
 
                         <div class="custom-option px-3 py-2.5 rounded-xl cursor-pointer flex items-center justify-between text-xs text-white" 
                              data-value="Canal Waves (Reggaetón/Afro)" 
-                             data-label="Canal Waves — Reggaetón & Afro"
+                             data-label="Channel Waves — Reggaetón & Afro"
                              data-dot="#a074ff">
                           <div class="flex items-center gap-2.5 truncate">
                             <span class="w-2 h-2 rounded-full bg-[#a074ff] flex-shrink-0"></span>
-                            <span class="font-medium truncate">Canal Waves — Reggaetón & Afro</span>
+                            <span class="font-medium truncate" data-i18n="opt_waves">Channel Waves — Reggaetón & Afro</span>
                           </div>
                           <span class="option-check hidden text-[#a074ff] font-bold text-xs ml-2">✓</span>
                         </div>
 
                         <div class="custom-option px-3 py-2.5 rounded-xl cursor-pointer flex items-center justify-between text-xs text-white" 
                              data-value="Producción a Medida" 
-                             data-label="Producción Musical a Medida"
+                             data-label="Custom Music Production"
                              data-dot="#ffffff">
                           <div class="flex items-center gap-2.5 truncate">
                             <span class="w-2 h-2 rounded-full bg-white flex-shrink-0"></span>
-                            <span class="font-medium truncate">Producción Musical a Medida</span>
+                            <span class="font-medium truncate" data-i18n="opt_custom_prod">Custom Music Production</span>
                           </div>
                           <span class="option-check hidden text-white font-bold text-xs ml-2">✓</span>
                         </div>
 
                         <div class="custom-option px-3 py-2.5 rounded-xl cursor-pointer flex items-center justify-between text-xs text-white" 
                              data-value="Otra Consulta" 
-                             data-label="Otra Consulta General"
+                             data-label="Other General Inquiries"
                              data-dot="#888888">
                           <div class="flex items-center gap-2.5 truncate">
                             <span class="w-2 h-2 rounded-full bg-[#888888] flex-shrink-0"></span>
-                            <span class="font-medium truncate">Otra Consulta General</span>
+                            <span class="font-medium truncate" data-i18n="opt_other">Other General Inquiries</span>
                           </div>
                           <span class="option-check hidden text-[#888888] font-bold text-xs ml-2">✓</span>
                         </div>
@@ -1117,12 +1118,12 @@
               
               <!-- Direct Fast Channels -->
               <div class="space-y-3">
-                <span class="text-[11px] font-mono text-[#888888] uppercase tracking-wider block mb-1">
-                  RESPUESTA INMEDIATA // CANALES DIRECTOS
+                <span class="text-[11px] font-mono text-[#888888] uppercase tracking-wider block mb-1" data-i18n="contact_fast_resp_header">
+                  IMMEDIATE RESPONSE // DIRECT CHANNELS
                 </span>
 
                 <!-- WhatsApp VIP -->
-                <a href="https://wa.me/50498700953?text=Hola%207lite%20Music,%20me%20gustar%C3%ADa%20iniciar%20un%20proyecto%20o%20consultar%20sobre%20beats." 
+                <a href="https://wa.me/50498700953?text=Hi%207lite%20Music,%20I'd%20like%20to%20start%20a%20project%20or%20inquire%20about%20beats." 
                    target="_blank" 
                    rel="noopener noreferrer" 
                    class="flex items-center gap-3.5 p-3 rounded-xl bg-[#262626] border border-[#333333] hover:border-[#4EFFAE] transition-all group">
@@ -1130,7 +1131,7 @@
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.585 1.961.914 2.791.915h.005c3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.586-5.766-5.768-5.766zm9.969 5.766c0 5.518-4.482 10-10 10-1.748 0-3.385-.45-4.819-1.242L2 22l1.509-5.111C2.678 15.485 2.2 13.799 2.2 11.938c0-5.518 4.482-10 10-10s10 4.482 10 10z"/></svg>
                   </div>
                   <div class="flex-grow">
-                    <div class="text-[10px] font-mono text-[#888888]">WHATSAPP DIRECTO</div>
+                    <div class="text-[10px] font-mono text-[#888888]" data-i18n="contact_wa_label">DIRECT WHATSAPP</div>
                     <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-[#4EFFAE] transition-colors">+504 9870-0953</div>
                   </div>
                   <span class="text-xs text-[#888888] group-hover:text-white transition-colors">&rarr;</span>
@@ -1143,7 +1144,7 @@
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                   </div>
                   <div class="flex-grow">
-                    <div class="text-[10px] font-mono text-[#888888]">CORREO ELECTRÓNICO</div>
+                    <div class="text-[10px] font-mono text-[#888888]" data-i18n="contact_email_label_card">DIRECT EMAIL</div>
                     <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-[#00BFFF] transition-colors">7litemusic@gmail.com</div>
                   </div>
                   <span class="text-xs text-[#888888] group-hover:text-white transition-colors">&rarr;</span>
@@ -1158,7 +1159,7 @@
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                   </div>
                   <div class="flex-grow">
-                    <div class="text-[10px] font-mono text-[#888888]">INSTAGRAM OFICIAL</div>
+                    <div class="text-[10px] font-mono text-[#888888]" data-i18n="contact_ig_label">OFFICIAL INSTAGRAM</div>
                     <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-[#a074ff] transition-colors">@7litemusic</div>
                   </div>
                   <span class="text-xs text-[#888888] group-hover:text-white transition-colors">&rarr;</span>
@@ -1175,7 +1176,7 @@
                     </svg>
                   </div>
                   <div class="flex-grow">
-                    <div class="text-[10px] font-mono text-[#888888]">TIKTOK OFICIAL</div>
+                    <div class="text-[10px] font-mono text-[#888888]" data-i18n="contact_tiktok_label">OFFICIAL TIKTOK</div>
                     <div class="text-xs sm:text-sm font-semibold text-white group-hover:text-[#00BFFF] transition-colors">@7litemusic</div>
                   </div>
                   <span class="text-xs text-[#888888] group-hover:text-white transition-colors">&rarr;</span>
@@ -1187,30 +1188,30 @@
               <div class="p-5 rounded-2xl bg-[#262626] border border-[#333333]">
                 <div class="flex items-center gap-2 text-xs font-mono text-[#888888] mb-3">
                   <svg class="w-4 h-4 text-[#00BFFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                  <span>GARANTÍAS Y OPERACIONES</span>
+                  <span data-i18n="contact_guarantees_title">GUARANTEES & OPERATIONS</span>
                 </div>
 
                 <div class="space-y-2 text-xs text-neutral-300">
                   <div class="flex justify-between py-1.5 border-b border-[#333333]">
-                    <span class="text-[#888888]">Ubicación:</span>
-                    <span class="text-white font-medium">Copán Ruinas, Honduras</span>
+                    <span class="text-[#888888]" data-i18n="contact_location_label">Location:</span>
+                    <span class="text-white font-medium" data-i18n="contact_location_val">Copán Ruinas, Honduras</span>
                   </div>
                   <div class="flex justify-between py-1.5 border-b border-[#333333]">
-                    <span class="text-[#888888]">Entrega:</span>
-                    <span class="text-[#4EFFAE] font-medium">Descarga instantánea 24/7</span>
+                    <span class="text-[#888888]" data-i18n="contact_delivery_label">Delivery:</span>
+                    <span class="text-[#4EFFAE] font-medium" data-i18n="contact_delivery_val">Instant 24/7 Download</span>
                   </div>
                   <div class="flex justify-between py-1.5 border-b border-[#333333]">
-                    <span class="text-[#888888]">Formatos:</span>
-                    <span class="text-white font-medium">MP3, WAV 24-Bit y Stems</span>
+                    <span class="text-[#888888]" data-i18n="contact_formats_label">Formats:</span>
+                    <span class="text-white font-medium" data-i18n="contact_formats_val">MP3, 24-Bit WAV & Stems</span>
                   </div>
                   <div class="flex justify-between py-1.5 border-b border-[#333333]">
-                    <span class="text-[#888888]">Pagos:</span>
-                    <span class="text-white font-medium">Tarjeta, PayPal y Transferencia</span>
+                    <span class="text-[#888888]" data-i18n="contact_payments_label">Payments:</span>
+                    <span class="text-white font-medium" data-i18n="contact_payments_val">Cards, PayPal & Bank Transfer</span>
                   </div>
                 </div>
 
                 <div class="mt-4 pt-3 border-t border-[#333333] flex items-center justify-between text-[11px] font-mono text-[#888888]">
-                  <span>DOMINIO OFICIAL:</span>
+                  <span data-i18n="contact_domain_label">OFFICIAL DOMAIN:</span>
                   <span class="text-white font-bold">7LITEMUSIC.COM</span>
                 </div>
               </div>
@@ -1228,7 +1229,7 @@
 
 
   <!-- =========================================================================
-       7. FOOTER TÉCNICO
+       7. TECHNICAL FOOTER
        ========================================================================= -->
   <footer class="bg-[#121212] border-t border-[#262626] relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -1247,33 +1248,33 @@
             </span>
           </div>
 
-          <p class="text-xs text-[#888888] max-w-sm mb-4 leading-relaxed">
-            "Sonido que se siente" — Fusión entre ingeniería en sistemas, precisión técnica (cero latencia) y arte callejero.
+          <p class="text-xs text-[#888888] max-w-sm mb-4 leading-relaxed" data-i18n="footer_tagline">
+            "Sound You Can Feel" — Fusion of systems engineering, audio precision (zero latency), and street artistry.
           </p>
 
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#1F1F1F] border border-[#333333] text-[10px] font-mono text-[#A0A0A0]">
             <span class="w-1.5 h-1.5 rounded-full bg-[#4EFFAE]"></span>
-            <span>DOMINIO: 7LITEMUSIC.COM</span>
+            <span data-i18n="footer_domain">DOMAIN: 7LITEMUSIC.COM</span>
           </div>
         </div>
 
-        <!-- Canales Links -->
+        <!-- Sound Channels Links -->
         <div>
-          <h4 class="font-heading font-bold text-xs uppercase tracking-wider text-white mb-4">
-            Canales Sonoros
+          <h4 class="font-heading font-bold text-xs uppercase tracking-wider text-white mb-4" data-i18n="footer_channels_title">
+            Sound Channels
           </h4>
           <ul class="space-y-2.5 text-xs text-[#888888]">
-            <li><a href="#canales" class="hover:text-[#4EFFAE] transition-colors">Vibes (Smooth R&B)</a></li>
-            <li><a href="#canales" class="hover:text-[#00BFFF] transition-colors">Flow (Trap / Drill)</a></li>
-            <li><a href="#canales" class="hover:text-[#a074ff] transition-colors">Waves (Reggaetón Elite)</a></li>
-            <li><a href="#catalogo" class="hover:text-white transition-colors">Catálogo BeatStars</a></li>
+            <li><a href="#canales" class="hover:text-[#4EFFAE] transition-colors" data-i18n="footer_cat_vibes">Vibes (Smooth R&B)</a></li>
+            <li><a href="#canales" class="hover:text-[#00BFFF] transition-colors" data-i18n="footer_cat_flow">Flow (Trap / Drill)</a></li>
+            <li><a href="#canales" class="hover:text-[#a074ff] transition-colors" data-i18n="footer_cat_waves">Waves (Reggaetón Elite)</a></li>
+            <li><a href="#catalogo" class="hover:text-white transition-colors" data-i18n="footer_catalog_link">BeatStars Catalog</a></li>
           </ul>
         </div>
 
-        <!-- Contacto Directo -->
+        <!-- Technical Contact -->
         <div>
-          <h4 class="font-heading font-bold text-xs uppercase tracking-wider text-white mb-4">
-            Contacto Técnico
+          <h4 class="font-heading font-bold text-xs uppercase tracking-wider text-white mb-4" data-i18n="footer_contact_title">
+            Technical Contact
           </h4>
           <ul class="space-y-2.5 text-xs text-[#888888]">
             <li>
@@ -1297,7 +1298,7 @@
               </a>
             </li>
             <li class="text-[#666666]">
-              <span>Copán Ruinas, Honduras</span>
+              <span data-i18n="footer_location">Copán Ruinas, Honduras</span>
             </li>
           </ul>
         </div>
@@ -1307,15 +1308,15 @@
       <!-- Bottom Bar -->
       <div class="pt-8 border-t border-[#262626] flex flex-col sm:flex-row items-center justify-between gap-4">
         
-        <p class="text-xs text-[#666666]">
+        <p class="text-xs text-[#666666]" data-i18n="footer_rights">
           &copy; 2026 7lite Music. All Rights Reserved. Engineered with precision.
         </p>
 
         <!-- Back to Top Button -->
         <button id="back-to-top-btn" 
                 class="opacity-0 pointer-events-none translate-y-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#1F1F1F] border border-[#333333] text-xs text-[#888888] hover:text-white hover:border-neutral-500 transition-all duration-300"
-                aria-label="Volver arriba">
-          <span>Subir al inicio</span>
+                aria-label="Back to top">
+          <span data-i18n="footer_top">Back to top ↑</span>
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
           </svg>
@@ -1327,10 +1328,10 @@
   </footer>
 
   <!-- =========================================================================
-       MODAL COMPARATIVO FULLSCREEN DE LICENCIAS (BEATSTARS)
+       FULLSCREEN LICENSE COMPARISON MODAL (BEATSTARS)
        ========================================================================= -->
   <div id="license-compare-modal" 
-       class="fixed inset-0 z-[100] bg-black/85 backdrop-blur-2xl flex items-center justify-center p-3 sm:p-6 opacity-0 pointer-events-none transition-all duration-300"
+       class="fixed inset-0 z-[100] bg-black/85 backdrop-blur-2xl flex items-center justify-center p-3 sm:p-6 opacity-0 pointer-events-none transition-all duration-300" 
        role="dialog" 
        aria-modal="true" 
        aria-labelledby="modal-compare-title">
@@ -1354,7 +1355,7 @@
         <!-- Close Button -->
         <button id="btn-close-compare-modal" 
                 class="p-2 sm:p-2.5 rounded-xl bg-[#222222] border border-[#383838] hover:border-white text-neutral-400 hover:text-white transition-all focus:outline-none flex-shrink-0" 
-                aria-label="Cerrar modal comparativo">
+                aria-label="Close comparison matrix">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
           </svg>
@@ -1377,7 +1378,7 @@
             </tr>
           </thead>
           <tbody class="divide-y divide-[#222222]">
-            <!-- Row: Precio -->
+            <!-- Row: Price -->
             <tr>
               <td class="py-3 px-3 font-semibold text-white" data-i18n="row_price">Official Price</td>
               <td class="py-3 px-3 text-center font-bold text-white text-sm">$19.99</td>
@@ -1386,7 +1387,7 @@
               <td class="py-3 px-3 text-center font-bold text-[#a074ff] text-sm">$119.99</td>
               <td class="py-3 px-3 text-center font-bold text-white text-sm" data-i18n="lic_negotiate">Negotiate</td>
             </tr>
-            <!-- Row: Formatos -->
+            <!-- Row: Formats -->
             <tr>
               <td class="py-3 px-3 font-medium text-neutral-400" data-i18n="row_format">Delivered Files</td>
               <td class="py-3 px-3 text-center font-mono">MP3 Master</td>
@@ -1395,7 +1396,7 @@
               <td class="py-3 px-3 text-center font-mono font-semibold text-white">WAV + MP3 + STEMS</td>
               <td class="py-3 px-3 text-center font-mono font-semibold text-white" data-i18n="val_exclusive_session">Full Studio Session</td>
             </tr>
-            <!-- Row: Grabación Comercial -->
+            <!-- Row: Vocal Recording -->
             <tr>
               <td class="py-3 px-3 font-medium text-neutral-400" data-i18n="row_recording">Vocal Recording</td>
               <td class="py-3 px-3 text-center text-[#4EFFAE]">✓ <span data-i18n="val_allowed">Allowed</span></td>
@@ -1407,18 +1408,18 @@
             <!-- Row: Streams -->
             <tr>
               <td class="py-3 px-3 font-medium text-neutral-400" data-i18n="row_streams">Online Audio Streams</td>
-              <td class="py-3 px-3 text-center text-neutral-500">0 (<span data-i18n="lic_1_pt2">Demo use only</span>)</td>
-              <td class="py-3 px-3 text-center">Hasta 100,000</td>
-              <td class="py-3 px-3 text-center font-bold text-white bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">Hasta 500,000</td>
+              <td class="py-3 px-3 text-center text-neutral-500">0 (<span data-i18n="lic_1_pt2">0 streams / 0 copies (Demos)</span>)</td>
+              <td class="py-3 px-3 text-center" data-i18n="val_up_to_100k">Up to 100,000</td>
+              <td class="py-3 px-3 text-center font-bold text-white bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20" data-i18n="val_up_to_500k">Up to 500,000</td>
               <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]" data-i18n="val_unlimited">UNLIMITED</td>
               <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]" data-i18n="val_unlimited">UNLIMITED</td>
             </tr>
-            <!-- Row: Copias -->
+            <!-- Row: Copies -->
             <tr>
               <td class="py-3 px-3 font-medium text-neutral-400" data-i18n="row_copies">Physical Copies / Downloads</td>
               <td class="py-3 px-3 text-center text-neutral-500">0</td>
-              <td class="py-3 px-3 text-center">Hasta 5,000</td>
-              <td class="py-3 px-3 text-center font-bold text-white bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">Hasta 10,000</td>
+              <td class="py-3 px-3 text-center" data-i18n="val_up_to_5k">Up to 5,000</td>
+              <td class="py-3 px-3 text-center font-bold text-white bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20" data-i18n="val_up_to_10k">Up to 10,000</td>
               <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]" data-i18n="val_unlimited">UNLIMITED</td>
               <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]" data-i18n="val_unlimited">UNLIMITED</td>
             </tr>
@@ -1443,8 +1444,8 @@
             <!-- Row: Radio -->
             <tr>
               <td class="py-3 px-3 font-medium text-neutral-400" data-i18n="row_radio">Radio Broadcasting</td>
-              <td class="py-3 px-3 text-center text-neutral-500">✕ <span data-i18n="val_none">None</span></td>
-              <td class="py-3 px-3 text-center text-neutral-500">✕ <span data-i18n="val_none">None</span></td>
+              <td class="py-3 px-3 text-center text-neutral-500">✕ <span data-i18n="val_none">None / Not Included</span></td>
+              <td class="py-3 px-3 text-center text-neutral-500">✕ <span data-i18n="val_none">None / Not Included</span></td>
               <td class="py-3 px-3 text-center text-white bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20" data-i18n="val_stations_2">Up to 2 Stations</td>
               <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]" data-i18n="val_stations_unlimited">Unlimited Stations</td>
               <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]" data-i18n="val_stations_unlimited">Unlimited Stations</td>
@@ -1452,13 +1453,13 @@
             <!-- Row: Stems -->
             <tr>
               <td class="py-3 px-3 font-medium text-neutral-400" data-i18n="row_stems">Track Stems</td>
-              <td class="py-3 px-3 text-center text-neutral-500">✕ <span data-i18n="val_none">None</span></td>
-              <td class="py-3 px-3 text-center text-neutral-500">✕ <span data-i18n="val_none">None</span></td>
+              <td class="py-3 px-3 text-center text-neutral-500">✕ <span data-i18n="val_none">None / Not Included</span></td>
+              <td class="py-3 px-3 text-center text-neutral-500">✕ <span data-i18n="val_none">None / Not Included</span></td>
               <td class="py-3 px-3 text-center font-bold text-[#4EFFAE] bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">✓ WAV 24-Bit</td>
               <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">✓ WAV 24-Bit</td>
               <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">✓ <span data-i18n="val_exclusive_session">Full Studio Session</span></td>
             </tr>
-            <!-- Row: Exclusividad -->
+            <!-- Row: Store Removal -->
             <tr>
               <td class="py-3 px-3 font-medium text-neutral-400" data-i18n="row_store_remove">Store Removal</td>
               <td class="py-3 px-3 text-center text-neutral-500" data-i18n="val_remove_no">Remains in Store</td>
@@ -1469,7 +1470,7 @@
             </tr>
             <!-- Action Row -->
             <tr class="pt-4">
-              <td class="py-4 px-3 font-bold text-white" data-i18n="lic_select">Select License</td>
+              <td class="py-4 px-3 font-bold text-white" data-i18n="lic_select">Select</td>
               <td class="py-4 px-3 text-center">
                 <a href="#catalogo" class="modal-cta-close px-3 py-1.5 rounded-lg bg-[#262626] hover:bg-white text-white hover:text-black font-heading font-bold text-[10px] uppercase transition-colors inline-block" data-i18n="lic_select">Select</a>
               </td>
@@ -1483,7 +1484,7 @@
                 <a href="#catalogo" class="modal-cta-close px-3 py-1.5 rounded-lg bg-[#262626] hover:bg-[#a074ff] text-white hover:text-black font-heading font-bold text-[10px] uppercase transition-colors inline-block" data-i18n="lic_select">Select</a>
               </td>
               <td class="py-4 px-3 text-center">
-                <a href="https://wa.me/50498700953?text=Hola%207lite%20Music,%20me%20interesa%20negociar%20una%20Licencia%20Exclusiva" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-white text-black hover:bg-neutral-200 font-heading font-bold text-[10px] uppercase transition-colors inline-block" data-i18n="lic_negotiate">Negotiate</a>
+                <a href="https://wa.me/50498700953?text=Hi%207lite%20Music,%20I'm%20interested%20in%20negotiating%20an%20Exclusive%20License" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-white text-black hover:bg-neutral-200 font-heading font-bold text-[10px] uppercase transition-colors inline-block" data-i18n="lic_negotiate">Negotiate</a>
               </td>
             </tr>
           </tbody>

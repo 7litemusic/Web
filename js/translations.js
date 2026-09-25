@@ -6,6 +6,10 @@
 
 const translations = {
   en: {
+    // Meta / Document
+    meta_title: "7lite Music — Sound You Can Feel | Official Beat Store",
+    meta_desc: "7lite Music: Fusion of systems engineering, audio precision, and street culture. Official catalog of high-caliber instrumentals: Vibes (R&B), Flow (Trap/Drill), and Waves (Reggaetón).",
+
     // Nav
     nav_logo_sub: "Audio Engineering",
     nav_canales: "Channels",
@@ -22,18 +26,23 @@ const translations = {
     nav_sfx_off: "SFX: OFF",
 
     // Hero
-    hero_badge: "● HIGH-FIDELITY AUDIO PRODUCTION",
-    hero_title_1: "SURGICAL SOUND.",
-    hero_title_2: "MAXIMUM IMPACT.",
-    hero_sub: "Modern instrumentals engineered for vocalists, recording artists, and multimedia creators demanding international clarity, heavy punch, and sonic prestige.",
-    hero_btn_catalog: "Explore Official Catalog ↓",
-    hero_btn_channels: "Sound Directions (Channels) →",
-    hero_spec_1_title: "24-Bit / 48kHz WAV",
-    hero_spec_1_sub: "Master Studio Quality",
-    hero_spec_2_title: "100% Royalty-Free",
-    hero_spec_2_sub: "Keep Your Master Earnings",
-    hero_spec_3_title: "Immediate Delivery",
-    hero_spec_3_sub: "Instant Automated Download",
+    hero_scramble_1: "SOUND YOU",
+    hero_scramble_2: "CAN FEEL.",
+    hero_sub: "High-caliber instrumentals produced with technical precision and ready to conquer streaming platforms.",
+    hero_btn_explore: "Explore Beats",
+    hero_btn_exclusive: "Inquire Exclusive",
+
+    // Marquee Tickers
+    ticker_zero_latency: "ZERO LATENCY",
+    ticker_audio_master: "24-BIT / 96kHz MASTER AUDIO",
+    ticker_instant_dl: "INSTANT UNTAGGED DOWNLOAD",
+    ticker_produced_in: "PRODUCED IN COPÁN RUINAS",
+    ticker_royalty_ready: "ROYALTY COMPOSITION READY",
+    ticker_official_lic: "OFFICIAL LICENSES",
+    ticker_wav_master: "24-BIT WAV MASTER",
+    ticker_stems_available: "TRACKOUT STEMS AVAILABLE",
+    ticker_royalties_artist: "100% ROYALTIES FOR THE ARTIST",
+    ticker_downloadable_contract: "INSTANT DOWNLOADABLE CONTRACT",
 
     // Channels
     canales_badge: "● SOUND DIRECTIONS",
@@ -56,64 +65,142 @@ const translations = {
     canal_3_btn: "Visit @7litemusicwaves",
 
     // Catalog
-    catalog_badge: "● OFFICIAL BEAT STORE",
+    catalog_badge: "OFFICIAL LIVE CATALOG",
     catalog_title: "Official Beat Store",
-    catalog_sub: "Instant search, filtered licensing, and automated contract delivery directly from our official player.",
-    catalog_ticker: "/// INSTANT AUTOMATED DELIVERY /// 100% ROYALTY-FREE COMMERCE /// SPOTIFY • APPLE MUSIC • TIKTOK • YOUTUBE /// DOWNLOADABLE CONTRACT ///",
+    catalog_sub: "Listen in real time, add to cart, and download clean files without voice tags instantly in an automated, secure process.",
+    catalog_payment_note: "We accept Credit/Debit Cards, PayPal, and secure transfers.",
+    catalog_license_details_link: "Consult details for each license type &rarr;",
 
     // Licenses
     licenses_badge: "● CLEAR RIGHTS",
     licenses_title: "License Guide & Pricing",
     licenses_sub: "Choose the perfect tier for your career goals. Keep 100% of your writing royalties under official terms.",
-    licenses_btn_compare: "Compare All 5 Licenses Fullscreen →",
+    licenses_btn_compare: "Compare All 5 Licenses Fullscreen &rarr;",
     lic_most_popular: "MOST POPULAR",
-    lic_studio_pro: "STUDIO PRO",
+    lic_tier_entry: "Entry",
+    lic_tier_starter: "Starter",
+    lic_tier_pro: "Studio Pro",
+    lic_tier_unlimited: "No Ceiling",
+    lic_tier_ownership: "Ownership",
+    lic_format_pro: "PRO SESSION",
     lic_select: "Select",
     lic_negotiate: "Negotiate",
-    lic_view_terms: "View full terms &rarr;",
+    lic_view_terms: "View full terms",
+    lic_per_beat: "/ beat",
 
     // License 1 (Basic)
     lic_1_name: "Basic",
     lic_1_format: "MP3",
-    lic_1_pt1: "Commercial vocal recording permitted",
-    lic_1_pt2: "0 physical copies & 0 audio streams (demo use)",
-    lic_1_pt3: "1 Music Video / Unlimited non-profit shows",
+    lic_1_pt1: "Commercial vocal recording",
+    lic_1_pt2: "0 streams / 0 copies (Demos)",
+    lic_1_pt3: "1 Music Video & non-profit shows",
     lic_1_btn: "Select Basic",
 
     // License 2 (Standard)
     lic_2_name: "Standard",
     lic_2_format: "WAV + MP3",
-    lic_2_pt1: "Commercial vocal recording permitted",
-    lic_2_pt2: "Up to 5,000 physical copies & downloads",
-    lic_2_pt3: "Up to 100,000 online audio streams",
+    lic_2_pt1: "1 Video & commercial recording",
+    lic_2_pt2: "Up to <strong>5,000 copies</strong> / downloads",
+    lic_2_pt3: "Up to <strong>100,000 streams</strong>",
     lic_2_btn: "Select Standard",
 
     // License 3 (Premium)
     lic_3_name: "Premium",
     lic_3_format: "WAV + STEMS",
-    lic_3_pt1: "Commercial vocal recording permitted",
-    lic_3_pt2: "Up to 10,000 physical copies & downloads",
-    lic_3_pt3: "Up to 500,000 online audio streams",
-    lic_3_pt4: "Separated Studio Stems included",
+    lic_3_pt1: "Radio (2 stations) & paid shows",
+    lic_3_pt2: "Up to <strong>10,000 copies</strong> / downloads",
+    lic_3_pt3: "Up to <strong>500,000 streams</strong>",
+    lic_3_pt4: "<strong>Trackout STEMS</strong> (Separated tracks)",
     lic_3_btn: "Select Premium",
 
     // License 4 (Unlimited)
     lic_4_name: "Unlimited",
     lic_4_format: "WAV + STEMS",
-    lic_4_pt1: "Unlimited online audio streams",
+    lic_4_pt1: "Streams & copies <strong>UNLIMITED</strong>",
     lic_4_pt2: "Unlimited physical copies & distribution",
-    lic_4_pt3: "Unlimited Music Videos & Paid Live Shows",
-    lic_4_pt4: "Separated Studio Stems included",
+    lic_4_pt3: "Radio & videos <strong>UNLIMITED</strong>",
+    lic_4_pt4: "<strong>Trackout STEMS</strong> included",
     lic_4_btn: "Select Unlimited",
 
     // License 5 (Exclusive)
     lic_5_name: "Exclusive",
     lic_5_format: "FULL PRO SESSION",
-    lic_5_pt1: "100% Exclusive ownership of the beat",
-    lic_5_pt2: "Beat permanently removed from store",
-    lic_5_pt3: "Unlimited distribution, radio, sync & media",
+    lic_5_pt1: "<strong>100% Rights and Ownership</strong>",
+    lic_5_pt2: "Immediate removal from public store",
+    lic_5_pt3: "Transfer agreement & full session",
     lic_5_pt4: "Full DAW Session (Pro Tools, Logic, FL)",
     lic_5_btn: "Negotiate Exclusive",
+
+    // FAQ Section
+    faq_badge: "TOTAL TRANSPARENCY",
+    faq_title: "Artist Frequently Asked Questions",
+    faq_q1: "How do I receive the files after payment is complete?",
+    faq_a1: "Delivery is <strong class=\"text-white\">instant and 100% automated</strong> via BeatStars. You will receive direct, untagged download links in your email seconds after completing checkout, alongside the official license agreement.",
+    faq_q2: "What are Stems and why do they matter for my song?",
+    faq_a2: "<strong class=\"text-white\">Stems are the isolated audio tracks</strong> of the beat (kick, snare, 808, synths, guitars, etc.). They allow your mix engineer to sculpt the instrumental around your vocals, adjust individual levels, and achieve a radio-ready commercial sound.",
+    faq_q3: "Can I upgrade my license to a higher tier in the future?",
+    faq_a3: "Absolutely! If you bought a Standard license and your song surpasses stream thresholds, <strong class=\"text-white\">you only pay the difference</strong> to upgrade to Premium or Unlimited. Simply contact us directly via WhatsApp and we will update your contract.",
+
+    // Contact
+    contact_badge: "DIRECT TRANSMISSION",
+    contact_title: "Let's Talk About Your Next Release",
+    contact_sub: "Send your requirements, demo links, or ask about exclusive licenses. Fast and direct response to your inbox.",
+    contact_name_label: "Your Name / Artist Name *",
+    contact_name_ph: "e.g. John Doe / Artist Alias",
+    contact_email_label: "Your Email Address *",
+    contact_email_ph: "e.g. artist@example.com",
+    contact_phone_label: "WhatsApp / Phone",
+    contact_project_label: "Project Type / Inquiry *",
+    contact_msg_label: "Message / Project Details *",
+    contact_msg_ph: "Tell us about your project, target sound, deadlines, or licensing questions...",
+    contact_btn_send: "Send Message →",
+    contact_sending: "Transmitting...",
+    contact_transmitting: "Transmitting package...",
+    contact_success_btn: "Successfully Transmitted!",
+    contact_success_msg: "✓ <strong>Transmission received:</strong> We will contact you as soon as possible.",
+    contact_toast_success: "Transmission successful: Your message was sent to 7lite Music.",
+    contact_error_msg: "✕ <strong>Notice:</strong> Connection error. You can contact us directly via WhatsApp (+504 9870-0953).",
+    contact_toast_error: "Transmission error. Please reach out via WhatsApp or direct email.",
+    wa_default_msg: "Hi 7lite Music, I'd like to inquire about beats and music production projects.",
+    wa_exclusive_msg: "Hi 7lite Music, I'm interested in negotiating Exclusive Rights. Could we coordinate the details?",
+
+    // Dropdown Options
+    opt_exclusive: "Exclusive License / Negotiation",
+    opt_vibes: "Channel Vibes — Smooth R&B",
+    opt_flow: "Channel Flow — Trap & Drill",
+    opt_waves: "Channel Waves — Reggaetón & Afro",
+    opt_custom_prod: "Custom Music Production",
+    opt_other: "Other General Inquiries",
+
+    // Contact Sidebar
+    contact_fast_resp_header: "IMMEDIATE RESPONSE // DIRECT CHANNELS",
+    contact_wa_label: "DIRECT WHATSAPP",
+    contact_email_label_card: "DIRECT EMAIL",
+    contact_ig_label: "OFFICIAL INSTAGRAM",
+    contact_tiktok_label: "OFFICIAL TIKTOK",
+    contact_guarantees_title: "GUARANTEES & OPERATIONS",
+    contact_location_label: "Location:",
+    contact_location_val: "Copán Ruinas, Honduras",
+    contact_delivery_label: "Delivery:",
+    contact_delivery_val: "Instant 24/7 Download",
+    contact_formats_label: "Formats:",
+    contact_formats_val: "MP3, 24-Bit WAV & Stems",
+    contact_payments_label: "Payments:",
+    contact_payments_val: "Cards, PayPal & Bank Transfer",
+    contact_domain_label: "OFFICIAL DOMAIN:",
+
+    // Footer
+    footer_tagline: "\"Sound You Can Feel\" — Fusion of systems engineering, audio precision (zero latency), and street artistry.",
+    footer_domain: "DOMAIN: 7LITEMUSIC.COM",
+    footer_channels_title: "Sound Channels",
+    footer_cat_vibes: "Vibes (Smooth R&B)",
+    footer_cat_flow: "Flow (Trap / Drill)",
+    footer_cat_waves: "Waves (Reggaetón Elite)",
+    footer_catalog_link: "BeatStars Catalog",
+    footer_contact_title: "Technical Contact",
+    footer_location: "Copán Ruinas, Honduras",
+    footer_rights: "© 2026 7lite Music. All Rights Reserved. Engineered with precision.",
+    footer_top: "Back to top ↑",
 
     // Comparison Modal
     modal_badge: "OFFICIAL BEATSTARS SPECIFICATIONS",
@@ -123,7 +210,7 @@ const translations = {
     th_terms: "Terms / Specifications",
     th_basic: "Basic",
     th_standard: "Standard",
-    th_premium: "Premium",
+    th_premium: "Premium ⭐",
     th_unlimited: "Unlimited",
     th_exclusive: "Exclusive",
     row_price: "Official Price",
@@ -138,7 +225,7 @@ const translations = {
     row_store_remove: "Store Removal",
     val_allowed: "Allowed",
     val_none: "None / Not Included",
-    val_unlimited: "Unlimited",
+    val_unlimited: "UNLIMITED",
     val_exclusive_session: "Full Studio Session",
     val_non_profit: "Non-profit only",
     val_for_profit: "Paid / For-profit allowed",
@@ -146,40 +233,17 @@ const translations = {
     val_stations_unlimited: "Unlimited Stations",
     val_remove_yes: "Permanent Removal",
     val_remove_no: "Remains in Store",
-
-    // Contact
-    contact_badge: "● DIRECT COMMUNICATION",
-    contact_title: "Start Your Next Release",
-    contact_sub: "Have questions about licensing, custom productions, mixing, or sound design? Send us a message or reach out on WhatsApp.",
-    contact_form_title: "Transmission Form",
-    contact_form_sub: "Encrypted direct to production studio",
-    contact_name_label: "Your Name / Artist Name *",
-    contact_name_ph: "e.g. John Doe / Artist Alias",
-    contact_email_label: "Your Email Address *",
-    contact_email_ph: "e.g. artist@example.com",
-    contact_project_label: "Project Type / Inquiry *",
-    contact_project_select: "Select an option...",
-    contact_opt_1: "Custom Beat / Exclusive Production",
-    contact_opt_2: "BeatStars License Inquiry",
-    contact_opt_3: "Mixing & Audio Mastering",
-    contact_opt_4: "Commercial Soundtrack / Synchronization",
-    contact_opt_5: "Other Inquiries",
-    contact_msg_label: "Message / Project Details *",
-    contact_msg_ph: "Tell us about your project, target sound, deadlines, or licensing questions...",
-    contact_btn_send: "Send Message →",
-    contact_sending: "Transmitting...",
-    contact_alt_channels: "DIRECT PRODUCTION CHANNELS",
-    contact_btn_email: "Send Direct Email",
-    contact_btn_wa: "Chat on WhatsApp (+504 9870-0953)",
-    contact_social_label: "OFFICIAL PRODUCTION LAB",
-    contact_fast_resp: "Fast response via WhatsApp (Average < 15 min)",
-
-    // Footer
-    footer_rights: "© 2026 7lite Music. All rights reserved. Engineering, sound design and musical architecture.",
-    footer_top: "Top ↑"
+    val_up_to_100k: "Up to 100,000",
+    val_up_to_500k: "Up to 500,000",
+    val_up_to_5k: "Up to 5,000",
+    val_up_to_10k: "Up to 10,000"
   },
 
   es: {
+    // Meta / Document
+    meta_title: "7lite Music — Sonido que se siente | Tienda Oficial de Beats",
+    meta_desc: "7lite Music: Fusión de ingeniería, código y arte callejero. Catálogo oficial de instrumentales de alta precisión técnica: Vibes (R&B), Flow (Trap/Drill) y Waves (Reggaetón).",
+
     // Nav
     nav_logo_sub: "Ingeniería de Audio",
     nav_canales: "Canales",
@@ -196,18 +260,23 @@ const translations = {
     nav_sfx_off: "SFX: OFF",
 
     // Hero
-    hero_badge: "● PRODUCCIÓN DE AUDIO HIGH-FIDELITY",
-    hero_title_1: "SONIDO QUIRÚRGICO.",
-    hero_title_2: "MÁXIMO IMPACTO.",
-    hero_sub: "Instrumentales modernas diseñadas para vocalistas, artistas y creadores de contenido que exigen claridad internacional, pegada contundente y prestigio sonoro.",
-    hero_btn_catalog: "Explorar Catálogo Oficial ↓",
-    hero_btn_channels: "Direcciones Sonoras (Canales) →",
-    hero_spec_1_title: "24-Bit / 48kHz WAV",
-    hero_spec_1_sub: "Calidad Master Estudio",
-    hero_spec_2_title: "100% Libre de Regalías",
-    hero_spec_2_sub: "Conserva Tus Ganancias",
-    hero_spec_3_title: "Entrega Inmediata",
-    hero_spec_3_sub: "Descarga Digital Inmediata",
+    hero_scramble_1: "SONIDO QUE",
+    hero_scramble_2: "SE SIENTE.",
+    hero_sub: "Instrumentales de alto calibre producidas con precisión técnica y listas para romper en plataformas.",
+    hero_btn_explore: "Explorar Beats",
+    hero_btn_exclusive: "Consultar Exclusivas",
+
+    // Marquee Tickers
+    ticker_zero_latency: "CERO LATENCIA",
+    ticker_audio_master: "AUDIO MASTER 24-BIT / 96kHz",
+    ticker_instant_dl: "DESCARGA INMEDIATA SIN VOCAL TAGS",
+    ticker_produced_in: "PRODUCIDO EN COPÁN RUINAS",
+    ticker_royalty_ready: "ROYALTY COMPOSITION READY",
+    ticker_official_lic: "LICENCIAS OFICIALES",
+    ticker_wav_master: "WAV MASTER 24-BIT",
+    ticker_stems_available: "TRACKOUT STEMS DISPONIBLES",
+    ticker_royalties_artist: "100% REGALÍAS PARA EL ARTISTA",
+    ticker_downloadable_contract: "CONTRATO INMEDIATO DESCARGABLE",
 
     // Channels
     canales_badge: "● DIRECCIONES SONORAS",
@@ -230,64 +299,142 @@ const translations = {
     canal_3_btn: "Visitar @7litemusicwaves",
 
     // Catalog
-    catalog_badge: "● TIENDA OFICIAL",
-    catalog_title: "Catálogo Oficial",
-    catalog_sub: "Búsqueda instantánea, selección de licencias y entrega automatizada de contratos desde nuestro reproductor oficial.",
-    catalog_ticker: "/// ENTREGA INMEDIATA AUTOMATIZADA /// COMERCIO 100% LIBRE DE REGALÍAS /// SPOTIFY • APPLE MUSIC • TIKTOK • YOUTUBE /// CONTRATO INMEDIATO DESCARGABLE ///",
+    catalog_badge: "CATÁLOGO OFICIAL EN VIVO",
+    catalog_title: "Beat Store Oficial",
+    catalog_sub: "Escucha en tiempo real, añade al carrito y descarga tus archivos limpios sin tags de voz al instante de forma automatizada y segura.",
+    catalog_payment_note: "Aceptamos Tarjeta de Crédito/Débito, PayPal y transferencias seguras.",
+    catalog_license_details_link: "Consultar detalles de cada tipo de licencia &rarr;",
 
     // Licenses
     licenses_badge: "● DERECHOS CLAROS",
     licenses_title: "Guía de Licencias & Precios",
     licenses_sub: "Elige el nivel perfecto para tus metas. Mantén el 100% de tus regalías de composición según los términos acordados.",
-    licenses_btn_compare: "Comparar las 5 Licencias en Pantalla Completa →",
+    licenses_btn_compare: "Comparar las 5 Licencias en Pantalla Completa &rarr;",
     lic_most_popular: "MÁS POPULAR",
-    lic_studio_pro: "ESTUDIO PRO",
+    lic_tier_entry: "Entrada",
+    lic_tier_starter: "Starter",
+    lic_tier_pro: "Estudio Pro",
+    lic_tier_unlimited: "Sin Techo",
+    lic_tier_ownership: "Propiedad",
+    lic_format_pro: "SESIÓN PRO",
     lic_select: "Elegir",
     lic_negotiate: "Negociar",
-    lic_view_terms: "Ver términos completos &rarr;",
+    lic_view_terms: "Ver términos completos",
+    lic_per_beat: "/ beat",
 
     // License 1 (Basic)
     lic_1_name: "Básica",
     lic_1_format: "MP3",
-    lic_1_pt1: "Grabación vocal comercial permitida",
-    lic_1_pt2: "0 copias físicas / 0 streams (maqueta)",
-    lic_1_pt3: "1 Video Musical / En vivo no lucrativo",
+    lic_1_pt1: "Grabación vocal comercial",
+    lic_1_pt2: "0 streams / 0 copias (Maquetas)",
+    lic_1_pt3: "1 Video & shows no lucrativos",
     lic_1_btn: "Elegir Básica",
 
     // License 2 (Standard)
     lic_2_name: "Estándar",
     lic_2_format: "WAV + MP3",
-    lic_2_pt1: "Grabación vocal comercial permitida",
-    lic_2_pt2: "Hasta 5,000 copias físicas / descargas",
-    lic_2_pt3: "Hasta 100,000 streams de audio online",
+    lic_2_pt1: "1 Video & grabación comercial",
+    lic_2_pt2: "Hasta <strong>5,000 copias</strong> / descargas",
+    lic_2_pt3: "Hasta <strong>100,000 streams</strong>",
     lic_2_btn: "Elegir Estándar",
 
     // License 3 (Premium)
     lic_3_name: "Premium",
     lic_3_format: "WAV + STEMS",
-    lic_3_pt1: "Grabación vocal comercial permitida",
-    lic_3_pt2: "Hasta 10,000 copias físicas / descargas",
-    lic_3_pt3: "Hasta 500,000 streams de audio online",
-    lic_3_pt4: "Pistas separadas (Trackout) incluidas",
+    lic_3_pt1: "Radio (2 estaciones) & shows con lucro",
+    lic_3_pt2: "Hasta <strong>10,000 copias</strong> / descargas",
+    lic_3_pt3: "Hasta <strong>500,000 streams</strong>",
+    lic_3_pt4: "<strong>Trackout STEMS</strong> (Pistas separadas)",
     lic_3_btn: "Elegir Premium",
 
     // License 4 (Unlimited)
     lic_4_name: "Ilimitada",
     lic_4_format: "WAV + STEMS",
-    lic_4_pt1: "Streams de audio online ilimitados",
+    lic_4_pt1: "Streams & copias <strong>ILIMITADOS</strong>",
     lic_4_pt2: "Copias físicas y distribución ilimitadas",
-    lic_4_pt3: "Videos musicales ilimitados / Shows pagos",
-    lic_4_pt4: "Pistas separadas (Trackout) incluidas",
+    lic_4_pt3: "Radio & videos <strong>ILIMITADOS</strong>",
+    lic_4_pt4: "<strong>Trackout STEMS</strong> incluidos",
     lic_4_btn: "Elegir Ilimitada",
 
     // License 5 (Exclusive)
     lic_5_name: "Exclusiva",
     lic_5_format: "SESIÓN COMPLETA",
-    lic_5_pt1: "Propiedad exclusiva 100% de la instrumental",
-    lic_5_pt2: "Retiro permanente de la tienda / catálogo",
-    lic_5_pt3: "Distribución, radio, sync y medios ilimitados",
+    lic_5_pt1: "<strong>100% Derechos y Propiedad</strong>",
+    lic_5_pt2: "Retiro inmediato de tienda pública",
+    lic_5_pt3: "Contrato de cesión & sesión completa",
     lic_5_pt4: "Sesión completa DAW (Pro Tools, FL Studio)",
     lic_5_btn: "Negociar Exclusiva",
+
+    // FAQ Section
+    faq_badge: "TRANSPARENCIA TOTAL",
+    faq_title: "Preguntas Frecuentes de Artistas",
+    faq_q1: "¿Cómo recibo los archivos una vez completado el pago?",
+    faq_a1: "La entrega es <strong class=\"text-white\">inmediata y 100% automatizada</strong> a través de BeatStars. Recibirás los enlaces de descarga directa sin tags de voz en tu correo electrónico segundos después de completar tu pago, junto con el contrato oficial de licencia.",
+    faq_q2: "¿Qué son los Stems y por qué convienen para mi canción?",
+    faq_a2: "Los <strong class=\"text-white\">Stems son los canales de audio aislados</strong> del beat (bombo, caja, 808, sintetizadores, guitarras, etc.). Permiten a tu ingeniero de mezcla moldear la instrumental alrededor de tu voz, ajustar niveles individuales y lograr un acabado comercial insuperable para plataformas.",
+    faq_q3: "¿Puedo actualizar mi licencia a un nivel superior en el futuro?",
+    faq_a3: "¡Totalmente! Si compraste una licencia Estándar y tu canción supera los 50,000 streams, <strong class=\"text-white\">solo pagas la diferencia</strong> para subir a Premium o Ilimitada. Solo escríbenos directamente por WhatsApp y actualizamos tu contrato.",
+
+    // Contact
+    contact_badge: "TRANSMISIÓN DIRECTA",
+    contact_title: "Hablemos de tu próximo lanzamiento",
+    contact_sub: "Envía tus requerimientos, enlaces a maquetas o consulta sobre licencias exclusivas. Respuesta rápida y directa a tu bandeja de entrada.",
+    contact_name_label: "Tu Nombre / Nombre Artístico *",
+    contact_name_ph: "Ej. Jon Doe / Tu alias artístico",
+    contact_email_label: "Correo Electrónico *",
+    contact_email_ph: "tu@email.com",
+    contact_phone_label: "WhatsApp / Teléfono",
+    contact_project_label: "Tipo de Proyecto / Consulta *",
+    contact_msg_label: "Mensaje / Detalles del Proyecto *",
+    contact_msg_ph: "Cuéntanos sobre tu proyecto, estilo buscado, plazos o dudas de licencias...",
+    contact_btn_send: "Enviar Mensaje →",
+    contact_sending: "Transmitiendo...",
+    contact_transmitting: "Transmitiendo paquete...",
+    contact_success_btn: "¡Transmitido con Éxito!",
+    contact_success_msg: "✓ <strong>Transmisión recibida:</strong> Nos pondremos en contacto contigo a la brevedad posible.",
+    contact_toast_success: "Transmisión exitosa: Tu mensaje ha sido enviado a 7lite Music.",
+    contact_error_msg: "✕ <strong>Aviso:</strong> Error de conexión. Puedes contactarnos directamente por WhatsApp (+504 9870-0953).",
+    contact_toast_error: "Error en la transmisión. Intenta vía WhatsApp o email directo.",
+    wa_default_msg: "Hola 7lite Music, me gustaría consultar sobre beats y proyectos de producción musical.",
+    wa_exclusive_msg: "Hola 7lite Music, me interesa negociar los derechos de la Licencia Exclusiva. ¿Podríamos coordinar los detalles?",
+
+    // Dropdown Options
+    opt_exclusive: "Licencia Exclusiva / Negociación",
+    opt_vibes: "Canal Vibes — Smooth R&B",
+    opt_flow: "Canal Flow — Trap & Drill",
+    opt_waves: "Canal Waves — Reggaetón & Afro",
+    opt_custom_prod: "Producción Musical a Medida",
+    opt_other: "Otra Consulta General",
+
+    // Contact Sidebar
+    contact_fast_resp_header: "RESPUESTA INMEDIATA // CANALES DIRECTOS",
+    contact_wa_label: "WHATSAPP DIRECTO",
+    contact_email_label_card: "CORREO ELECTRÓNICO",
+    contact_ig_label: "INSTAGRAM OFICIAL",
+    contact_tiktok_label: "TIKTOK OFICIAL",
+    contact_guarantees_title: "GARANTÍAS Y OPERACIONES",
+    contact_location_label: "Ubicación:",
+    contact_location_val: "Copán Ruinas, Honduras",
+    contact_delivery_label: "Entrega:",
+    contact_delivery_val: "Descarga instantánea 24/7",
+    contact_formats_label: "Formatos:",
+    contact_formats_val: "MP3, WAV 24-Bit y Stems",
+    contact_payments_label: "Pagos:",
+    contact_payments_val: "Tarjeta, PayPal y Transferencia",
+    contact_domain_label: "DOMINIO OFICIAL:",
+
+    // Footer
+    footer_tagline: "\"Sonido que se siente\" — Fusión entre ingeniería en sistemas, precisión técnica (cero latencia) y arte callejero.",
+    footer_domain: "DOMINIO: 7LITEMUSIC.COM",
+    footer_channels_title: "Canales Sonoros",
+    footer_cat_vibes: "Vibes (Smooth R&B)",
+    footer_cat_flow: "Flow (Trap / Drill)",
+    footer_cat_waves: "Waves (Reggaetón Elite)",
+    footer_catalog_link: "Catálogo BeatStars",
+    footer_contact_title: "Contacto Técnico",
+    footer_location: "Copán Ruinas, Honduras",
+    footer_rights: "© 2026 7lite Music. Todos los derechos reservados. Ingeniería, diseño sonoro y arquitectura musical.",
+    footer_top: "Subir al inicio ↑",
 
     // Comparison Modal
     modal_badge: "ESPECIFICACIONES OFICIALES BEATSTARS",
@@ -297,7 +444,7 @@ const translations = {
     th_terms: "Términos / Derechos",
     th_basic: "Básica",
     th_standard: "Estándar",
-    th_premium: "Premium",
+    th_premium: "Premium ⭐",
     th_unlimited: "Ilimitada",
     th_exclusive: "Exclusiva",
     row_price: "Precio Oficial",
@@ -312,7 +459,7 @@ const translations = {
     row_store_remove: "Retiro de Tienda",
     val_allowed: "Permitido",
     val_none: "Ninguno / No Incluido",
-    val_unlimited: "Ilimitado",
+    val_unlimited: "ILIMITADO",
     val_exclusive_session: "Sesión de Estudio Completa",
     val_non_profit: "Solo No Lucrativas",
     val_for_profit: "Permitido (Pagadas / Con Fines de Lucro)",
@@ -320,45 +467,18 @@ const translations = {
     val_stations_unlimited: "Emisoras Ilimitadas",
     val_remove_yes: "Retiro Permanente",
     val_remove_no: "Permanece en Tienda",
-
-    // Contact
-    contact_badge: "● COMUNICACIÓN DIRECTA",
-    contact_title: "Inicia Tu Próximo Lanzamiento",
-    contact_sub: "¿Tienes dudas sobre licencias, producciones personalizadas, mezcla o diseño sonoro? Envíanos un mensaje o contáctanos por WhatsApp.",
-    contact_form_title: "Formulario de Transmisión",
-    contact_form_sub: "Encriptado directo a producción",
-    contact_name_label: "Tu Nombre / Nombre Artístico *",
-    contact_name_ph: "Ej. Jon Doe / Tu alias artístico",
-    contact_email_label: "Correo Electrónico *",
-    contact_email_ph: "tu@email.com",
-    contact_project_label: "Tipo de Proyecto / Consulta *",
-    contact_project_select: "Selecciona una opción...",
-    contact_opt_1: "Beat Personalizado / Producción Exclusiva",
-    contact_opt_2: "Consulta sobre Licencias BeatStars",
-    contact_opt_3: "Mezcla & Masterización de Audio",
-    contact_opt_4: "Banda Sonora Comercial / Sincronización",
-    contact_opt_5: "Otras Consultas",
-    contact_msg_label: "Mensaje / Detalles del Proyecto *",
-    contact_msg_ph: "Cuéntanos sobre tu proyecto, estilo buscado, plazos o dudas de licencias...",
-    contact_btn_send: "Enviar Mensaje →",
-    contact_sending: "Transmitiendo...",
-    contact_alt_channels: "CANALES DE PRODUCCIÓN DIRECTA",
-    contact_btn_email: "Enviar Correo Directo",
-    contact_btn_wa: "Escribir a WhatsApp (+504 9870-0953)",
-    contact_social_label: "LABORATORIO OFICIAL DE PRODUCCIÓN",
-    contact_fast_resp: "Respuesta rápida por WhatsApp (Promedio < 15 min)",
-
-    // Footer
-    footer_rights: "© 2026 7lite Music. Todos los derechos reservados. Ingeniería, diseño sonoro y arquitectura musical.",
-    footer_top: "Inicio ↑"
+    val_up_to_100k: "Hasta 100,000",
+    val_up_to_500k: "Hasta 500,000",
+    val_up_to_5k: "Hasta 5,000",
+    val_up_to_10k: "Hasta 10,000"
   }
 };
 
 /**
  * Determine initial language:
- * 1. Saved user preference in localStorage
- * 2. If browser language is Spanish ('es'), use 'es'
- * 3. Default to 'en'
+ * 1. Saved user preference in localStorage ('en' or 'es')
+ * 2. If browser language starts with 'es', use 'es'
+ * 3. Default: 'en'
  */
 function detectPreferredLanguage() {
   const saved = localStorage.getItem('7lite_lang');
@@ -369,7 +489,7 @@ function detectPreferredLanguage() {
   if (browserLang.startsWith('es')) {
     return 'es';
   }
-  return 'en'; // Default is English
+  return 'en'; // English is default
 }
 
 let currentLanguage = detectPreferredLanguage();
@@ -386,6 +506,10 @@ function applyTranslations(lang) {
     const key = el.getAttribute('data-i18n');
     if (t[key] !== undefined) {
       el.innerHTML = t[key];
+      // Keep scramble elements in sync
+      if (el.classList.contains('text-scramble')) {
+        el.setAttribute('data-original-text', t[key]);
+      }
     }
   });
 
@@ -409,11 +533,25 @@ function applyTranslations(lang) {
   // 4. Update desktop & mobile switchers
   updateSwitcherUI(lang);
 
-  // 5. Update dropdown placeholder if not customized
+  // 5. Update dropdown active label and custom options
   const selectedText = document.getElementById('selected-option-text');
   const projectInput = document.getElementById('contact-project-input');
-  if (selectedText && (!projectInput || !projectInput.value)) {
-    selectedText.textContent = t.contact_project_select;
+  
+  // If an option is selected, update its label according to current language
+  if (projectInput && selectedText) {
+    const activeVal = projectInput.value;
+    const optionMap = {
+      'Licencia Exclusiva': 'opt_exclusive',
+      'Canal Vibes (Smooth R&B)': 'opt_vibes',
+      'Canal Flow (Trap/Drill)': 'opt_flow',
+      'Canal Waves (Reggaetón/Afro)': 'opt_waves',
+      'Producción a Medida': 'opt_custom_prod',
+      'Otra Consulta': 'opt_other'
+    };
+    const key = optionMap[activeVal];
+    if (key && t[key]) {
+      selectedText.textContent = t[key];
+    }
   }
 
   // 6. Broadcast event for other modules
@@ -474,6 +612,7 @@ function initLanguageEngine() {
 }
 
 // Expose globals
+window.translations = translations;
 window.currentLanguage = currentLanguage;
 window.applyTranslations = applyTranslations;
 window.initLanguageEngine = initLanguageEngine;

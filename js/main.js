@@ -346,7 +346,8 @@ function initWhatsAppHandlers() {
   const phoneNumber = '50498700953';
 
   window.open7liteWhatsApp = function(customText) {
-    const defaultText = 'Hola 7lite Music, me gustaría consultar sobre beats y proyectos de producción musical.';
+    const t = (window.translations && window.currentLanguage) ? window.translations[window.currentLanguage] : null;
+    const defaultText = (t && t.wa_default_msg) ? t.wa_default_msg : "Hi 7lite Music, I'd like to inquire about beats and music production projects.";
     const textToSend = encodeURIComponent(customText || defaultText);
     const waUrl = `https://wa.me/${phoneNumber}?text=${textToSend}`;
     window.open(waUrl, '_blank', 'noopener,noreferrer');
@@ -356,8 +357,8 @@ function initWhatsAppHandlers() {
   exclusiveButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const beatName = btn.getAttribute('data-beat') || 'un beat';
-      const msg = `Hola 7lite Music, me interesa negociar los derechos de la Licencia Exclusiva para ${beatName}. ¿Podríamos coordinar los detalles?`;
+      const t = (window.translations && window.currentLanguage) ? window.translations[window.currentLanguage] : null;
+      const msg = (t && t.wa_exclusive_msg) ? t.wa_exclusive_msg : "Hi 7lite Music, I'm interested in negotiating Exclusive Rights. Could we coordinate the details?";
       window.open7liteWhatsApp(msg);
     });
   });
@@ -431,10 +432,11 @@ function initContactForm() {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    const t = (window.translations && window.currentLanguage) ? window.translations[window.currentLanguage] : null;
     const originalText = submitBtnText.textContent;
     submitBtn.disabled = true;
     submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
-    submitBtnText.textContent = 'Transmitiendo paquete...';
+    submitBtnText.textContent = (t && t.contact_transmitting) ? t.contact_transmitting : 'Transmitting package...';
 
     if (statusBox) {
       statusBox.className = 'hidden text-xs font-mono px-4 py-2.5 rounded-lg border';
@@ -453,14 +455,14 @@ function initContactForm() {
 
       if (response.ok) {
         form.reset();
-        submitBtnText.textContent = '¡Transmitido con Éxito!';
+        submitBtnText.textContent = (t && t.contact_success_btn) ? t.contact_success_btn : 'Successfully Transmitted!';
         
         if (statusBox) {
           statusBox.className = 'block text-xs font-mono px-4 py-2.5 rounded-lg border border-[#4EFFAE]/30 bg-[#4EFFAE]/10 text-[#4EFFAE]';
-          statusBox.innerHTML = '✓ <strong>Transmisión recibida:</strong> Nos pondremos en contacto contigo a la brevedad posible.';
+          statusBox.innerHTML = (t && t.contact_success_msg) ? t.contact_success_msg : '✓ <strong>Transmission received:</strong> We will contact you as soon as possible.';
         }
 
-        showAudioToast('Transmisión exitosa: Tu mensaje ha sido enviado a 7lite Music.');
+        showAudioToast((t && t.contact_toast_success) ? t.contact_toast_success : 'Transmission successful: Your message was sent to 7lite Music.');
 
         setTimeout(() => {
           submitBtn.disabled = false;
@@ -471,7 +473,7 @@ function initContactForm() {
         const data = await response.json();
         const errorMessage = data && data.errors && data.errors.length 
           ? data.errors.map(err => err.message).join(', ') 
-          : 'Error al enviar el formulario.';
+          : 'Error sending message.';
         
         throw new Error(errorMessage);
       }
@@ -480,12 +482,13 @@ function initContactForm() {
       submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
       submitBtnText.textContent = originalText;
 
+      const fallbackErr = (t && t.contact_error_msg) ? t.contact_error_msg : '✕ <strong>Notice:</strong> Connection error. You can contact us directly via WhatsApp (+504 9870-0953).';
       if (statusBox) {
         statusBox.className = 'block text-xs font-mono px-4 py-2.5 rounded-lg border border-red-500/30 bg-red-500/10 text-red-400';
-        statusBox.innerHTML = `✕ <strong>Aviso:</strong> ${err.message || 'Error de conexión'}. Puedes contactarnos directamente por WhatsApp (+504 9870-0953).`;
+        statusBox.innerHTML = err.message && err.message !== 'Failed to fetch' ? `✕ <strong>Notice:</strong> ${err.message}` : fallbackErr;
       }
 
-      showAudioToast('Error en la transmisión. Intenta vía WhatsApp o email directo.');
+      showAudioToast((t && t.contact_toast_error) ? t.contact_toast_error : 'Transmission error. Please reach out via WhatsApp or direct email.');
     }
   });
 }
@@ -509,15 +512,20 @@ function initUISoundFX() {
 
   function updateToggleUI() {
     if (!led || !label) return;
+    const t = (window.translations && window.currentLanguage) ? window.translations[window.currentLanguage] : null;
     if (uiSoundEnabled) {
       led.className = 'w-1.5 h-1.5 rounded-full bg-[#4EFFAE] animate-pulse';
-      label.textContent = 'SFX: ON';
+      label.textContent = (t && t.nav_sfx_on) ? t.nav_sfx_on : 'SFX: ON';
     } else {
       led.className = 'w-1.5 h-1.5 rounded-full bg-[#666666]';
-      label.textContent = 'SFX: OFF';
+      label.textContent = (t && t.nav_sfx_off) ? t.nav_sfx_off : 'SFX: OFF';
     }
   }
   updateToggleUI();
+
+  window.addEventListener('languagechange', () => {
+    updateToggleUI();
+  });
 
   if (toggleBtn) {
     toggleBtn.addEventListener('click', (e) => {
@@ -683,11 +691,11 @@ function initCustomDropdowns() {
       opt.addEventListener('click', (e) => {
         e.stopPropagation();
         const value = opt.getAttribute('data-value');
-        const label = opt.getAttribute('data-label') || value;
+        const localizedText = opt.querySelector('[data-i18n]')?.textContent || opt.getAttribute('data-label') || value;
         const dotColor = opt.getAttribute('data-dot') || '#00BFFF';
 
         hiddenInput.value = value;
-        if (labelText) labelText.textContent = label;
+        if (labelText) labelText.textContent = localizedText;
         if (labelDot) labelDot.style.backgroundColor = dotColor;
 
         options.forEach(o => {
