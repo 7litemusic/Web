@@ -1235,10 +1235,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       
       <!-- Top Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
         
         <!-- Brand Summary -->
-        <div class="md:col-span-2">
+        <div class="sm:col-span-2 lg:col-span-1">
           <div class="flex items-center gap-3 mb-4">
             <div class="w-8 h-8 flex-shrink-0 flex items-center justify-center">
               <img src="assets/Elite%20Mu7ic%20SVG%20Logo%20White.svg" alt="7lite Music Logo" class="w-full h-full object-contain">
@@ -1268,6 +1268,35 @@
             <li><a href="#canales" class="hover:text-[#00BFFF] transition-colors" data-i18n="footer_cat_flow">Flow (Trap / Drill)</a></li>
             <li><a href="#canales" class="hover:text-[#a074ff] transition-colors" data-i18n="footer_cat_waves">Waves (Reggaetón Elite)</a></li>
             <li><a href="#catalogo" class="hover:text-white transition-colors" data-i18n="footer_catalog_link">BeatStars Catalog</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal & Policies -->
+        <div>
+          <h4 class="font-heading font-bold text-xs uppercase tracking-wider text-white mb-4" data-i18n="footer_legal_title">
+            Legal & Policies
+          </h4>
+          <ul class="space-y-2.5 text-xs text-[#888888]">
+            <li>
+              <button type="button" class="btn-open-legal hover:text-white transition-colors text-left" data-tab="privacy" data-i18n="footer_legal_privacy">
+                Privacy Policy
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn-open-legal hover:text-white transition-colors text-left" data-tab="terms" data-i18n="footer_legal_terms">
+                Terms of Service
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn-open-legal hover:text-white transition-colors text-left" data-tab="refunds" data-i18n="footer_legal_refunds">
+                Refund Policy
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn-open-legal hover:text-white transition-colors text-left" data-tab="licensing" data-i18n="footer_legal_licensing">
+                Licensing Disclaimer
+              </button>
+            </li>
           </ul>
         </div>
 
@@ -1306,11 +1335,20 @@
       </div>
 
       <!-- Bottom Bar -->
-      <div class="pt-8 border-t border-[#262626] flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="pt-8 border-t border-[#262626] flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#666666]">
         
-        <p class="text-xs text-[#666666]" data-i18n="footer_rights">
+        <p data-i18n="footer_rights">
           &copy; 2026 7lite Music. All Rights Reserved. Engineered with precision.
         </p>
+
+        <!-- Quick Inline Legal Links -->
+        <div class="flex items-center gap-3 text-[11px] font-mono">
+          <button type="button" class="btn-open-legal hover:text-[#00BFFF] transition-colors" data-tab="privacy" data-i18n="footer_quick_privacy">Privacy Policy</button>
+          <span class="text-neutral-700">•</span>
+          <button type="button" class="btn-open-legal hover:text-[#00BFFF] transition-colors" data-tab="terms" data-i18n="footer_quick_terms">Terms of Service</button>
+          <span class="text-neutral-700">•</span>
+          <button type="button" class="btn-open-legal hover:text-[#00BFFF] transition-colors" data-tab="refunds" data-i18n="footer_quick_refunds">Refund Policy</button>
+        </div>
 
         <!-- Back to Top Button -->
         <button id="back-to-top-btn" 
@@ -1489,6 +1527,145 @@
             </tr>
           </tbody>
         </table>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       LEGAL DOCUMENTATION & POLICIES MODAL
+       ========================================================================= -->
+  <div id="legal-modal" 
+       class="fixed inset-0 z-[100] bg-black/85 backdrop-blur-2xl flex items-center justify-center p-3 sm:p-6 opacity-0 pointer-events-none transition-all duration-300" 
+       role="dialog" 
+       aria-modal="true" 
+       aria-labelledby="modal-legal-title">
+    
+    <div class="max-w-4xl w-full max-h-[90vh] bg-[#161616] border border-[#333333] rounded-3xl p-5 sm:p-8 flex flex-col shadow-2xl relative overflow-hidden">
+      
+      <!-- Modal Header -->
+      <div class="flex items-start justify-between gap-4 pb-4 border-b border-[#262626] flex-shrink-0">
+        <div>
+          <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-[#1F1F1F] border border-[#333333] text-[10px] font-mono text-[#00BFFF] uppercase tracking-wider mb-2">
+            <span data-i18n="legal_badge">LEGAL FRAMEWORK & COMPLIANCE</span>
+          </div>
+          <h3 id="modal-legal-title" class="font-heading font-black text-xl sm:text-2xl text-white uppercase tracking-tight" data-i18n="legal_title">
+            Legal Documentation & Policies
+          </h3>
+          <p class="text-xs text-[#888888] mt-1" data-i18n="legal_sub">
+            Transparency, data security, and official licensing terms for 7lite Music.
+          </p>
+        </div>
+
+        <!-- Close Button -->
+        <button id="btn-close-legal-modal" 
+                class="p-2 sm:p-2.5 rounded-xl bg-[#222222] border border-[#383838] hover:border-white text-neutral-400 hover:text-white transition-all focus:outline-none flex-shrink-0" 
+                aria-label="Close legal modal">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Tab Buttons Navigation -->
+      <div class="flex items-center gap-2 pt-4 pb-3 overflow-x-auto flex-shrink-0 border-b border-[#222222] scrollbar-none" role="tablist">
+        <button type="button" class="legal-tab-btn px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all bg-[#00BFFF] text-black shadow-sm" data-tab="privacy" role="tab" aria-selected="true" data-i18n="tab_privacy">
+          Privacy Policy
+        </button>
+        <button type="button" class="legal-tab-btn px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all bg-[#222222] text-[#888888] hover:text-white" data-tab="terms" role="tab" aria-selected="false" data-i18n="tab_terms">
+          Terms of Service
+        </button>
+        <button type="button" class="legal-tab-btn px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all bg-[#222222] text-[#888888] hover:text-white" data-tab="refunds" role="tab" aria-selected="false" data-i18n="tab_refunds">
+          Refund Policy
+        </button>
+        <button type="button" class="legal-tab-btn px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all bg-[#222222] text-[#888888] hover:text-white" data-tab="licensing" role="tab" aria-selected="false" data-i18n="tab_licensing">
+          Licensing Disclaimer
+        </button>
+      </div>
+
+      <!-- Tab Contents (Scrollable Container) -->
+      <div class="overflow-y-auto mt-4 pr-2 flex-grow space-y-6 text-xs text-neutral-300 leading-relaxed font-body">
+        
+        <!-- Panel 1: Privacy Policy -->
+        <div id="panel-privacy" class="legal-tab-panel space-y-4">
+          <p class="text-sm text-white font-medium bg-[#1F1F1F] p-4 rounded-xl border border-[#333333]" data-i18n="legal_privacy_intro">
+            At 7lite Music, we treat your privacy and personal data with the same uncompromising precision as our audio engineering. This policy describes how we collect, handle, and safeguard your information.
+          </p>
+          <div class="space-y-2">
+            <h4 class="font-heading font-bold text-sm uppercase text-[#00BFFF]" data-i18n="legal_privacy_h1">1. Information We Collect</h4>
+            <p data-i18n="legal_privacy_p1">When you contact us using our Transmission Form or directly via WhatsApp/Email, we collect the details you provide: your name or artist alias, email address, phone number, and project notes. This information is utilized solely to communicate regarding production inquiries, audio engineering jobs, or licensing consultations.</p>
+          </div>
+          <div class="space-y-2">
+            <h4 class="font-heading font-bold text-sm uppercase text-[#00BFFF]" data-i18n="legal_privacy_h2">2. Payments & Transaction Security</h4>
+            <p data-i18n="legal_privacy_p2">All digital license sales and monetary transactions are handled externally and securely by BeatStars Inc. via certified payment processors (Stripe and PayPal with Level 1 PCI-DSS compliance). 7lite Music does not collect, process, or store your credit card or financial information.</p>
+          </div>
+          <div class="space-y-2">
+            <h4 class="font-heading font-bold text-sm uppercase text-[#00BFFF]" data-i18n="legal_privacy_h3">3. Local Storage & Interface State</h4>
+            <p data-i18n="legal_privacy_p3">We do not deploy intrusive tracking cookies or third-party advertising trackers. We utilize browser localStorage exclusively to remember your chosen interface language (English or Spanish) and your sound effects toggle state (SFX On/Off).</p>
+          </div>
+          <div class="space-y-2">
+            <h4 class="font-heading font-bold text-sm uppercase text-[#00BFFF]" data-i18n="legal_privacy_h4">4. Your Rights & Data Deletion</h4>
+            <p data-i18n="legal_privacy_p4">You have the right to request a copy of the communication records we hold about you or request immediate deletion of your contact records. To exercise these rights, email us directly at 7litemusic@gmail.com.</p>
+          </div>
+        </div>
+
+        <!-- Panel 2: Terms of Service -->
+        <div id="panel-terms" class="legal-tab-panel hidden space-y-4">
+          <p class="text-sm text-white font-medium bg-[#1F1F1F] p-4 rounded-xl border border-[#333333]" data-i18n="legal_terms_intro">
+            By browsing 7litemusic.com or purchasing instrumentals produced by 7lite Music, you agree to comply with and be bound by the following Terms of Service.
+          </p>
+          <div class="space-y-2">
+            <h4 class="font-heading font-bold text-sm uppercase text-[#4EFFAE]" data-i18n="legal_terms_h1">1. Instrumental Licensing Nature</h4>
+            <p data-i18n="legal_terms_p1">All non-exclusive instrumentals remains the intellectual property of 7lite Music (producer). Purchasing a license grants you specific commercial usage rights according to the purchased tier (Basic, Standard, Premium, or Unlimited). Full ownership transfer only occurs upon executing an Exclusive License Agreement.</p>
+          </div>
+          <div class="space-y-2">
+            <h4 class="font-heading font-bold text-sm uppercase text-[#4EFFAE]" data-i18n="legal_terms_h2">2. Automated Delivery of Digital Assets</h4>
+            <p data-i18n="legal_terms_p2">Purchases made through our embedded BeatStars store are delivered automatically upon checkout. You will receive untagged, high-definition audio files (MP3, 24-Bit WAV, and/or Trackout STEMS depending on your tier) alongside an official PDF license contract.</p>
+          </div>
+          <div class="space-y-2">
+            <h4 class="font-heading font-bold text-sm uppercase text-[#4EFFAE]" data-i18n="legal_terms_h3">3. Artist Master & Composition Rights</h4>
+            <p data-i18n="legal_terms_p3">The recording artist retains 100% of the master rights for their vocal performance and lyrics. For non-exclusive licenses, streaming caps and physical distribution allowances apply as defined in our official License Matrix.</p>
+          </div>
+          <div class="space-y-2">
+            <h4 class="font-heading font-bold text-sm uppercase text-[#4EFFAE]" data-i18n="legal_terms_h4">4. Prohibited Uses</h4>
+            <p data-i18n="legal_terms_p4">You may not re-sell, loan, rent, or distribute raw instrumental files, isolated stems, or sample packs. Non-exclusive licensees may not register instrumentals with automated Content ID or audio fingerprinting databases without vocals.</p>
+          </div>
+        </div>
+
+        <!-- Panel 3: Refund Policy -->
+        <div id="panel-refunds" class="legal-tab-panel hidden space-y-4">
+          <p class="text-sm text-white font-medium bg-[#1F1F1F] p-4 rounded-xl border border-[#333333]" data-i18n="legal_refunds_intro">
+            Because 7lite Music provides irrevocable digital audio files, our refund policy reflects industry standards for digital media and downloadable intellectual property.
+          </p>
+          <div class="space-y-2">
+            <h4 class="font-heading font-bold text-sm uppercase text-[#a074ff]" data-i18n="legal_refunds_h1">1. Digital Goods Final Sale Policy</h4>
+            <p data-i18n="legal_refunds_p1">All beat license sales completed via BeatStars are considered final and non-refundable once the download links have been issued, due to the nature of instant delivery digital goods.</p>
+          </div>
+          <div class="space-y-2">
+            <h4 class="font-heading font-bold text-sm uppercase text-[#a074ff]" data-i18n="legal_refunds_h2">2. Corrupted or Defective Files Guarantee</h4>
+            <p data-i18n="legal_refunds_p2">If you experience any technical difficulties with your delivered files (e.g. damaged archive, missing stems, corrupted WAV headers), contact us immediately. We guarantee replacement or direct file transfer within 24 hours.</p>
+          </div>
+          <div class="space-y-2">
+            <h4 class="font-heading font-bold text-sm uppercase text-[#a074ff]" data-i18n="legal_refunds_h3">3. License Upgrades & Price Credit</h4>
+            <p data-i18n="legal_refunds_p3">If your song exceeds the commercial stream threshold of your current license tier, you can upgrade to Premium or Unlimited at any time by paying only the difference in price. Contact us on WhatsApp with your proof of purchase.</p>
+          </div>
+        </div>
+
+        <!-- Panel 4: Licensing Disclaimer -->
+        <div id="panel-licensing" class="legal-tab-panel hidden space-y-4">
+          <p class="text-sm text-white font-medium bg-[#1F1F1F] p-4 rounded-xl border border-[#333333]" data-i18n="legal_licensing_intro">
+            Every instrumental engineered by 7lite Music is constructed with strict legal compliance, ensuring total protection for artists, record labels, and commercial publishers.
+          </p>
+          <div class="space-y-2">
+            <h4 class="font-heading font-bold text-sm uppercase text-[#ffd000]" data-i18n="legal_licensing_h1">1. 100% Royalty-Free Production</h4>
+            <p data-i18n="legal_licensing_p1">All instrumentals are created using original synthesizers, analog processing, and cleared sound libraries. There are zero uncleared vintage vinyl or third-party samples in our catalog.</p>
+          </div>
+          <div class="space-y-2">
+            <h4 class="font-heading font-bold text-sm uppercase text-[#ffd000]" data-i18n="legal_licensing_h2">2. Legally Binding Contracts</h4>
+            <p data-i18n="legal_licensing_p2">Every transaction generates an internationally enforceable PDF agreement generated by BeatStars, detailing your exact stream thresholds, radio allowances, and performance rights.</p>
+          </div>
+        </div>
+
       </div>
 
     </div>

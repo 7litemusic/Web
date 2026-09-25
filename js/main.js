@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initCustomDropdowns();
   initLicenseCompareModal();
+  initLegalModal();
   initBackToTop();
 });
 
@@ -822,6 +823,94 @@ function initLicenseCompareModal() {
   });
 }
 
+/**
+ * Interactive Legal Documentation & Policies Modal
+ */
+function initLegalModal() {
+  const modal = document.getElementById('legal-modal');
+  const closeBtn = document.getElementById('btn-close-legal-modal');
+  const openBtns = document.querySelectorAll('.btn-open-legal');
+  const tabBtns = document.querySelectorAll('.legal-tab-btn');
+  const tabPanels = document.querySelectorAll('.legal-tab-panel');
 
+  if (!modal) return;
 
+  function switchTab(targetTab) {
+    tabBtns.forEach(btn => {
+      const isTarget = btn.getAttribute('data-tab') === targetTab;
+      if (isTarget) {
+        btn.className = 'legal-tab-btn px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all bg-[#00BFFF] text-black shadow-sm';
+        btn.setAttribute('aria-selected', 'true');
+      } else {
+        btn.className = 'legal-tab-btn px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all bg-[#222222] text-[#888888] hover:text-white';
+        btn.setAttribute('aria-selected', 'false');
+      }
+    });
 
+    tabPanels.forEach(panel => {
+      if (panel.id === `panel-${targetTab}`) {
+        panel.classList.remove('hidden');
+      } else {
+        panel.classList.add('hidden');
+      }
+    });
+
+    if (typeof playAnalogClick === 'function') {
+      playAnalogClick(1100, 0.02, 0.03);
+    }
+  }
+
+  function openModal(defaultTab = 'privacy') {
+    switchTab(defaultTab);
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    modal.classList.add('opacity-100');
+    document.body.classList.add('overflow-hidden');
+    if (typeof playAnalogClick === 'function') {
+      playAnalogClick(1200, 0.03, 0.04);
+    }
+  }
+
+  function closeModal() {
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    modal.classList.remove('opacity-100');
+    document.body.classList.remove('overflow-hidden');
+    if (typeof playAnalogClick === 'function') {
+      playAnalogClick(800, 0.02, 0.03);
+    }
+  }
+
+  openBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const tab = btn.getAttribute('data-tab') || 'privacy';
+      openModal(tab);
+    });
+  });
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const tab = btn.getAttribute('data-tab');
+      if (tab) switchTab(tab);
+    });
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeModal();
+    });
+  }
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.classList.contains('pointer-events-none')) {
+      closeModal();
+    }
+  });
+}

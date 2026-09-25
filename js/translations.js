@@ -197,10 +197,66 @@ const translations = {
     footer_cat_flow: "Flow (Trap / Drill)",
     footer_cat_waves: "Waves (Reggaetón Elite)",
     footer_catalog_link: "BeatStars Catalog",
+    footer_legal_title: "Legal & Policies",
+    footer_legal_privacy: "Privacy Policy",
+    footer_legal_terms: "Terms of Service",
+    footer_legal_refunds: "Refund Policy",
+    footer_legal_licensing: "Licensing Disclaimer",
+    footer_quick_privacy: "Privacy Policy",
+    footer_quick_terms: "Terms of Service",
+    footer_quick_refunds: "Refund Policy",
     footer_contact_title: "Technical Contact",
     footer_location: "Copán Ruinas, Honduras",
     footer_rights: "© 2026 7lite Music. All Rights Reserved. Engineered with precision.",
     footer_top: "Back to top ↑",
+
+    // Legal Documentation Modal
+    legal_badge: "LEGAL FRAMEWORK & COMPLIANCE",
+    legal_title: "Legal Documentation & Policies",
+    legal_sub: "Transparency, data security, and official licensing terms for 7lite Music.",
+    legal_btn_close: "Close",
+    tab_privacy: "Privacy Policy",
+    tab_terms: "Terms of Service",
+    tab_refunds: "Refund Policy",
+    tab_licensing: "Licensing Disclaimer",
+
+    // Privacy Policy Content
+    legal_privacy_intro: "At 7lite Music, we treat your privacy and personal data with the same uncompromising precision as our audio engineering. This policy describes how we collect, handle, and safeguard your information.",
+    legal_privacy_h1: "1. Information We Collect",
+    legal_privacy_p1: "When you contact us using our Transmission Form or directly via WhatsApp/Email, we collect the details you provide: your name or artist alias, email address, phone number, and project notes. This information is utilized solely to communicate regarding production inquiries, audio engineering jobs, or licensing consultations.",
+    legal_privacy_h2: "2. Payments & Transaction Security",
+    legal_privacy_p2: "All digital license sales and monetary transactions are handled externally and securely by BeatStars Inc. via certified payment processors (Stripe and PayPal with Level 1 PCI-DSS compliance). 7lite Music does not collect, process, or store your credit card or financial information.",
+    legal_privacy_h3: "3. Local Storage & Interface State",
+    legal_privacy_p3: "We do not deploy intrusive tracking cookies or third-party advertising trackers. We utilize browser localStorage exclusively to remember your chosen interface language (English or Spanish) and your sound effects toggle state (SFX On/Off).",
+    legal_privacy_h4: "4. Your Rights & Data Deletion",
+    legal_privacy_p4: "You have the right to request a copy of the communication records we hold about you or request immediate deletion of your contact records. To exercise these rights, email us directly at 7litemusic@gmail.com.",
+
+    // Terms of Service Content
+    legal_terms_intro: "By browsing 7litemusic.com or purchasing instrumentals produced by 7lite Music, you agree to comply with and be bound by the following Terms of Service.",
+    legal_terms_h1: "1. Instrumental Licensing Nature",
+    legal_terms_p1: "All non-exclusive instrumentals remains the intellectual property of 7lite Music (producer). Purchasing a license grants you specific commercial usage rights according to the purchased tier (Basic, Standard, Premium, or Unlimited). Full ownership transfer only occurs upon executing an Exclusive License Agreement.",
+    legal_terms_h2: "2. Automated Delivery of Digital Assets",
+    legal_terms_p2: "Purchases made through our embedded BeatStars store are delivered automatically upon checkout. You will receive untagged, high-definition audio files (MP3, 24-Bit WAV, and/or Trackout STEMS depending on your tier) alongside an official PDF license contract.",
+    legal_terms_h3: "3. Artist Master & Composition Rights",
+    legal_terms_p3: "The recording artist retains 100% of the master rights for their vocal performance and lyrics. For non-exclusive licenses, streaming caps and physical distribution allowances apply as defined in our official License Matrix.",
+    legal_terms_h4: "4. Prohibited Uses",
+    legal_terms_p4: "You may not re-sell, loan, rent, or distribute raw instrumental files, isolated stems, or sample packs. Non-exclusive licensees may not register instrumentals with automated Content ID or audio fingerprinting databases without vocals.",
+
+    // Refund Policy Content
+    legal_refunds_intro: "Because 7lite Music provides irrevocable digital audio files, our refund policy reflects industry standards for digital media and downloadable intellectual property.",
+    legal_refunds_h1: "1. Digital Goods Final Sale Policy",
+    legal_refunds_p1: "All beat license sales completed via BeatStars are considered final and non-refundable once the download links have been issued, due to the nature of instant delivery digital goods.",
+    legal_refunds_h2: "2. Corrupted or Defective Files Guarantee",
+    legal_refunds_p2: "If you experience any technical difficulties with your delivered files (e.g. damaged archive, missing stems, corrupted WAV headers), contact us immediately. We guarantee replacement or direct file transfer within 24 hours.",
+    legal_refunds_h3: "3. License Upgrades & Price Credit",
+    legal_refunds_p3: "If your song exceeds the commercial stream threshold of your current license tier, you can upgrade to Premium or Unlimited at any time by paying only the difference in price. Contact us on WhatsApp with your proof of purchase.",
+
+    // Licensing Disclaimer Content
+    legal_licensing_intro: "Every instrumental engineered by 7lite Music is constructed with strict legal compliance, ensuring total protection for artists, record labels, and commercial publishers.",
+    legal_licensing_h1: "1. 100% Royalty-Free Production",
+    legal_licensing_p1: "All instrumentals are created using original synthesizers, analog processing, and cleared sound libraries. There are zero uncleared vintage vinyl or third-party samples in our catalog.",
+    legal_licensing_h2: "2. Legally Binding Contracts",
+    legal_licensing_p2: "Every transaction generates an internationally enforceable PDF agreement generated by BeatStars, detailing your exact stream thresholds, radio allowances, and performance rights.",
 
     // Comparison Modal
     modal_badge: "OFFICIAL BEATSTARS SPECIFICATIONS",
@@ -431,10 +487,66 @@ const translations = {
     footer_cat_flow: "Flow (Trap / Drill)",
     footer_cat_waves: "Waves (Reggaetón Elite)",
     footer_catalog_link: "Catálogo BeatStars",
+    footer_legal_title: "Legal & Políticas",
+    footer_legal_privacy: "Política de Privacidad",
+    footer_legal_terms: "Términos de Servicio",
+    footer_legal_refunds: "Política de Reembolsos",
+    footer_legal_licensing: "Aviso de Licenciamiento",
+    footer_quick_privacy: "Política de Privacidad",
+    footer_quick_terms: "Términos de Servicio",
+    footer_quick_refunds: "Política de Reembolsos",
     footer_contact_title: "Contacto Técnico",
     footer_location: "Copán Ruinas, Honduras",
     footer_rights: "© 2026 7lite Music. Todos los derechos reservados. Ingeniería, diseño sonoro y arquitectura musical.",
     footer_top: "Subir al inicio ↑",
+
+    // Legal Documentation Modal
+    legal_badge: "MARCO LEGAL & CUMPLIMIENTO",
+    legal_title: "Documentación Legal & Políticas",
+    legal_sub: "Transparencia, seguridad de datos y términos oficiales de licenciamiento para 7lite Music.",
+    legal_btn_close: "Cerrar",
+    tab_privacy: "Privacidad",
+    tab_terms: "Términos",
+    tab_refunds: "Reembolsos",
+    tab_licensing: "Licencias",
+
+    // Privacy Policy Content
+    legal_privacy_intro: "En 7lite Music tratamos tu privacidad y datos personales con la misma precisión que nuestra ingeniería de audio. Esta política describe cómo recopilamos, gestionamos y protegemos tu información.",
+    legal_privacy_h1: "1. Información que Recopilamos",
+    legal_privacy_p1: "Cuando nos contactas mediante nuestro Formulario de Transmisión o vía WhatsApp/Email, recopilamos los datos que proporcionas: tu nombre o alias artístico, correo electrónico, teléfono y detalles de tu proyecto. Esta información se usa únicamente para coordinar consultas sobre beats, producciones o mezclas.",
+    legal_privacy_h2: "2. Pagos y Seguridad en Transacciones",
+    legal_privacy_p2: "Todas las compras de licencias y transacciones monetarias se gestionan de forma externa y segura a través de BeatStars Inc. mediante pasarelas certificadas (Stripe y PayPal con certificación PCI-DSS Nivel 1). 7lite Music no almacena ni recopila números de tarjetas ni datos bancarios.",
+    legal_privacy_h3: "3. Almacenamiento Local y Estado de Interfaz",
+    legal_privacy_p3: "No utilizamos cookies invasivas ni rastreadores publicitarios de terceros. Empleamos el almacenamiento local del navegador (localStorage) exclusivamente para recordar tu idioma preferido (inglés o español) y el estado del audio de interfaz (SFX Activado/Desactivado).",
+    legal_privacy_h4: "4. Tus Derechos y Supresión de Datos",
+    legal_privacy_p4: "Tienes el derecho de solicitar una copia de las comunicaciones mantenidas o pedir la eliminación inmediata de tus registros de contacto. Para ejercer estos derechos, escríbenos directamente a 7litemusic@gmail.com.",
+
+    // Terms of Service Content
+    legal_terms_intro: "Al navegar en 7litemusic.com o adquirir instrumentales producidas por 7lite Music, aceptas cumplir con los siguientes Términos de Servicio.",
+    legal_terms_h1: "1. Naturaleza de las Licencias",
+    legal_terms_p1: "Todas las instrumentales no exclusivas permanecen como propiedad intelectual de 7lite Music (productor). La adquisición de una licencia te otorga derechos comerciales específicos según el nivel comprado (Básica, Estándar, Premium o Ilimitada). La cesión de propiedad total solo se formaliza mediante Contrato de Licencia Exclusiva.",
+    legal_terms_h2: "2. Entrega Automatizada de Archivos Digitales",
+    legal_terms_p2: "Las compras en nuestra tienda oficial de BeatStars se entregan automáticamente al completar el pago. Recibirás archivos limpios sin tags de voz en alta definición (MP3, WAV 24-Bit y/o STEMS según el nivel) junto a un contrato oficial en PDF.",
+    legal_terms_h3: "3. Regalías del Artista y Composición",
+    legal_terms_p3: "El artista conserva el 100% de los derechos de grabación (Master) sobre sus letras e interpretación vocal. Para licencias no exclusivas, aplican los límites de streams y distribución establecidos en nuestra Matriz de Licencias.",
+    legal_terms_h4: "4. Usos Prohibidos",
+    legal_terms_p4: "No está permitido revender, sublicenciar, alquilar ni distribuir los archivos instrumentales o pistas separadas (stems). Los licenciatarios no exclusivos no deben registrar la pista instrumental aislada en bases de datos automatizadas de Content ID de YouTube sin voces grabadas.",
+
+    // Refund Policy Content
+    legal_refunds_intro: "Dado que 7lite Music comercializa archivos de audio digital de entrega instantánea, nuestra política de reembolsos se ajusta a los estándares globales de productos digitales no revocables.",
+    legal_refunds_h1: "1. Política de Venta Final en Productos Digitales",
+    legal_refunds_p1: "Todas las ventas completadas mediante BeatStars se consideran definitivas y no reembolsables una vez generados y emitidos los enlaces de descarga directa.",
+    legal_refunds_h2: "2. Garantía por Archivos Corruptos o Defectuosos",
+    legal_refunds_p2: "Si presentas inconvenientes técnicos con los archivos entregados (archivo corrupto, pistas faltantes o enlaces rotos), contáctanos de inmediato. Garantizamos el reemplazo o envío directo de archivos en menos de 24 horas por WhatsApp (+504 9870-0953) o email.",
+    legal_refunds_h3: "3. Actualización de Licencias y Crédito de Pago",
+    legal_refunds_p3: "Si tu canción supera el límite de reproducciones de tu licencia actual, puedes subir a Premium o Ilimitada en cualquier momento pagando únicamente la diferencia. Tu pago inicial se acredita íntegramente.",
+
+    // Licensing Disclaimer Content
+    legal_licensing_intro: "Cada instrumental producida por 7lite Music está estructurada bajo riguroso cumplimiento legal, protegiendo a vocalistas, sellos discográficos y creadores de contenido.",
+    legal_licensing_h1: "1. Producción 100% Libre de Regalías de Muestreo",
+    legal_licensing_p1: "Todas las instrumentales se crean mediante diseño sonoro original, síntesis analógica y librerías autorizadas. No contienen samples no autorizados ni grabaciones con derechos de terceros.",
+    legal_licensing_h2: "2. Contratos Legalmente Vinculantes",
+    legal_licensing_p2: "Cada compra genera un contrato formal en PDF emitido por BeatStars con validez internacional que detalla tus límites comerciales, emisiones en radio y presentaciones autorizadas.",
 
     // Comparison Modal
     modal_badge: "ESPECIFICACIONES OFICIALES BEATSTARS",
