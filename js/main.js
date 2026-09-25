@@ -7,14 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
   initInteractiveAudioCanvas();
   initTextScramble();
   initTiltAndSpotlight();
-  initWebAudioPreviews();
   initUISoundFX();
   initLaserHUDCursor();
   initMobileMenu();
   initScrollSpy();
   initSmoothScroll();
   initWhatsAppHandlers();
-  initChannelDirectNav();
   initContactForm();
   initCustomDropdowns();
   initLicenseCompareModal();
@@ -229,147 +227,6 @@ function initTiltAndSpotlight() {
 }
 
 /* ==========================================================================
-   4. WEB AUDIO SYNTHESIZED SOUND BITES (Instant Live Previews)
-   ========================================================================== */
-function initWebAudioPreviews() {
-  let audioCtx = null;
-  let activeChannel = null;
-  let loopInterval = null;
-
-  function getAudioContext() {
-    if (!audioCtx) {
-      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-      audioCtx = new AudioContextClass();
-    }
-    if (audioCtx.state === 'suspended') {
-      audioCtx.resume();
-    }
-    return audioCtx;
-  }
-
-  function playTone(freq, type, duration, startTime, vol = 0.2) {
-    const ctx = getAudioContext();
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
-
-    osc.type = type;
-    osc.frequency.setValueAtTime(freq, startTime);
-
-    gain.gain.setValueAtTime(vol, startTime);
-    gain.gain.exponentialRampToValueAtTime(0.001, startTime + duration);
-
-    osc.connect(gain);
-    gain.connect(ctx.destination);
-
-    osc.start(startTime);
-    osc.stop(startTime + duration);
-  }
-
-  function playSub808(startFreq, endFreq, duration, startTime, vol = 0.4) {
-    const ctx = getAudioContext();
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
-
-    osc.type = 'sine';
-    osc.frequency.setValueAtTime(startFreq, startTime);
-    osc.frequency.exponentialRampToValueAtTime(endFreq, startTime + duration);
-
-    gain.gain.setValueAtTime(vol, startTime);
-    gain.gain.exponentialRampToValueAtTime(0.001, startTime + duration);
-
-    osc.connect(gain);
-    gain.connect(ctx.destination);
-
-    osc.start(startTime);
-    osc.stop(startTime + duration);
-  }
-
-  function triggerVibesPattern() {
-    const ctx = getAudioContext();
-    const now = ctx.currentTime;
-    // Smooth R&B lush chords + soft sub
-    playTone(261.63, 'sine', 0.8, now, 0.15); // C4
-    playTone(329.63, 'sine', 0.8, now, 0.12); // E4
-    playTone(392.00, 'triangle', 0.8, now, 0.1); // G4
-    playSub808(80, 40, 1.2, now + 0.1, 0.25);
-  }
-
-  function triggerFlowPattern() {
-    const ctx = getAudioContext();
-    const now = ctx.currentTime;
-    // Aggressive Trap/Drill sliding 808 sub + metallic hi-hat
-    playSub808(140, 38, 0.9, now, 0.4);
-    // Hi-hat triplet clicks
-    playTone(1200, 'square', 0.04, now, 0.04);
-    playTone(1200, 'square', 0.04, now + 0.15, 0.04);
-    playTone(1200, 'square', 0.04, now + 0.3, 0.04);
-    playTone(1200, 'square', 0.04, now + 0.45, 0.06);
-  }
-
-  function triggerWavesPattern() {
-    const ctx = getAudioContext();
-    const now = ctx.currentTime;
-    // Bouncing Dembow rhythm (Kick, snare syncopation, modern pluck)
-    playSub808(100, 50, 0.3, now, 0.35); // Kick
-    playTone(440, 'triangle', 0.2, now + 0.18, 0.15); // Snare snap
-    playTone(523.25, 'sine', 0.25, now + 0.36, 0.12); // Pluck
-  }
-
-  const previewButtons = document.querySelectorAll('.btn-audio-preview');
-
-  previewButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const channel = btn.getAttribute('data-preview-channel');
-      const card = btn.closest('article');
-
-      // If already playing this channel, stop it
-      if (activeChannel === channel) {
-        stopAudioPreview();
-        return;
-      }
-
-      // Stop previous if playing
-      stopAudioPreview();
-
-      // Start new
-      activeChannel = channel;
-      card?.classList.add('playing');
-      btn.classList.add('bg-white', 'text-black');
-      btn.querySelector('.preview-btn-label').textContent = 'Pausar Vibe';
-
-      if (channel === 'Vibes') {
-        triggerVibesPattern();
-        loopInterval = setInterval(triggerVibesPattern, 1800);
-      } else if (channel === 'Flow') {
-        triggerFlowPattern();
-        loopInterval = setInterval(triggerFlowPattern, 1200);
-      } else if (channel === 'Waves') {
-        triggerWavesPattern();
-        loopInterval = setInterval(triggerWavesPattern, 1400);
-      }
-    });
-  });
-
-  function stopAudioPreview() {
-    if (loopInterval) {
-      clearInterval(loopInterval);
-      loopInterval = null;
-    }
-    activeChannel = null;
-
-    document.querySelectorAll('.card-tilt').forEach(c => c.classList.remove('playing'));
-    previewButtons.forEach(btn => {
-      btn.classList.remove('bg-white', 'text-black');
-      const label = btn.querySelector('.preview-btn-label');
-      if (label) label.textContent = 'Preview Vibe';
-    });
-  }
-
-  window.stopAudioPreview = stopAudioPreview;
-}
-
-/* ==========================================================================
    5. NAVIGATION & UTILITIES
    ========================================================================== */
 
@@ -501,31 +358,6 @@ function initWhatsAppHandlers() {
       const beatName = btn.getAttribute('data-beat') || 'un beat';
       const msg = `Hola 7lite Music, me interesa negociar los derechos de la Licencia Exclusiva para ${beatName}. ¿Podríamos coordinar los detalles?`;
       window.open7liteWhatsApp(msg);
-    });
-  });
-}
-
-/**
- * Channel Direct Filter Helper & Toast Notification
- */
-function initChannelDirectNav() {
-  const channelBtns = document.querySelectorAll('.btn-channel-filter');
-  const beatstoreSection = document.getElementById('catalogo');
-
-  channelBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const channelName = btn.getAttribute('data-channel') || 'Vibes';
-      
-      if (beatstoreSection) {
-        const offsetPosition = beatstoreSection.getBoundingClientRect().top + window.pageYOffset - 80;
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
-
-      showAudioToast(`Canal ${channelName.toUpperCase()} seleccionado. Utiliza el buscador dentro del reproductor para filtrar el catálogo.`);
     });
   });
 }

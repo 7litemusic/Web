@@ -304,15 +304,16 @@
           </p>
         </div>
 
-        <!-- 3 Master Cards Grid (3D Tilt & Audio Preview) -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <!-- 3 Master Cards Grid (Standardized Architecture & YouTube Direct Access) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
           
           <!-- RUTA 1: VIBES (Verde Neón #4EFFAE) -->
-          <article class="card-tilt bg-[#1F1F1F] rounded-2xl p-7 border border-[#333333] hover:border-[#4EFFAE] transition-all duration-300 flex flex-col justify-between group glow-vibes">
+          <article class="card-tilt bg-[#1F1F1F] rounded-2xl p-7 border border-[#333333] hover:border-[#4EFFAE] transition-all duration-300 flex flex-col justify-between group glow-vibes h-full">
             <div class="card-tilt-content flex flex-col justify-between h-full">
-              <div>
+              <!-- Top Content Block -->
+              <div class="flex flex-col">
                 <!-- Header / Badge -->
-                <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center justify-between mb-5">
                   <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#4EFFAE]/10 border border-[#4EFFAE]/30 text-[#4EFFAE] text-[11px] font-mono font-bold tracking-wider uppercase">
                     CANAL 01 // VIBES
                   </span>
@@ -323,57 +324,49 @@
                 <h3 class="font-heading font-bold text-2xl text-white mb-2 group-hover:text-[#4EFFAE] transition-colors">
                   Smooth R&B
                 </h3>
-                <p class="text-xs font-mono text-[#888888] mb-4">
+                <p class="text-xs font-mono text-[#888888] min-h-[2.5rem] flex items-center mb-4">
                   Melodías nocturnas • Bajos profundos • Texturas etéreas
                 </p>
 
                 <!-- Description -->
-                <p class="text-sm text-neutral-300 leading-relaxed mb-6">
+                <p class="text-sm text-neutral-300 leading-relaxed min-h-[4.5rem] flex items-start mb-6">
                   Vibras nocturnas, introspección y melodías envolventes. Pianos eléctricos, acordes cálidos y bajos profundos para voces emotivas.
                 </p>
-
-                <!-- Interactive Web Audio Preview Bar -->
-                <div class="mb-4 p-3 rounded-xl bg-[#262626] border border-[#333333] flex items-center justify-between">
-                  <button type="button" 
-                          class="btn-audio-preview inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#1F1F1F] hover:bg-[#333333] text-white border border-[#333333] text-xs font-mono font-semibold transition-all duration-200"
-                          data-preview-channel="Vibes"
-                          aria-label="Escuchar muestra sonora de Vibes">
-                    <svg class="w-3.5 h-3.5 text-[#4EFFAE]" fill="currentColor" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                    <span class="preview-btn-label">Preview Vibe</span>
-                  </button>
-                  <div class="flex items-end gap-1 h-4 px-2">
-                    <span class="sound-bar w-1 bg-[#4EFFAE] rounded-full h-1.5"></span>
-                    <span class="sound-bar w-1 bg-[#4EFFAE] rounded-full h-3"></span>
-                    <span class="sound-bar w-1 bg-[#4EFFAE] rounded-full h-2"></span>
-                    <span class="sound-bar w-1 bg-[#4EFFAE] rounded-full h-4"></span>
-                  </div>
-                </div>
-
-                <!-- Simplified Sound Spec (BPM only) -->
-                <div class="p-3 rounded-xl bg-[#262626] border border-[#333333] mb-6 flex justify-between items-center text-xs">
-                  <span class="text-[#888888] font-mono">TEMPO:</span>
-                  <span class="text-white font-mono font-semibold">75 — 110 BPM</span>
-                </div>
               </div>
 
-              <!-- Action Button -->
-              <button data-channel="Vibes" 
-                      class="btn-channel-filter btn-shimmer w-full py-3 px-4 rounded-xl bg-[#262626] hover:bg-[#4EFFAE] text-white hover:text-black font-heading font-bold text-xs tracking-wider uppercase border border-[#333333] hover:border-[#4EFFAE] transition-all duration-300 flex items-center justify-center gap-2">
-                <span>Explorar Beats Vibes</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                </svg>
-              </button>
+              <!-- Bottom Content Block (Always aligned at baseline) -->
+              <div class="mt-auto pt-2">
+                <!-- Simplified Sound Spec (BPM only) -->
+                <div class="p-3.5 rounded-xl bg-[#262626] border border-[#333333] mb-5 flex justify-between items-center text-xs">
+                  <span class="text-[#888888] font-mono tracking-wider">TEMPO:</span>
+                  <span class="text-white font-mono font-semibold">75 — 110 BPM</span>
+                </div>
+
+                <!-- Action Button: Visit YouTube Channel -->
+                <a href="https://www.youtube.com/@7litemusicvibes" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="group/yt btn-shimmer w-full py-3.5 px-4 rounded-xl bg-[#262626] hover:bg-[#4EFFAE] text-white hover:text-black font-heading font-bold text-xs tracking-wider uppercase border border-[#333333] hover:border-[#4EFFAE] transition-all duration-300 flex items-center justify-center gap-2.5">
+                  <svg class="w-4 h-4 text-[#FF0000] group-hover/yt:text-black transition-colors flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                  <span>Visitar @7litemusicvibes</span>
+                  <svg class="w-3.5 h-3.5 transition-transform group-hover/yt:translate-x-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                  </svg>
+                </a>
+              </div>
             </div>
           </article>
 
 
           <!-- RUTA 2: FLOW (Celeste Flow #00BFFF) -->
-          <article class="card-tilt bg-[#1F1F1F] rounded-2xl p-7 border border-[#333333] hover:border-[#00BFFF] transition-all duration-300 flex flex-col justify-between group glow-flow">
+          <article class="card-tilt bg-[#1F1F1F] rounded-2xl p-7 border border-[#333333] hover:border-[#00BFFF] transition-all duration-300 flex flex-col justify-between group glow-flow h-full">
             <div class="card-tilt-content flex flex-col justify-between h-full">
-              <div>
+              <!-- Top Content Block -->
+              <div class="flex flex-col">
                 <!-- Header / Badge -->
-                <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center justify-between mb-5">
                   <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#00BFFF]/10 border border-[#00BFFF]/30 text-[#00BFFF] text-[11px] font-mono font-bold tracking-wider uppercase">
                     CANAL 02 // FLOW
                   </span>
@@ -384,57 +377,49 @@
                 <h3 class="font-heading font-bold text-2xl text-white mb-2 group-hover:text-[#00BFFF] transition-colors">
                   Trap & Drill
                 </h3>
-                <p class="text-xs font-mono text-[#888888] mb-4">
+                <p class="text-xs font-mono text-[#888888] min-h-[2.5rem] flex items-center mb-4">
                   808s agresivos • Hi-Hats rápidos • Pegada dura
                 </p>
 
                 <!-- Description -->
-                <p class="text-sm text-neutral-300 leading-relaxed mb-6">
+                <p class="text-sm text-neutral-300 leading-relaxed min-h-[4.5rem] flex items-start mb-6">
                   Energía pura para barras pesadas. Subgraves con pegada contundente y ritmos dinámicos estructurados para dominar la pista.
                 </p>
-
-                <!-- Interactive Web Audio Preview Bar -->
-                <div class="mb-4 p-3 rounded-xl bg-[#262626] border border-[#333333] flex items-center justify-between">
-                  <button type="button" 
-                          class="btn-audio-preview inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#1F1F1F] hover:bg-[#333333] text-white border border-[#333333] text-xs font-mono font-semibold transition-all duration-200"
-                          data-preview-channel="Flow"
-                          aria-label="Escuchar muestra sonora de Flow">
-                    <svg class="w-3.5 h-3.5 text-[#00BFFF]" fill="currentColor" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                    <span class="preview-btn-label">Preview Vibe</span>
-                  </button>
-                  <div class="flex items-end gap-1 h-4 px-2">
-                    <span class="sound-bar w-1 bg-[#00BFFF] rounded-full h-1.5"></span>
-                    <span class="sound-bar w-1 bg-[#00BFFF] rounded-full h-3"></span>
-                    <span class="sound-bar w-1 bg-[#00BFFF] rounded-full h-2"></span>
-                    <span class="sound-bar w-1 bg-[#00BFFF] rounded-full h-4"></span>
-                  </div>
-                </div>
-
-                <!-- Simplified Sound Spec (BPM only) -->
-                <div class="p-3 rounded-xl bg-[#262626] border border-[#333333] mb-6 flex justify-between items-center text-xs">
-                  <span class="text-[#888888] font-mono">TEMPO:</span>
-                  <span class="text-white font-mono font-semibold">130 — 155 BPM</span>
-                </div>
               </div>
 
-              <!-- Action Button -->
-              <button data-channel="Flow" 
-                      class="btn-channel-filter btn-shimmer w-full py-3 px-4 rounded-xl bg-[#262626] hover:bg-[#00BFFF] text-white hover:text-black font-heading font-bold text-xs tracking-wider uppercase border border-[#333333] hover:border-[#00BFFF] transition-all duration-300 flex items-center justify-center gap-2">
-                <span>Explorar Beats Flow</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                </svg>
-              </button>
+              <!-- Bottom Content Block (Always aligned at baseline) -->
+              <div class="mt-auto pt-2">
+                <!-- Simplified Sound Spec (BPM only) -->
+                <div class="p-3.5 rounded-xl bg-[#262626] border border-[#333333] mb-5 flex justify-between items-center text-xs">
+                  <span class="text-[#888888] font-mono tracking-wider">TEMPO:</span>
+                  <span class="text-white font-mono font-semibold">130 — 155 BPM</span>
+                </div>
+
+                <!-- Action Button: Visit YouTube Channel -->
+                <a href="https://www.youtube.com/@7litemusicflow" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="group/yt btn-shimmer w-full py-3.5 px-4 rounded-xl bg-[#262626] hover:bg-[#00BFFF] text-white hover:text-black font-heading font-bold text-xs tracking-wider uppercase border border-[#333333] hover:border-[#00BFFF] transition-all duration-300 flex items-center justify-center gap-2.5">
+                  <svg class="w-4 h-4 text-[#FF0000] group-hover/yt:text-black transition-colors flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                  <span>Visitar @7litemusicflow</span>
+                  <svg class="w-3.5 h-3.5 transition-transform group-hover/yt:translate-x-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                  </svg>
+                </a>
+              </div>
             </div>
           </article>
 
 
           <!-- RUTA 3: WAVES (Morado Waves #4E00FF) -->
-          <article class="card-tilt bg-[#1F1F1F] rounded-2xl p-7 border border-[#333333] hover:border-[#4E00FF] transition-all duration-300 flex flex-col justify-between group glow-waves">
+          <article class="card-tilt bg-[#1F1F1F] rounded-2xl p-7 border border-[#333333] hover:border-[#4E00FF] transition-all duration-300 flex flex-col justify-between group glow-waves h-full">
             <div class="card-tilt-content flex flex-col justify-between h-full">
-              <div>
+              <!-- Top Content Block -->
+              <div class="flex flex-col">
                 <!-- Header / Badge -->
-                <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center justify-between mb-5">
                   <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#4E00FF]/15 border border-[#4E00FF]/40 text-[#a074ff] text-[11px] font-mono font-bold tracking-wider uppercase">
                     CANAL 03 // WAVES
                   </span>
@@ -445,47 +430,38 @@
                 <h3 class="font-heading font-bold text-2xl text-white mb-2 group-hover:text-[#a074ff] transition-colors">
                   Reggaetón & Afro
                 </h3>
-                <p class="text-xs font-mono text-[#888888] mb-4">
+                <p class="text-xs font-mono text-[#888888] min-h-[2.5rem] flex items-center mb-4">
                   Dembow moderno • Synths espaciales • Club ready
                 </p>
 
                 <!-- Description -->
-                <p class="text-sm text-neutral-300 leading-relaxed mb-6">
+                <p class="text-sm text-neutral-300 leading-relaxed min-h-[4.5rem] flex items-start mb-6">
                   Cadencia latina con estándar internacional. Ritmos bailables, sintetizadores abiertos y dinámicas diseñadas para sonar en discotecas y radio.
                 </p>
-
-                <!-- Interactive Web Audio Preview Bar -->
-                <div class="mb-4 p-3 rounded-xl bg-[#262626] border border-[#333333] flex items-center justify-between">
-                  <button type="button" 
-                          class="btn-audio-preview inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#1F1F1F] hover:bg-[#333333] text-white border border-[#333333] text-xs font-mono font-semibold transition-all duration-200"
-                          data-preview-channel="Waves"
-                          aria-label="Escuchar muestra sonora de Waves">
-                    <svg class="w-3.5 h-3.5 text-[#4E00FF]" fill="currentColor" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                    <span class="preview-btn-label">Preview Vibe</span>
-                  </button>
-                  <div class="flex items-end gap-1 h-4 px-2">
-                    <span class="sound-bar w-1 bg-[#a074ff] rounded-full h-1.5"></span>
-                    <span class="sound-bar w-1 bg-[#a074ff] rounded-full h-3"></span>
-                    <span class="sound-bar w-1 bg-[#a074ff] rounded-full h-2"></span>
-                    <span class="sound-bar w-1 bg-[#a074ff] rounded-full h-4"></span>
-                  </div>
-                </div>
-
-                <!-- Simplified Sound Spec (BPM only) -->
-                <div class="p-3 rounded-xl bg-[#262626] border border-[#333333] mb-6 flex justify-between items-center text-xs">
-                  <span class="text-[#888888] font-mono">TEMPO:</span>
-                  <span class="text-white font-mono font-semibold">88 — 104 BPM</span>
-                </div>
               </div>
 
-              <!-- Action Button -->
-              <button data-channel="Waves" 
-                      class="btn-channel-filter btn-shimmer w-full py-3 px-4 rounded-xl bg-[#262626] hover:bg-[#4E00FF] text-white hover:text-white font-heading font-bold text-xs tracking-wider uppercase border border-[#333333] hover:border-[#4E00FF] transition-all duration-300 flex items-center justify-center gap-2">
-                <span>Explorar Beats Waves</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                </svg>
-              </button>
+              <!-- Bottom Content Block (Always aligned at baseline) -->
+              <div class="mt-auto pt-2">
+                <!-- Simplified Sound Spec (BPM only) -->
+                <div class="p-3.5 rounded-xl bg-[#262626] border border-[#333333] mb-5 flex justify-between items-center text-xs">
+                  <span class="text-[#888888] font-mono tracking-wider">TEMPO:</span>
+                  <span class="text-white font-mono font-semibold">88 — 104 BPM</span>
+                </div>
+
+                <!-- Action Button: Visit YouTube Channel -->
+                <a href="https://www.youtube.com/@7litemusicwaves" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="group/yt btn-shimmer w-full py-3.5 px-4 rounded-xl bg-[#262626] hover:bg-[#a074ff] text-white hover:text-white font-heading font-bold text-xs tracking-wider uppercase border border-[#333333] hover:border-[#a074ff] transition-all duration-300 flex items-center justify-center gap-2.5">
+                  <svg class="w-4 h-4 text-[#FF0000] group-hover/yt:text-white transition-colors flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                  <span>Visitar @7litemusicwaves</span>
+                  <svg class="w-3.5 h-3.5 transition-transform group-hover/yt:translate-x-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                  </svg>
+                </a>
+              </div>
             </div>
           </article>
 
