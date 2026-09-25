@@ -4,6 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  if (window.initLanguageEngine) initLanguageEngine();
   initInteractiveAudioCanvas();
   initTextScramble();
   initTiltAndSpotlight();

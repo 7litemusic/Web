@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -104,28 +104,35 @@
           <span class="font-heading font-extrabold text-xl tracking-tight text-white flex items-center gap-1.5">
             7lite <span class="text-neutral-400 font-semibold text-lg">Music</span>
           </span>
-          <span class="text-[9px] tracking-[0.22em] text-[#888888] uppercase font-mono">Audio Engineering</span>
+          <span class="text-[9px] tracking-[0.22em] text-[#888888] uppercase font-mono" data-i18n="nav_logo_sub">Audio Engineering</span>
         </div>
       </a>
 
       <!-- Navegación Desktop -->
       <nav class="hidden md:flex items-center space-x-7" aria-label="Navegación Principal">
-        <a href="#canales" class="nav-link-desktop text-sm font-medium text-[#888888] hover:text-white transition-colors duration-200 py-1">
-          Canales
+        <a href="#canales" class="nav-link-desktop text-sm font-medium text-[#888888] hover:text-white transition-colors duration-200 py-1" data-i18n="nav_canales">
+          Channels
         </a>
-        <a href="#catalogo" class="nav-link-desktop text-sm font-medium text-[#888888] hover:text-white transition-colors duration-200 py-1">
-          Catálogo
+        <a href="#catalogo" class="nav-link-desktop text-sm font-medium text-[#888888] hover:text-white transition-colors duration-200 py-1" data-i18n="nav_catalogo">
+          Catalog
         </a>
-        <a href="#licencias" class="nav-link-desktop text-sm font-medium text-[#888888] hover:text-white transition-colors duration-200 py-1">
-          Licencias
+        <a href="#licencias" class="nav-link-desktop text-sm font-medium text-[#888888] hover:text-white transition-colors duration-200 py-1" data-i18n="nav_licencias">
+          Licenses
         </a>
-        <a href="#contacto" class="nav-link-desktop text-sm font-medium text-[#888888] hover:text-white transition-colors duration-200 py-1">
-          Contacto
+        <a href="#contacto" class="nav-link-desktop text-sm font-medium text-[#888888] hover:text-white transition-colors duration-200 py-1" data-i18n="nav_contacto">
+          Contact
         </a>
       </nav>
 
       <!-- Botón CTA WhatsApp Directo + Audio FX Toggle + Menú Móvil Hamburger -->
       <div class="flex items-center gap-3">
+        
+        <!-- Language Switcher (Desktop) -->
+        <div id="lang-switcher" class="flex items-center rounded-lg bg-[#1F1F1F] border border-[#333333] p-0.5 text-[11px] font-mono select-none" role="group" aria-label="Language / Idioma">
+          <button type="button" data-lang="en" class="lang-btn px-2.5 py-1 rounded-md transition-all font-bold text-white bg-[#333333] shadow-sm" aria-label="Switch to English">EN</button>
+          <button type="button" data-lang="es" class="lang-btn px-2.5 py-1 rounded-md transition-all font-semibold text-[#888888] hover:text-white" aria-label="Cambiar a Español">ES</button>
+        </div>
+
         <!-- UI Audio FX Sound Toggle -->
         <button id="ui-sound-toggle" 
                 class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-[#1F1F1F] border border-[#333333] hover:border-[#00BFFF] text-[10px] font-mono text-[#A0A0A0] hover:text-white transition-all focus:outline-none"
@@ -166,17 +173,25 @@
     <!-- Menú Desplegable Móvil -->
     <div id="mobile-menu" class="hidden md:hidden glass-panel border-x-0 border-b border-[#333333] px-6 py-6 transition-all duration-300">
       <nav class="flex flex-col space-y-4">
-        <a href="#canales" class="mobile-nav-link text-base font-medium text-neutral-300 hover:text-white py-2 border-b border-[#262626]">
-          Las 3 Rutas (Canales)
+        <!-- Language Switcher (Mobile) -->
+        <div class="flex items-center justify-between pb-3 mb-1 border-b border-[#262626]">
+          <span class="text-xs font-mono text-[#888888]" data-i18n="nav_lang_label">Language / Idioma</span>
+          <div id="mobile-lang-switcher" class="flex items-center rounded-lg bg-[#1F1F1F] border border-[#333333] p-0.5 text-xs font-mono select-none">
+            <button type="button" data-lang="en" class="mobile-lang-btn px-3 py-1 rounded-md transition-all font-bold text-white bg-[#333333] shadow-sm">EN</button>
+            <button type="button" data-lang="es" class="mobile-lang-btn px-3 py-1 rounded-md transition-all font-semibold text-[#888888] hover:text-white">ES</button>
+          </div>
+        </div>
+        <a href="#canales" class="mobile-nav-link text-base font-medium text-neutral-300 hover:text-white py-2 border-b border-[#262626]" data-i18n="nav_mobile_canales">
+          The 3 Routes (Channels)
         </a>
-        <a href="#catalogo" class="mobile-nav-link text-base font-medium text-neutral-300 hover:text-white py-2 border-b border-[#262626]">
-          Catálogo Oficial
+        <a href="#catalogo" class="mobile-nav-link text-base font-medium text-neutral-300 hover:text-white py-2 border-b border-[#262626]" data-i18n="nav_mobile_catalogo">
+          Official Catalog
         </a>
-        <a href="#licencias" class="mobile-nav-link text-base font-medium text-neutral-300 hover:text-white py-2 border-b border-[#262626]">
-          Guía de Licencias
+        <a href="#licencias" class="mobile-nav-link text-base font-medium text-neutral-300 hover:text-white py-2 border-b border-[#262626]" data-i18n="nav_mobile_licencias">
+          License Guide
         </a>
-        <a href="#contacto" class="mobile-nav-link text-base font-medium text-neutral-300 hover:text-white py-2">
-          Contacto Directo
+        <a href="#contacto" class="mobile-nav-link text-base font-medium text-neutral-300 hover:text-white py-2" data-i18n="nav_mobile_contacto">
+          Direct Contact
         </a>
         <div class="pt-2">
           <a href="https://wa.me/50498700953?text=Hola%207lite%20Music,%20me%20gustar%C3%ADa%20consultar%20sobre%20beats%20y%20proyectos." 
@@ -186,7 +201,7 @@
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.585 1.961.914 2.791.915h.005c3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.586-5.766-5.768-5.766zm9.969 5.766c0 5.518-4.482 10-10 10-1.748 0-3.385-.45-4.819-1.242L2 22l1.509-5.111C2.678 15.485 2.2 13.799 2.2 11.938c0-5.518 4.482-10 10-10s10 4.482 10 10z"/>
             </svg>
-            Escribir a WhatsApp (+504 9870-0953)
+            <span data-i18n="nav_mobile_wa">Chat on WhatsApp (+504 9870-0953)</span>
           </a>
         </div>
       </nav>
@@ -294,13 +309,13 @@
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-16">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1F1F1F] border border-[#333333] text-[11px] font-mono text-[#888888] tracking-widest uppercase mb-4">
-            <span class="text-[#00BFFF]">●</span> DIRECCIONES SONORAS
+            <span data-i18n="canales_badge"><span class="text-[#00BFFF]">●</span> SOUND DIRECTIONS</span>
           </div>
-          <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight uppercase mb-4">
-            Las 3 Rutas de 7lite
+          <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight uppercase mb-4" data-i18n="canales_title">
+            The 3 Routes of 7lite
           </h2>
           <p class="text-sm sm:text-base text-[#888888]">
-            Cada canal representa un ecosistema sonoro rigurosamente afinado, combinando arquitectura acústica y vanguardia cultural.
+            <span data-i18n="canales_sub">Each channel represents a finely-tuned sonic ecosystem, combining acoustic architecture with cultural vanguard.</span>
           </p>
         </div>
 
@@ -315,32 +330,27 @@
                 <!-- Header / Badge -->
                 <div class="flex items-center justify-between mb-5">
                   <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#4EFFAE]/10 border border-[#4EFFAE]/30 text-[#4EFFAE] text-[11px] font-mono font-bold tracking-wider uppercase">
-                    CANAL 01 // VIBES
+                    <span data-i18n="canal_1_badge">CHANNEL 01 // VIBES</span>
                   </span>
                   <span class="w-3 h-3 rounded-full bg-[#4EFFAE] shadow-[0_0_10px_#4EFFAE]"></span>
                 </div>
 
                 <!-- Title & Concept -->
-                <h3 class="font-heading font-bold text-2xl text-white mb-2 group-hover:text-[#4EFFAE] transition-colors">
+                <h3 class="font-heading font-bold text-2xl text-white mb-2 group-hover:text-[#4EFFAE] transition-colors" data-i18n="canal_1_title">
                   Smooth R&B
                 </h3>
-                <p class="text-xs font-mono text-[#888888] min-h-[2.5rem] flex items-center mb-4">
-                  Melodías nocturnas • Bajos profundos • Texturas etéreas
+                <p class="text-xs font-mono text-[#888888] min-h-[2.5rem] flex items-center mb-4" data-i18n="canal_1_sub">
+                  Nocturnal melodies • Deep 808s • Ethereal textures
                 </p>
 
                 <!-- Description -->
-                <p class="text-sm text-neutral-300 leading-relaxed min-h-[4.5rem] flex items-start mb-6">
-                  Vibras nocturnas, introspección y melodías envolventes. Pianos eléctricos, acordes cálidos y bajos profundos para voces emotivas.
+                <p class="text-sm text-neutral-300 leading-relaxed min-h-[4.5rem] flex items-start mb-6" data-i18n="canal_1_desc">
+                  Nocturnal vibes, introspection, and lush melodies. Electric pianos, warm chords, and deep low-end for emotive voices.
                 </p>
               </div>
 
               <!-- Bottom Content Block (Always aligned at baseline) -->
               <div class="mt-auto pt-2">
-                <!-- Simplified Sound Spec (BPM only) -->
-                <div class="p-3.5 rounded-xl bg-[#262626] border border-[#333333] mb-5 flex justify-between items-center text-xs">
-                  <span class="text-[#888888] font-mono tracking-wider">TEMPO:</span>
-                  <span class="text-white font-mono font-semibold">75 — 110 BPM</span>
-                </div>
 
                 <!-- Action Button: Visit YouTube Channel -->
                 <a href="https://www.youtube.com/@7litemusicvibes" 
@@ -350,7 +360,7 @@
                   <svg class="w-4 h-4 text-[#FF0000] group-hover/yt:text-black transition-colors flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                   </svg>
-                  <span>Visitar @7litemusicvibes</span>
+                  <span data-i18n="canal_1_btn">Visit @7litemusicvibes</span>
                   <svg class="w-3.5 h-3.5 transition-transform group-hover/yt:translate-x-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                   </svg>
@@ -368,32 +378,27 @@
                 <!-- Header / Badge -->
                 <div class="flex items-center justify-between mb-5">
                   <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#00BFFF]/10 border border-[#00BFFF]/30 text-[#00BFFF] text-[11px] font-mono font-bold tracking-wider uppercase">
-                    CANAL 02 // FLOW
+                    <span data-i18n="canal_2_badge">CHANNEL 02 // FLOW</span>
                   </span>
                   <span class="w-3 h-3 rounded-full bg-[#00BFFF] shadow-[0_0_10px_#00BFFF]"></span>
                 </div>
 
                 <!-- Title & Concept -->
-                <h3 class="font-heading font-bold text-2xl text-white mb-2 group-hover:text-[#00BFFF] transition-colors">
+                <h3 class="font-heading font-bold text-2xl text-white mb-2 group-hover:text-[#00BFFF] transition-colors" data-i18n="canal_2_title">
                   Trap & Drill
                 </h3>
-                <p class="text-xs font-mono text-[#888888] min-h-[2.5rem] flex items-center mb-4">
-                  808s agresivos • Hi-Hats rápidos • Pegada dura
+                <p class="text-xs font-mono text-[#888888] min-h-[2.5rem] flex items-center mb-4" data-i18n="canal_2_sub">
+                  Aggressive 808s • Fast hi-hats • Hard-hitting punch
                 </p>
 
                 <!-- Description -->
-                <p class="text-sm text-neutral-300 leading-relaxed min-h-[4.5rem] flex items-start mb-6">
-                  Energía pura para barras pesadas. Subgraves con pegada contundente y ritmos dinámicos estructurados para dominar la pista.
+                <p class="text-sm text-neutral-300 leading-relaxed min-h-[4.5rem] flex items-start mb-6" data-i18n="canal_2_desc">
+                  Pure energy engineered for heavy bars. Heavyweight sub-bass with punchy dynamics structured to dominate the track.
                 </p>
               </div>
 
               <!-- Bottom Content Block (Always aligned at baseline) -->
               <div class="mt-auto pt-2">
-                <!-- Simplified Sound Spec (BPM only) -->
-                <div class="p-3.5 rounded-xl bg-[#262626] border border-[#333333] mb-5 flex justify-between items-center text-xs">
-                  <span class="text-[#888888] font-mono tracking-wider">TEMPO:</span>
-                  <span class="text-white font-mono font-semibold">130 — 155 BPM</span>
-                </div>
 
                 <!-- Action Button: Visit YouTube Channel -->
                 <a href="https://www.youtube.com/@7litemusicflow" 
@@ -403,7 +408,7 @@
                   <svg class="w-4 h-4 text-[#FF0000] group-hover/yt:text-black transition-colors flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                   </svg>
-                  <span>Visitar @7litemusicflow</span>
+                  <span data-i18n="canal_2_btn">Visit @7litemusicflow</span>
                   <svg class="w-3.5 h-3.5 transition-transform group-hover/yt:translate-x-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                   </svg>
@@ -421,32 +426,27 @@
                 <!-- Header / Badge -->
                 <div class="flex items-center justify-between mb-5">
                   <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#4E00FF]/15 border border-[#4E00FF]/40 text-[#a074ff] text-[11px] font-mono font-bold tracking-wider uppercase">
-                    CANAL 03 // WAVES
+                    <span data-i18n="canal_3_badge">CHANNEL 03 // WAVES</span>
                   </span>
                   <span class="w-3 h-3 rounded-full bg-[#4E00FF] shadow-[0_0_10px_#4E00FF]"></span>
                 </div>
 
                 <!-- Title & Concept -->
-                <h3 class="font-heading font-bold text-2xl text-white mb-2 group-hover:text-[#a074ff] transition-colors">
+                <h3 class="font-heading font-bold text-2xl text-white mb-2 group-hover:text-[#a074ff] transition-colors" data-i18n="canal_3_title">
                   Reggaetón & Afro
                 </h3>
-                <p class="text-xs font-mono text-[#888888] min-h-[2.5rem] flex items-center mb-4">
-                  Dembow moderno • Synths espaciales • Club ready
+                <p class="text-xs font-mono text-[#888888] min-h-[2.5rem] flex items-center mb-4" data-i18n="canal_3_sub">
+                  Modern dembow • Spatial synths • Club ready
                 </p>
 
                 <!-- Description -->
-                <p class="text-sm text-neutral-300 leading-relaxed min-h-[4.5rem] flex items-start mb-6">
-                  Cadencia latina con estándar internacional. Ritmos bailables, sintetizadores abiertos y dinámicas diseñadas para sonar en discotecas y radio.
+                <p class="text-sm text-neutral-300 leading-relaxed min-h-[4.5rem] flex items-start mb-6" data-i18n="canal_3_desc">
+                  Latin cadence with global industry standards. Danceable grooves, open synth textures, and club-certified acoustics.
                 </p>
               </div>
 
               <!-- Bottom Content Block (Always aligned at baseline) -->
               <div class="mt-auto pt-2">
-                <!-- Simplified Sound Spec (BPM only) -->
-                <div class="p-3.5 rounded-xl bg-[#262626] border border-[#333333] mb-5 flex justify-between items-center text-xs">
-                  <span class="text-[#888888] font-mono tracking-wider">TEMPO:</span>
-                  <span class="text-white font-mono font-semibold">88 — 104 BPM</span>
-                </div>
 
                 <!-- Action Button: Visit YouTube Channel -->
                 <a href="https://www.youtube.com/@7litemusicwaves" 
@@ -456,7 +456,7 @@
                   <svg class="w-4 h-4 text-[#FF0000] group-hover/yt:text-white transition-colors flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                   </svg>
-                  <span>Visitar @7litemusicwaves</span>
+                  <span data-i18n="canal_3_btn">Visit @7litemusicwaves</span>
                   <svg class="w-3.5 h-3.5 transition-transform group-hover/yt:translate-x-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                   </svg>
@@ -587,13 +587,13 @@
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-10">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1F1F1F] border border-[#333333] text-[11px] font-mono text-[#888888] tracking-widest uppercase mb-3">
-            <span class="text-[#4EFFAE]">●</span> DERECHOS CLAROS
+            <span data-i18n="licenses_badge"><span class="text-[#4EFFAE]">●</span> CLEAR RIGHTS</span>
           </div>
-          <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight uppercase mb-3">
-            Guía de Licencias & Precios
+          <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight uppercase mb-3" data-i18n="licenses_title">
+            License Guide & Pricing
           </h2>
           <p class="text-xs sm:text-sm md:text-base text-[#888888] max-w-xl mx-auto mb-5">
-            Elige el nivel perfecto para tus metas. Mantén el 100% de tus regalías de composición según los términos acordados.
+            <span data-i18n="licenses_sub">Choose the perfect tier for your career goals. Keep 100% of your writing royalties under official terms.</span>
           </p>
 
           <!-- Button: Open Fullscreen Comparison Modal -->
@@ -700,7 +700,7 @@
           </div>
 
 
-          <!-- 3. LICENCIA PREMIUM ($59.99) - MÁS POPULAR -->
+          <!-- 3. LICENCIA PREMIUM ($59.99) - <span data-i18n="lic_most_popular">MOST POPULAR</span> -->
           <div class="card-tilt bg-[#1F1F1F] rounded-2xl p-5 border-2 border-[#4EFFAE] shadow-xl shadow-[#4EFFAE]/10 flex flex-col justify-between relative transform lg:-translate-y-2">
             
             <!-- Badge Recomendada -->
@@ -953,23 +953,25 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <!-- Name Input -->
                   <div>
-                    <label for="contact-name" class="block text-xs font-mono text-[#A0A0A0] uppercase mb-1.5">Nombre o Artista *</label>
+                    <label for="contact-name" class="block text-xs font-mono text-[#A0A0A0] uppercase mb-1.5" data-i18n="contact_name_label">Your Name / Artist Name *</label>
                     <input type="text" 
                            id="contact-name" 
                            name="name" 
                            required 
-                           placeholder="Ej. Alex / Artista" 
+                           placeholder="e.g. John Doe / Artist Alias" 
+                           data-i18n-placeholder="contact_name_ph"
                            class="w-full px-4 py-3 rounded-xl bg-[#262626] border border-[#333333] text-white text-xs sm:text-sm placeholder-neutral-500 focus:outline-none focus:border-[#00BFFF] focus:ring-1 focus:ring-[#00BFFF] transition-all">
                   </div>
 
                   <!-- Email Input -->
                   <div>
-                    <label for="contact-email" class="block text-xs font-mono text-[#A0A0A0] uppercase mb-1.5">Correo Electrónico *</label>
+                    <label for="contact-email" class="block text-xs font-mono text-[#A0A0A0] uppercase mb-1.5" data-i18n="contact_email_label">Your Email Address *</label>
                     <input type="email" 
                            id="contact-email" 
                            name="email" 
                            required 
-                           placeholder="tuemail@ejemplo.com" 
+                           placeholder="e.g. artist@example.com" 
+                           data-i18n-placeholder="contact_email_ph"
                            class="w-full px-4 py-3 rounded-xl bg-[#262626] border border-[#333333] text-white text-xs sm:text-sm placeholder-neutral-500 focus:outline-none focus:border-[#00BFFF] focus:ring-1 focus:ring-[#00BFFF] transition-all">
                   </div>
                 </div>
@@ -977,7 +979,7 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <!-- Phone / WhatsApp Input -->
                   <div>
-                    <label for="contact-phone" class="block text-xs font-mono text-[#A0A0A0] uppercase mb-1.5">WhatsApp / Teléfono</label>
+                    <label for="contact-phone" class="block text-xs font-mono text-[#A0A0A0] uppercase mb-1.5" data-i18n="contact_phone_label">WhatsApp / Phone</label>
                     <input type="tel" 
                            id="contact-phone" 
                            name="phone" 
@@ -987,7 +989,7 @@
 
                   <!-- Custom Project / Channel Select Dropdown -->
                   <div>
-                    <label class="block text-xs font-mono text-[#A0A0A0] uppercase mb-1.5">Tipo de Proyecto</label>
+                    <label class="block text-xs font-mono text-[#A0A0A0] uppercase mb-1.5" data-i18n="contact_project_label">Project Type / Inquiry *</label>
                     <div class="custom-select-wrapper relative" id="project-select-wrapper">
                       <!-- Hidden input for Formspree submission -->
                       <input type="hidden" name="project_type" id="contact-project-input" value="Licencia Exclusiva">
@@ -1085,12 +1087,13 @@
 
                 <!-- Message Input -->
                 <div>
-                  <label for="contact-message" class="block text-xs font-mono text-[#A0A0A0] uppercase mb-1.5">Mensaje o Idea del Proyecto *</label>
+                  <label for="contact-message" class="block text-xs font-mono text-[#A0A0A0] uppercase mb-1.5" data-i18n="contact_msg_label">Message / Project Details *</label>
                   <textarea id="contact-message" 
                             name="message" 
                             rows="3" 
                             required 
-                            placeholder="Cuéntanos tu visión, enlaces a tus canciones o el estilo que buscas..." 
+                            placeholder="Tell us about your project, target sound, deadlines, or licensing questions..." 
+                            data-i18n-placeholder="contact_msg_ph"
                             class="w-full px-4 py-3 rounded-xl bg-[#262626] border border-[#333333] text-white text-xs sm:text-sm placeholder-neutral-500 focus:outline-none focus:border-[#00BFFF] focus:ring-1 focus:ring-[#00BFFF] transition-all resize-none"></textarea>
                 </div>
 
@@ -1104,7 +1107,7 @@
                   <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
                   </svg>
-                  <span id="submit-btn-text">Transmitir Mensaje Directo</span>
+                  <span id="submit-btn-text" data-i18n="contact_btn_send">Send Message →</span>
                 </button>
               </form>
             </div>
@@ -1338,19 +1341,19 @@
       <div class="flex items-start justify-between gap-4 pb-5 border-b border-[#262626] flex-shrink-0">
         <div>
           <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-[#1F1F1F] border border-[#333333] text-[10px] font-mono text-[#00BFFF] uppercase tracking-wider mb-2">
-            <span>BEATSTARS OFFICIAL TIERS</span>
+            <span data-i18n="modal_badge">OFFICIAL BEATSTARS SPECIFICATIONS</span>
           </div>
-          <h3 id="modal-compare-title" class="font-heading font-black text-xl sm:text-2xl text-white uppercase tracking-tight">
-            Tabla Comparativa Oficial de Licencias
+          <h3 id="modal-compare-title" class="font-heading font-black text-xl sm:text-2xl text-white uppercase tracking-tight" data-i18n="modal_title">
+            License Comparison Matrix
           </h3>
-          <p class="text-xs text-[#888888] mt-1">
-            Revisa todos los términos, límites de streams y derechos de uso cara a cara para elegir la mejor opción.
+          <p class="text-xs text-[#888888] mt-1" data-i18n="modal_sub">
+            Review the exact official permissions, formats, and commercial thresholds for each license tier.
           </p>
         </div>
 
         <!-- Close Button -->
         <button id="btn-close-compare-modal" 
-                class="p-2 sm:p-2.5 rounded-xl bg-[#222222] border border-[#383838] hover:border-white text-neutral-400 hover:text-white transition-all focus:outline-none flex-shrink-0"
+                class="p-2 sm:p-2.5 rounded-xl bg-[#222222] border border-[#383838] hover:border-white text-neutral-400 hover:text-white transition-all focus:outline-none flex-shrink-0" 
                 aria-label="Cerrar modal comparativo">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
@@ -1363,124 +1366,124 @@
         <table class="w-full text-left text-xs text-neutral-300 border-collapse min-w-[700px]">
           <thead>
             <tr class="border-b border-[#2b2b2b] text-[11px] font-mono uppercase text-[#888888]">
-              <th class="py-3 px-3 w-1/4">Término / Derecho</th>
-              <th class="py-3 px-3 text-center">Básica</th>
-              <th class="py-3 px-3 text-center">Estándar</th>
-              <th class="py-3 px-3 text-center bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20 text-[#4EFFAE] font-bold">
+              <th class="py-3 px-3 w-1/4" data-i18n="th_terms">Terms / Specifications</th>
+              <th class="py-3 px-3 text-center" data-i18n="th_basic">Basic</th>
+              <th class="py-3 px-3 text-center" data-i18n="th_standard">Standard</th>
+              <th class="py-3 px-3 text-center bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20 text-[#4EFFAE] font-bold" data-i18n="th_premium">
                 Premium ⭐
               </th>
-              <th class="py-3 px-3 text-center">Ilimitada</th>
-              <th class="py-3 px-3 text-center">Exclusiva</th>
+              <th class="py-3 px-3 text-center" data-i18n="th_unlimited">Unlimited</th>
+              <th class="py-3 px-3 text-center" data-i18n="th_exclusive">Exclusive</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-[#222222]">
             <!-- Row: Precio -->
             <tr>
-              <td class="py-3 px-3 font-semibold text-white">Precio por Beat</td>
+              <td class="py-3 px-3 font-semibold text-white" data-i18n="row_price">Official Price</td>
               <td class="py-3 px-3 text-center font-bold text-white text-sm">$19.99</td>
               <td class="py-3 px-3 text-center font-bold text-[#00BFFF] text-sm">$39.99</td>
               <td class="py-3 px-3 text-center font-bold text-[#4EFFAE] text-sm bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">$59.99</td>
               <td class="py-3 px-3 text-center font-bold text-[#a074ff] text-sm">$119.99</td>
-              <td class="py-3 px-3 text-center font-bold text-white text-sm">Negociable</td>
+              <td class="py-3 px-3 text-center font-bold text-white text-sm" data-i18n="lic_negotiate">Negotiate</td>
             </tr>
             <!-- Row: Formatos -->
             <tr>
-              <td class="py-3 px-3 font-medium text-neutral-400">Archivos entregados</td>
+              <td class="py-3 px-3 font-medium text-neutral-400" data-i18n="row_format">Delivered Files</td>
               <td class="py-3 px-3 text-center font-mono">MP3 Master</td>
               <td class="py-3 px-3 text-center font-mono">WAV + MP3</td>
               <td class="py-3 px-3 text-center font-mono font-semibold text-white bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">WAV + MP3 + STEMS</td>
               <td class="py-3 px-3 text-center font-mono font-semibold text-white">WAV + MP3 + STEMS</td>
-              <td class="py-3 px-3 text-center font-mono font-semibold text-white">Sesión Completa</td>
+              <td class="py-3 px-3 text-center font-mono font-semibold text-white" data-i18n="val_exclusive_session">Full Studio Session</td>
             </tr>
             <!-- Row: Grabación Comercial -->
             <tr>
-              <td class="py-3 px-3 font-medium text-neutral-400">Grabación vocal comercial</td>
-              <td class="py-3 px-3 text-center text-[#4EFFAE]">✓ Permitida</td>
-              <td class="py-3 px-3 text-center text-[#4EFFAE]">✓ Permitida</td>
-              <td class="py-3 px-3 text-center text-[#4EFFAE] bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">✓ Permitida</td>
-              <td class="py-3 px-3 text-center text-[#4EFFAE]">✓ Permitida</td>
-              <td class="py-3 px-3 text-center text-[#4EFFAE]">✓ Exclusiva Total</td>
+              <td class="py-3 px-3 font-medium text-neutral-400" data-i18n="row_recording">Vocal Recording</td>
+              <td class="py-3 px-3 text-center text-[#4EFFAE]">✓ <span data-i18n="val_allowed">Allowed</span></td>
+              <td class="py-3 px-3 text-center text-[#4EFFAE]">✓ <span data-i18n="val_allowed">Allowed</span></td>
+              <td class="py-3 px-3 text-center text-[#4EFFAE] bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">✓ <span data-i18n="val_allowed">Allowed</span></td>
+              <td class="py-3 px-3 text-center text-[#4EFFAE]">✓ <span data-i18n="val_allowed">Allowed</span></td>
+              <td class="py-3 px-3 text-center text-[#4EFFAE]">✓ <span data-i18n="val_allowed">Allowed</span></td>
             </tr>
             <!-- Row: Streams -->
             <tr>
-              <td class="py-3 px-3 font-medium text-neutral-400">Streams de audio online</td>
-              <td class="py-3 px-3 text-center text-neutral-500">0 (Solo maquetas)</td>
+              <td class="py-3 px-3 font-medium text-neutral-400" data-i18n="row_streams">Online Audio Streams</td>
+              <td class="py-3 px-3 text-center text-neutral-500">0 (<span data-i18n="lic_1_pt2">Demo use only</span>)</td>
               <td class="py-3 px-3 text-center">Hasta 100,000</td>
               <td class="py-3 px-3 text-center font-bold text-white bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">Hasta 500,000</td>
-              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">ILIMITADOS</td>
-              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">ILIMITADOS</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]" data-i18n="val_unlimited">UNLIMITED</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]" data-i18n="val_unlimited">UNLIMITED</td>
             </tr>
             <!-- Row: Copias -->
             <tr>
-              <td class="py-3 px-3 font-medium text-neutral-400">Copias físicas / descargas</td>
-              <td class="py-3 px-3 text-center text-neutral-500">0 copias</td>
+              <td class="py-3 px-3 font-medium text-neutral-400" data-i18n="row_copies">Physical Copies / Downloads</td>
+              <td class="py-3 px-3 text-center text-neutral-500">0</td>
               <td class="py-3 px-3 text-center">Hasta 5,000</td>
               <td class="py-3 px-3 text-center font-bold text-white bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">Hasta 10,000</td>
-              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">ILIMITADAS</td>
-              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">ILIMITADAS</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]" data-i18n="val_unlimited">UNLIMITED</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]" data-i18n="val_unlimited">UNLIMITED</td>
             </tr>
             <!-- Row: Videos -->
             <tr>
-              <td class="py-3 px-3 font-medium text-neutral-400">Videos musicales</td>
-              <td class="py-3 px-3 text-center">1 Video</td>
-              <td class="py-3 px-3 text-center">1 Video</td>
-              <td class="py-3 px-3 text-center bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">1 Video</td>
-              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">ILIMITADOS</td>
-              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">ILIMITADOS</td>
+              <td class="py-3 px-3 font-medium text-neutral-400" data-i18n="row_videos">Music Videos</td>
+              <td class="py-3 px-3 text-center">1</td>
+              <td class="py-3 px-3 text-center">1</td>
+              <td class="py-3 px-3 text-center bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">1</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]" data-i18n="val_unlimited">UNLIMITED</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]" data-i18n="val_unlimited">UNLIMITED</td>
             </tr>
             <!-- Row: Shows -->
             <tr>
-              <td class="py-3 px-3 font-medium text-neutral-400">Presentaciones en vivo</td>
-              <td class="py-3 px-3 text-center text-neutral-500">No lucrativas</td>
-              <td class="py-3 px-3 text-center text-neutral-500">No lucrativas</td>
-              <td class="py-3 px-3 text-center font-semibold text-white bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">Con fines de lucro</td>
-              <td class="py-3 px-3 text-center font-semibold text-white">Con fines de lucro</td>
-              <td class="py-3 px-3 text-center font-semibold text-white">Con fines de lucro</td>
+              <td class="py-3 px-3 font-medium text-neutral-400" data-i18n="row_live">Live Performances</td>
+              <td class="py-3 px-3 text-center text-neutral-500" data-i18n="val_non_profit">Non-profit only</td>
+              <td class="py-3 px-3 text-center text-neutral-500" data-i18n="val_non_profit">Non-profit only</td>
+              <td class="py-3 px-3 text-center font-semibold text-white bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20" data-i18n="val_for_profit">Paid / For-profit allowed</td>
+              <td class="py-3 px-3 text-center font-semibold text-white" data-i18n="val_for_profit">Paid / For-profit allowed</td>
+              <td class="py-3 px-3 text-center font-semibold text-white" data-i18n="val_for_profit">Paid / For-profit allowed</td>
             </tr>
             <!-- Row: Radio -->
             <tr>
-              <td class="py-3 px-3 font-medium text-neutral-400">Transmisión en radio</td>
-              <td class="py-3 px-3 text-center text-neutral-500">✕ No</td>
-              <td class="py-3 px-3 text-center text-neutral-500">✕ No</td>
-              <td class="py-3 px-3 text-center text-white bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">Hasta 2 emisoras</td>
-              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">ILIMITADAS</td>
-              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">ILIMITADAS</td>
+              <td class="py-3 px-3 font-medium text-neutral-400" data-i18n="row_radio">Radio Broadcasting</td>
+              <td class="py-3 px-3 text-center text-neutral-500">✕ <span data-i18n="val_none">None</span></td>
+              <td class="py-3 px-3 text-center text-neutral-500">✕ <span data-i18n="val_none">None</span></td>
+              <td class="py-3 px-3 text-center text-white bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20" data-i18n="val_stations_2">Up to 2 Stations</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]" data-i18n="val_stations_unlimited">Unlimited Stations</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]" data-i18n="val_stations_unlimited">Unlimited Stations</td>
             </tr>
             <!-- Row: Stems -->
             <tr>
-              <td class="py-3 px-3 font-medium text-neutral-400">Pistas separadas (Trackout)</td>
-              <td class="py-3 px-3 text-center text-neutral-500">✕ No</td>
-              <td class="py-3 px-3 text-center text-neutral-500">✕ No</td>
-              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE] bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">✓ Sí (WAV 24-Bit)</td>
-              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">✓ Sí (WAV 24-Bit)</td>
-              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">✓ Sesión de Estudio</td>
+              <td class="py-3 px-3 font-medium text-neutral-400" data-i18n="row_stems">Track Stems</td>
+              <td class="py-3 px-3 text-center text-neutral-500">✕ <span data-i18n="val_none">None</span></td>
+              <td class="py-3 px-3 text-center text-neutral-500">✕ <span data-i18n="val_none">None</span></td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE] bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">✓ WAV 24-Bit</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">✓ WAV 24-Bit</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">✓ <span data-i18n="val_exclusive_session">Full Studio Session</span></td>
             </tr>
             <!-- Row: Exclusividad -->
             <tr>
-              <td class="py-3 px-3 font-medium text-neutral-400">Retiro de tienda pública</td>
-              <td class="py-3 px-3 text-center text-neutral-500">✕ No</td>
-              <td class="py-3 px-3 text-center text-neutral-500">✕ No</td>
-              <td class="py-3 px-3 text-center text-neutral-500 bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">✕ No</td>
-              <td class="py-3 px-3 text-center text-neutral-500">✕ No</td>
-              <td class="py-3 px-3 text-center font-bold text-[#ffd000]">✓ Retiro Inmediato</td>
+              <td class="py-3 px-3 font-medium text-neutral-400" data-i18n="row_store_remove">Store Removal</td>
+              <td class="py-3 px-3 text-center text-neutral-500" data-i18n="val_remove_no">Remains in Store</td>
+              <td class="py-3 px-3 text-center text-neutral-500" data-i18n="val_remove_no">Remains in Store</td>
+              <td class="py-3 px-3 text-center text-neutral-500 bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20" data-i18n="val_remove_no">Remains in Store</td>
+              <td class="py-3 px-3 text-center text-neutral-500" data-i18n="val_remove_no">Remains in Store</td>
+              <td class="py-3 px-3 text-center font-bold text-[#ffd000]">✓ <span data-i18n="val_remove_yes">Permanent Removal</span></td>
             </tr>
             <!-- Action Row -->
             <tr class="pt-4">
-              <td class="py-4 px-3 font-bold text-white">Seleccionar Licencia</td>
+              <td class="py-4 px-3 font-bold text-white" data-i18n="lic_select">Select License</td>
               <td class="py-4 px-3 text-center">
-                <a href="#catalogo" class="modal-cta-close px-3 py-1.5 rounded-lg bg-[#262626] hover:bg-white text-white hover:text-black font-heading font-bold text-[10px] uppercase transition-colors inline-block">Elegir</a>
+                <a href="#catalogo" class="modal-cta-close px-3 py-1.5 rounded-lg bg-[#262626] hover:bg-white text-white hover:text-black font-heading font-bold text-[10px] uppercase transition-colors inline-block" data-i18n="lic_select">Select</a>
               </td>
               <td class="py-4 px-3 text-center">
-                <a href="#catalogo" class="modal-cta-close px-3 py-1.5 rounded-lg bg-[#262626] hover:bg-[#00BFFF] text-white hover:text-black font-heading font-bold text-[10px] uppercase transition-colors inline-block">Elegir</a>
+                <a href="#catalogo" class="modal-cta-close px-3 py-1.5 rounded-lg bg-[#262626] hover:bg-[#00BFFF] text-white hover:text-black font-heading font-bold text-[10px] uppercase transition-colors inline-block" data-i18n="lic_select">Select</a>
               </td>
               <td class="py-4 px-3 text-center bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">
-                <a href="#catalogo" class="modal-cta-close px-3 py-1.5 rounded-lg bg-[#4EFFAE] hover:bg-[#3bf09d] text-black font-heading font-bold text-[10px] uppercase transition-colors inline-block shadow-md">Elegir</a>
+                <a href="#catalogo" class="modal-cta-close px-3 py-1.5 rounded-lg bg-[#4EFFAE] hover:bg-[#3bf09d] text-black font-heading font-bold text-[10px] uppercase transition-colors inline-block shadow-md" data-i18n="lic_select">Select</a>
               </td>
               <td class="py-4 px-3 text-center">
-                <a href="#catalogo" class="modal-cta-close px-3 py-1.5 rounded-lg bg-[#262626] hover:bg-[#a074ff] text-white hover:text-black font-heading font-bold text-[10px] uppercase transition-colors inline-block">Elegir</a>
+                <a href="#catalogo" class="modal-cta-close px-3 py-1.5 rounded-lg bg-[#262626] hover:bg-[#a074ff] text-white hover:text-black font-heading font-bold text-[10px] uppercase transition-colors inline-block" data-i18n="lic_select">Select</a>
               </td>
               <td class="py-4 px-3 text-center">
-                <a href="https://wa.me/50498700953?text=Hola%207lite%20Music,%20me%20interesa%20negociar%20una%20Licencia%20Exclusiva" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-white text-black hover:bg-neutral-200 font-heading font-bold text-[10px] uppercase transition-colors inline-block">Negociar</a>
+                <a href="https://wa.me/50498700953?text=Hola%207lite%20Music,%20me%20interesa%20negociar%20una%20Licencia%20Exclusiva" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-white text-black hover:bg-neutral-200 font-heading font-bold text-[10px] uppercase transition-colors inline-block" data-i18n="lic_negotiate">Negotiate</a>
               </td>
             </tr>
           </tbody>
@@ -1491,6 +1494,7 @@
   </div>
 
   <!-- Scripts -->
+  <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
