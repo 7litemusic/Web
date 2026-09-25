@@ -147,15 +147,134 @@ section[id] {
   border-bottom: 1px solid rgba(51, 51, 51, 0.7);
 }
 
-/* Modern Details & Summary for FAQ */
-details > summary {
-  list-style: none;
+/* ==========================================================================
+   MODERN FAQ ACCORDION DROPDOWNS
+   ========================================================================== */
+.faq-accordion {
+  background: #1c1c1c;
+  border: 1px solid #2e2e2e;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.3s ease;
 }
-details > summary::-webkit-details-marker {
+
+.faq-accordion:hover {
+  border-color: #444444;
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.4);
+}
+
+.faq-accordion[open] {
+  background: linear-gradient(180deg, #222222 0%, #191919 100%);
+  border-color: rgba(0, 191, 255, 0.45);
+  box-shadow: 0 12px 30px -8px rgba(0, 191, 255, 0.15);
+}
+
+.faq-summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.15rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  user-select: none;
+}
+
+.faq-summary::-webkit-details-marker {
   display: none;
 }
-details[open] summary svg {
+
+.faq-icon-pill {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.65rem;
+  background: #262626;
+  border: 1px solid #383838;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-accordion:hover .faq-icon-pill {
+  border-color: #555555;
+  background: #2e2e2e;
+}
+
+.faq-accordion[open] .faq-icon-pill {
+  background: #00BFFF;
+  border-color: #00BFFF;
   transform: rotate(180deg);
+}
+
+.faq-accordion[open] .faq-icon-pill svg {
+  color: #000000;
+}
+
+.faq-content {
+  padding: 0 1.25rem 1.25rem 1.25rem;
+  animation: faq-reveal 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes faq-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   CUSTOM CYBER-DARK SELECT DROPDOWN
+   ========================================================================== */
+.custom-select-trigger {
+  position: relative;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.custom-select-trigger.is-open {
+  border-color: #a074ff !important;
+  box-shadow: 0 0 15px rgba(160, 116, 255, 0.25), 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+  background-color: #242424 !important;
+}
+
+.custom-select-trigger.is-open .custom-select-chevron {
+  transform: rotate(180deg);
+  color: #a074ff;
+}
+
+.custom-select-menu {
+  display: none;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.custom-select-menu.is-active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.custom-option {
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+
+.custom-option:hover {
+  background-color: #2a2a2a;
+  transform: translateX(2px);
+}
+
+.custom-option.is-selected {
+  background-color: #2e2e2e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Audio Player Container Frame */

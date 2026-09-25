@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initWhatsAppHandlers();
   initChannelDirectNav();
   initContactForm();
+  initCustomDropdowns();
   initBackToTop();
 });
 
@@ -1337,5 +1338,105 @@ function initTapTempo() {
     });
   }
 }
+
+/**
+ * Modern Custom Dropdowns & Accordion Interactions
+ */
+function initCustomDropdowns() {
+  // 1. Custom Contact Project Select Dropdown
+  const wrapper = document.getElementById('project-select-wrapper');
+  const trigger = document.getElementById('custom-select-trigger');
+  const menu = document.getElementById('custom-select-menu');
+  const hiddenInput = document.getElementById('contact-project-input');
+  const labelDot = document.getElementById('selected-option-dot');
+  const labelText = document.getElementById('selected-option-text');
+  const options = document.querySelectorAll('.custom-option');
+
+  if (wrapper && trigger && menu && hiddenInput) {
+    function openMenu() {
+      menu.classList.add('is-active');
+      trigger.classList.add('is-open');
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenu() {
+      menu.classList.remove('is-active');
+      trigger.classList.remove('is-open');
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = menu.classList.contains('is-active');
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    options.forEach(opt => {
+      opt.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const value = opt.getAttribute('data-value');
+        const label = opt.getAttribute('data-label') || value;
+        const dotColor = opt.getAttribute('data-dot') || '#00BFFF';
+
+        hiddenInput.value = value;
+        if (labelText) labelText.textContent = label;
+        if (labelDot) labelDot.style.backgroundColor = dotColor;
+
+        options.forEach(o => {
+          o.classList.remove('is-selected');
+          const check = o.querySelector('.option-check');
+          if (check) check.classList.add('hidden');
+        });
+
+        opt.classList.add('is-selected');
+        const activeCheck = opt.querySelector('.option-check');
+        if (activeCheck) activeCheck.classList.remove('hidden');
+
+        closeMenu();
+        if (typeof playAnalogClick === 'function') {
+          playAnalogClick(1100, 0.02, 0.035);
+        }
+      });
+    });
+
+    // Close on click outside
+    document.addEventListener('click', (e) => {
+      if (!wrapper.contains(e.target)) {
+        closeMenu();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menu.classList.contains('is-active')) {
+        closeMenu();
+      }
+    });
+  }
+
+  // 2. Modern FAQ Accordion Behavior (Exclusive expansion)
+  const faqItems = document.querySelectorAll('.faq-accordion');
+  faqItems.forEach(item => {
+    item.addEventListener('toggle', () => {
+      if (item.open) {
+        if (typeof playAnalogClick === 'function') {
+          playAnalogClick(950, 0.025, 0.03);
+        }
+        // Auto-close other items for clean single-view accordion
+        faqItems.forEach(other => {
+          if (other !== item && other.open) {
+            other.removeAttribute('open');
+          }
+        });
+      }
+    });
+  });
+}
+
 
 
