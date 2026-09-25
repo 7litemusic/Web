@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initChannelDirectNav();
   initContactForm();
   initCustomDropdowns();
+  initLicenseCompareModal();
   initBackToTop();
 });
 
@@ -1437,6 +1438,80 @@ function initCustomDropdowns() {
     });
   });
 }
+
+/**
+ * Fullscreen Interactive License Comparison Modal
+ */
+function initLicenseCompareModal() {
+  const modal = document.getElementById('license-compare-modal');
+  const openMainBtn = document.getElementById('btn-open-compare-modal');
+  const closeBtn = document.getElementById('btn-close-compare-modal');
+  const triggerBtns = document.querySelectorAll('.btn-trigger-compare');
+  const ctaCloseBtns = document.querySelectorAll('.modal-cta-close');
+
+  if (!modal) return;
+
+  function openModal() {
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    modal.classList.add('opacity-100');
+    document.body.classList.add('overflow-hidden');
+    if (typeof playAnalogClick === 'function') {
+      playAnalogClick(1200, 0.03, 0.04);
+    }
+  }
+
+  function closeModal() {
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    modal.classList.remove('opacity-100');
+    document.body.classList.remove('overflow-hidden');
+    if (typeof playAnalogClick === 'function') {
+      playAnalogClick(800, 0.02, 0.03);
+    }
+  }
+
+  if (openMainBtn) {
+    openMainBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+    });
+  }
+
+  triggerBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+    });
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeModal();
+    });
+  }
+
+  // Close when clicking directly on backdrop
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Close when pressing Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.classList.contains('pointer-events-none')) {
+      closeModal();
+    }
+  });
+
+  // Close when clicking action button inside table
+  ctaCloseBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      closeModal();
+    });
+  });
+}
+
 
 
 

@@ -895,273 +895,259 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         <!-- Section Header -->
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1F1F1F] border border-[#333333] text-[11px] font-mono text-[#888888] tracking-widest uppercase mb-4">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1F1F1F] border border-[#333333] text-[11px] font-mono text-[#888888] tracking-widest uppercase mb-3">
             <span class="text-[#4EFFAE]">●</span> DERECHOS CLAROS
           </div>
-          <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight uppercase mb-4">
+          <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight uppercase mb-3">
             Guía de Licencias & Precios
           </h2>
-          <p class="text-sm sm:text-base text-[#888888] max-w-xl mx-auto">
+          <p class="text-xs sm:text-sm md:text-base text-[#888888] max-w-xl mx-auto mb-5">
             Elige el nivel perfecto para tus metas. Mantén el 100% de tus regalías de composición según los términos acordados.
           </p>
+
+          <!-- Button: Open Fullscreen Comparison Modal -->
+          <button id="btn-open-compare-modal" 
+                  type="button"
+                  class="btn-shimmer inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#1F1F1F] hover:bg-[#262626] border border-[#333333] hover:border-[#00BFFF] text-xs font-mono text-neutral-300 hover:text-white transition-all shadow-lg group">
+            <svg class="w-4 h-4 text-[#00BFFF] group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+            <span>Comparar las 5 Licencias en Pantalla Completa &rarr;</span>
+          </button>
         </div>
 
-        <!-- 5 Tiers Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <!-- 5 Tiers Grid (Compact & Elegant Proportions) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
           
           <!-- 1. LICENCIA BÁSICA ($19.99) -->
-          <div class="card-tilt bg-[#1F1F1F] rounded-2xl p-6 border border-[#333333] hover:border-neutral-500 transition-all duration-300 flex flex-col justify-between">
+          <div class="card-tilt bg-[#1F1F1F] rounded-2xl p-5 border border-[#333333] hover:border-neutral-500 transition-all duration-300 flex flex-col justify-between">
             <div class="card-tilt-content flex flex-col justify-between h-full">
               <div>
-                <div class="text-xs font-mono font-semibold text-[#888888] uppercase mb-1">Entrada</div>
-                <h3 class="font-heading font-bold text-xl text-white mb-2">Básica</h3>
-                <div class="flex items-baseline gap-1 mb-6">
-                  <span class="font-heading font-extrabold text-3xl text-white">$19.99</span>
-                  <span class="text-xs text-[#888888] font-mono">/ beat</span>
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[10px] font-mono font-semibold text-[#888888] uppercase">Entrada</span>
+                  <span class="px-2 py-0.5 rounded bg-[#262626] border border-[#383838] text-[10px] font-mono text-neutral-300">MP3</span>
+                </div>
+                <h3 class="font-heading font-bold text-lg text-white mb-1">Básica</h3>
+                <div class="flex items-baseline gap-1 mb-4">
+                  <span class="font-heading font-extrabold text-2xl text-white">$19.99</span>
+                  <span class="text-[10px] text-[#888888] font-mono">/ beat</span>
                 </div>
 
-                <!-- Features -->
-                <ul class="space-y-2.5 text-xs text-neutral-300 mb-6">
+                <!-- Compact Highlights -->
+                <ul class="space-y-2 text-xs text-neutral-300 mb-5">
                   <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#4EFFAE] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Formato entregado: <strong>MP3</strong></span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#4EFFAE] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Grabación vocal comercial permitida (Used for Music Recording)</span>
+                    <svg class="w-3.5 h-3.5 text-[#4EFFAE] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>Grabación vocal comercial</span>
                   </li>
                   <li class="flex items-start gap-2 text-[#888888]">
-                    <svg class="w-4 h-4 text-neutral-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-                    <span>0 copias físicas / distribución (0 copies)</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-[#888888]">
-                    <svg class="w-4 h-4 text-neutral-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-                    <span>0 streams de audio online (Uso inicial / maquetas)</span>
+                    <svg class="w-3.5 h-3.5 text-neutral-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                    <span>0 streams / 0 copias (Maquetas)</span>
                   </li>
                   <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#4EFFAE] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>1 Video Musical</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#4EFFAE] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Presentaciones en vivo no lucrativas ilimitadas</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-[#888888]">
-                    <svg class="w-4 h-4 text-neutral-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-                    <span>Sin pistas separadas (No Stems)</span>
+                    <svg class="w-3.5 h-3.5 text-[#4EFFAE] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>1 Video & shows no lucrativos</span>
                   </li>
                 </ul>
               </div>
 
-              <a href="#catalogo" 
-                 class="btn-shimmer w-full py-2.5 px-4 rounded-lg bg-[#262626] hover:bg-white text-white hover:text-black font-heading font-semibold text-xs tracking-wider uppercase text-center border border-[#333333] transition-colors">
-                Elegir Básica
-              </a>
+              <div>
+                <a href="#catalogo" 
+                   class="btn-shimmer w-full py-2.5 px-3 rounded-lg bg-[#262626] hover:bg-white text-white hover:text-black font-heading font-semibold text-xs tracking-wider uppercase text-center border border-[#333333] transition-colors block">
+                  Elegir Básica
+                </a>
+                <button type="button" class="btn-trigger-compare mt-2.5 text-[10px] font-mono text-[#888888] hover:text-[#00BFFF] transition-colors flex items-center justify-center gap-1 w-full">
+                  <span>Ver términos completos</span>
+                  <span>&rarr;</span>
+                </button>
+              </div>
             </div>
           </div>
 
 
           <!-- 2. LICENCIA ESTÁNDAR ($39.99) -->
-          <div class="card-tilt bg-[#1F1F1F] rounded-2xl p-6 border border-[#333333] hover:border-[#00BFFF] transition-all duration-300 flex flex-col justify-between">
+          <div class="card-tilt bg-[#1F1F1F] rounded-2xl p-5 border border-[#333333] hover:border-[#00BFFF] transition-all duration-300 flex flex-col justify-between">
             <div class="card-tilt-content flex flex-col justify-between h-full">
               <div>
-                <div class="text-xs font-mono font-semibold text-[#00BFFF] uppercase mb-1">Streaming Starter</div>
-                <h3 class="font-heading font-bold text-xl text-white mb-2">Estándar</h3>
-                <div class="flex items-baseline gap-1 mb-6">
-                  <span class="font-heading font-extrabold text-3xl text-white">$39.99</span>
-                  <span class="text-xs text-[#888888] font-mono">/ beat</span>
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[10px] font-mono font-semibold text-[#00BFFF] uppercase">Starter</span>
+                  <span class="px-2 py-0.5 rounded bg-[#262626] border border-[#383838] text-[10px] font-mono text-[#00BFFF]">WAV + MP3</span>
+                </div>
+                <h3 class="font-heading font-bold text-lg text-white mb-1">Estándar</h3>
+                <div class="flex items-baseline gap-1 mb-4">
+                  <span class="font-heading font-extrabold text-2xl text-white">$39.99</span>
+                  <span class="text-[10px] text-[#888888] font-mono">/ beat</span>
                 </div>
 
-                <!-- Features -->
-                <ul class="space-y-2.5 text-xs text-neutral-300 mb-6">
+                <!-- Compact Highlights -->
+                <ul class="space-y-2 text-xs text-neutral-300 mb-5">
                   <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#00BFFF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Formato entregado: <strong>WAV + MP3</strong></span>
+                    <svg class="w-3.5 h-3.5 text-[#00BFFF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>Hasta <strong>100,000 streams</strong></span>
                   </li>
                   <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#00BFFF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Grabación vocal comercial permitida</span>
+                    <svg class="w-3.5 h-3.5 text-[#00BFFF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>Hasta <strong>5,000 copias</strong> / descargas</span>
                   </li>
                   <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#00BFFF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Hasta <strong>5,000 copias</strong> físicas / descargas</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#00BFFF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Hasta <strong>100,000 streams</strong> de audio online</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#00BFFF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>1 Video Musical</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#00BFFF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Presentaciones en vivo no lucrativas ilimitadas</span>
+                    <svg class="w-3.5 h-3.5 text-[#00BFFF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>1 Video & grabación comercial</span>
                   </li>
                 </ul>
               </div>
 
-              <a href="#catalogo" 
-                 class="btn-shimmer w-full py-2.5 px-4 rounded-lg bg-[#262626] hover:bg-[#00BFFF] text-white hover:text-black font-heading font-semibold text-xs tracking-wider uppercase text-center border border-[#333333] hover:border-[#00BFFF] transition-colors">
-                Elegir Estándar
-              </a>
+              <div>
+                <a href="#catalogo" 
+                   class="btn-shimmer w-full py-2.5 px-3 rounded-lg bg-[#262626] hover:bg-[#00BFFF] text-white hover:text-black font-heading font-semibold text-xs tracking-wider uppercase text-center border border-[#333333] hover:border-[#00BFFF] transition-colors block">
+                  Elegir Estándar
+                </a>
+                <button type="button" class="btn-trigger-compare mt-2.5 text-[10px] font-mono text-[#888888] hover:text-[#00BFFF] transition-colors flex items-center justify-center gap-1 w-full">
+                  <span>Ver términos completos</span>
+                  <span>&rarr;</span>
+                </button>
+              </div>
             </div>
           </div>
 
 
           <!-- 3. LICENCIA PREMIUM ($59.99) - MÁS POPULAR -->
-          <div class="card-tilt bg-[#1F1F1F] rounded-2xl p-6 border-2 border-[#4EFFAE] shadow-xl shadow-[#4EFFAE]/10 flex flex-col justify-between relative transform lg:-translate-y-2">
+          <div class="card-tilt bg-[#1F1F1F] rounded-2xl p-5 border-2 border-[#4EFFAE] shadow-xl shadow-[#4EFFAE]/10 flex flex-col justify-between relative transform lg:-translate-y-2">
             
             <!-- Badge Recomendada -->
-            <div class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-[#4EFFAE] text-black font-mono font-bold text-[10px] tracking-widest uppercase px-3 py-1 rounded-full shadow-md z-20">
+            <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#4EFFAE] text-black font-mono font-bold text-[9px] tracking-widest uppercase px-2.5 py-0.5 rounded-full shadow-md z-20">
               MÁS POPULAR
             </div>
 
             <div class="card-tilt-content flex flex-col justify-between h-full">
               <div>
-                <div class="text-xs font-mono font-semibold text-[#4EFFAE] uppercase mb-1">Estudio Pro</div>
-                <h3 class="font-heading font-bold text-xl text-white mb-2">Premium</h3>
-                <div class="flex items-baseline gap-1 mb-6">
-                  <span class="font-heading font-extrabold text-3xl text-white">$59.99</span>
-                  <span class="text-xs text-[#888888] font-mono">/ beat</span>
+                <div class="flex items-center justify-between mb-1 mt-1">
+                  <span class="text-[10px] font-mono font-semibold text-[#4EFFAE] uppercase">Estudio Pro</span>
+                  <span class="px-2 py-0.5 rounded bg-[#4EFFAE]/10 border border-[#4EFFAE]/30 text-[10px] font-mono text-[#4EFFAE] font-bold">WAV + STEMS</span>
+                </div>
+                <h3 class="font-heading font-bold text-lg text-white mb-1">Premium</h3>
+                <div class="flex items-baseline gap-1 mb-4">
+                  <span class="font-heading font-extrabold text-2xl text-white">$59.99</span>
+                  <span class="text-[10px] text-[#888888] font-mono">/ beat</span>
                 </div>
 
-                <!-- Features -->
-                <ul class="space-y-2.5 text-xs text-neutral-200 mb-6">
+                <!-- Compact Highlights -->
+                <ul class="space-y-2 text-xs text-neutral-200 mb-5">
                   <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#4EFFAE] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Formato: <strong>WAV + MP3 + STEMS</strong> (Pistas)</span>
+                    <svg class="w-3.5 h-3.5 text-[#4EFFAE] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span><strong>Trackout STEMS</strong> (Pistas separadas)</span>
                   </li>
                   <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#4EFFAE] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Grabación vocal comercial permitida</span>
+                    <svg class="w-3.5 h-3.5 text-[#4EFFAE] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>Hasta <strong>500,000 streams</strong></span>
                   </li>
                   <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#4EFFAE] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Hasta <strong>10,000 copias</strong> físicas / descargas</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#4EFFAE] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Hasta <strong>500,000 streams</strong> de audio online</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#4EFFAE] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>1 Video Musical</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#4EFFAE] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Presentaciones en vivo con fines de lucro permitidas</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#4EFFAE] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Derechos de transmisión en radio (Hasta 2 estaciones)</span>
+                    <svg class="w-3.5 h-3.5 text-[#4EFFAE] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>Radio (2 estaciones) & shows con lucro</span>
                   </li>
                 </ul>
               </div>
 
-              <a href="#catalogo" 
-                 class="btn-shimmer w-full py-2.5 px-4 rounded-lg bg-[#4EFFAE] hover:bg-[#36f09e] text-black font-heading font-bold text-xs tracking-wider uppercase text-center shadow-lg transition-colors">
-                Elegir Premium
-              </a>
+              <div>
+                <a href="#catalogo" 
+                   class="btn-shimmer w-full py-2.5 px-3 rounded-lg bg-[#4EFFAE] hover:bg-[#36f09e] text-black font-heading font-bold text-xs tracking-wider uppercase text-center shadow-lg transition-colors block">
+                  Elegir Premium
+                </a>
+                <button type="button" class="btn-trigger-compare mt-2.5 text-[10px] font-mono text-[#4EFFAE] hover:underline transition-colors flex items-center justify-center gap-1 w-full">
+                  <span>Ver términos completos</span>
+                  <span>&rarr;</span>
+                </button>
+              </div>
             </div>
           </div>
 
 
           <!-- 4. LICENCIA ILIMITADA ($119.99) -->
-          <div class="card-tilt bg-[#1F1F1F] rounded-2xl p-6 border border-[#333333] hover:border-[#a074ff] transition-all duration-300 flex flex-col justify-between">
+          <div class="card-tilt bg-[#1F1F1F] rounded-2xl p-5 border border-[#333333] hover:border-[#a074ff] transition-all duration-300 flex flex-col justify-between">
             <div class="card-tilt-content flex flex-col justify-between h-full">
               <div>
-                <div class="text-xs font-mono font-semibold text-[#a074ff] uppercase mb-1">Sin Restricciones</div>
-                <h3 class="font-heading font-bold text-xl text-white mb-2">Ilimitada</h3>
-                <div class="flex items-baseline gap-1 mb-6">
-                  <span class="font-heading font-extrabold text-3xl text-white">$119.99</span>
-                  <span class="text-xs text-[#888888] font-mono">/ beat</span>
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[10px] font-mono font-semibold text-[#a074ff] uppercase">Sin Techo</span>
+                  <span class="px-2 py-0.5 rounded bg-[#a074ff]/10 border border-[#a074ff]/30 text-[10px] font-mono text-[#a074ff] font-bold">WAV + STEMS</span>
+                </div>
+                <h3 class="font-heading font-bold text-lg text-white mb-1">Ilimitada</h3>
+                <div class="flex items-baseline gap-1 mb-4">
+                  <span class="font-heading font-extrabold text-2xl text-white">$119.99</span>
+                  <span class="text-[10px] text-[#888888] font-mono">/ beat</span>
                 </div>
 
-                <!-- Features -->
-                <ul class="space-y-2.5 text-xs text-neutral-300 mb-6">
+                <!-- Compact Highlights -->
+                <ul class="space-y-2 text-xs text-neutral-300 mb-5">
                   <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#a074ff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Formato: <strong>WAV + MP3 + STEMS</strong> (Pistas)</span>
+                    <svg class="w-3.5 h-3.5 text-[#a074ff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>Streams & copias <strong>ILIMITADOS</strong></span>
                   </li>
                   <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#a074ff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Grabación vocal comercial permitida</span>
+                    <svg class="w-3.5 h-3.5 text-[#a074ff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>Radio & videos <strong>ILIMITADOS</strong></span>
                   </li>
                   <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#a074ff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Copias físicas y distribución <strong>ILIMITADAS</strong></span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#a074ff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Streams de audio online <strong>ILIMITADOS</strong></span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#a074ff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Videos musicales <strong>ILIMITADOS</strong></span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#a074ff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Presentaciones en vivo con fines de lucro permitidas</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-[#a074ff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Derechos de transmisión en radio <strong>ILIMITADOS</strong></span>
+                    <svg class="w-3.5 h-3.5 text-[#a074ff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span><strong>Trackout STEMS</strong> incluidos</span>
                   </li>
                 </ul>
               </div>
 
-              <a href="#catalogo" 
-                 class="btn-shimmer w-full py-2.5 px-4 rounded-lg bg-[#262626] hover:bg-[#a074ff] text-white hover:text-black font-heading font-semibold text-xs tracking-wider uppercase text-center border border-[#333333] hover:border-[#a074ff] transition-colors">
-                Elegir Ilimitada
-              </a>
+              <div>
+                <a href="#catalogo" 
+                   class="btn-shimmer w-full py-2.5 px-3 rounded-lg bg-[#262626] hover:bg-[#a074ff] text-white hover:text-black font-heading font-semibold text-xs tracking-wider uppercase text-center border border-[#333333] hover:border-[#a074ff] transition-colors block">
+                  Elegir Ilimitada
+                </a>
+                <button type="button" class="btn-trigger-compare mt-2.5 text-[10px] font-mono text-[#888888] hover:text-[#00BFFF] transition-colors flex items-center justify-center gap-1 w-full">
+                  <span>Ver términos completos</span>
+                  <span>&rarr;</span>
+                </button>
+              </div>
             </div>
           </div>
 
 
           <!-- 5. LICENCIA EXCLUSIVA (NEGOCIABLE) -->
-          <div class="card-tilt bg-[#1F1F1F] rounded-2xl p-6 border border-[#333333] hover:border-white transition-all duration-300 flex flex-col justify-between">
+          <div class="card-tilt bg-[#1F1F1F] rounded-2xl p-5 border border-[#333333] hover:border-white transition-all duration-300 flex flex-col justify-between">
             <div class="card-tilt-content flex flex-col justify-between h-full">
               <div>
-                <div class="text-xs font-mono font-semibold text-white uppercase mb-1">Propiedad Total</div>
-                <h3 class="font-heading font-bold text-xl text-white mb-2">Exclusiva</h3>
-                <div class="flex items-baseline gap-1 mb-6">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[10px] font-mono font-semibold text-white uppercase">Propiedad</span>
+                  <span class="px-2 py-0.5 rounded bg-white/10 border border-white/30 text-[10px] font-mono text-white font-bold">SESIÓN PRO</span>
+                </div>
+                <h3 class="font-heading font-bold text-lg text-white mb-1">Exclusiva</h3>
+                <div class="flex items-baseline gap-1 mb-4">
                   <span class="font-heading font-extrabold text-2xl text-white">Negociable</span>
-                  <span class="text-xs text-[#888888] font-mono">(Negotiate price)</span>
                 </div>
 
-                <!-- Features -->
-                <ul class="space-y-2.5 text-xs text-neutral-300 mb-6">
+                <!-- Compact Highlights -->
+                <ul class="space-y-2 text-xs text-neutral-300 mb-5">
                   <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Formato: <strong>WAV + MP3 + STEMS</strong> (Sesión de estudio)</span>
+                    <svg class="w-3.5 h-3.5 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span><strong>100% Derechos y Propiedad</strong></span>
                   </li>
                   <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Propiedad y derechos comerciales exclusivos</span>
+                    <svg class="w-3.5 h-3.5 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>Retiro inmediato de tienda pública</span>
                   </li>
                   <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Distribución, streams, videos y radio <strong>ILIMITADOS</strong></span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Retiro inmediato del beat de la tienda pública</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <svg class="w-4 h-4 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span>Contrato formal de cesión de derechos</span>
+                    <svg class="w-3.5 h-3.5 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>Contrato de cesión & sesión completa</span>
                   </li>
                 </ul>
               </div>
 
-              <a href="https://wa.me/50498700953?text=Hola%207lite%20Music,%20me%20interesa%20negociar%20una%20Licencia%20Exclusiva" 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
-                 class="btn-exclusive-wa btn-shimmer w-full py-2.5 px-4 rounded-lg bg-white text-black hover:bg-neutral-200 font-heading font-bold text-xs tracking-wider uppercase text-center transition-colors">
-                Negociar Exclusiva
-              </a>
+              <div>
+                <a href="https://wa.me/50498700953?text=Hola%207lite%20Music,%20me%20interesa%20negociar%20una%20Licencia%20Exclusiva" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn-exclusive-wa btn-shimmer w-full py-2.5 px-3 rounded-lg bg-white text-black hover:bg-neutral-200 font-heading font-bold text-xs tracking-wider uppercase text-center transition-colors block">
+                  Negociar Exclusiva
+                </a>
+                <button type="button" class="btn-trigger-compare mt-2.5 text-[10px] font-mono text-[#888888] hover:text-white transition-colors flex items-center justify-center gap-1 w-full">
+                  <span>Ver términos completos</span>
+                  <span>&rarr;</span>
+                </button>
+              </div>
             </div>
           </div>
 
@@ -1646,6 +1632,173 @@
 
     </div>
   </footer>
+
+  <!-- =========================================================================
+       MODAL COMPARATIVO FULLSCREEN DE LICENCIAS (BEATSTARS)
+       ========================================================================= -->
+  <div id="license-compare-modal" 
+       class="fixed inset-0 z-[100] bg-black/85 backdrop-blur-2xl flex items-center justify-center p-3 sm:p-6 opacity-0 pointer-events-none transition-all duration-300"
+       role="dialog" 
+       aria-modal="true" 
+       aria-labelledby="modal-compare-title">
+    
+    <div class="max-w-6xl w-full max-h-[92vh] bg-[#161616] border border-[#333333] rounded-3xl p-5 sm:p-8 flex flex-col shadow-2xl relative overflow-hidden">
+      
+      <!-- Modal Header -->
+      <div class="flex items-start justify-between gap-4 pb-5 border-b border-[#262626] flex-shrink-0">
+        <div>
+          <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-[#1F1F1F] border border-[#333333] text-[10px] font-mono text-[#00BFFF] uppercase tracking-wider mb-2">
+            <span>BEATSTARS OFFICIAL TIERS</span>
+          </div>
+          <h3 id="modal-compare-title" class="font-heading font-black text-xl sm:text-2xl text-white uppercase tracking-tight">
+            Tabla Comparativa Oficial de Licencias
+          </h3>
+          <p class="text-xs text-[#888888] mt-1">
+            Revisa todos los términos, límites de streams y derechos de uso cara a cara para elegir la mejor opción.
+          </p>
+        </div>
+
+        <!-- Close Button -->
+        <button id="btn-close-compare-modal" 
+                class="p-2 sm:p-2.5 rounded-xl bg-[#222222] border border-[#383838] hover:border-white text-neutral-400 hover:text-white transition-all focus:outline-none flex-shrink-0"
+                aria-label="Cerrar modal comparativo">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Scrollable Comparison Table -->
+      <div class="overflow-x-auto overflow-y-auto mt-4 pr-1 flex-grow">
+        <table class="w-full text-left text-xs text-neutral-300 border-collapse min-w-[700px]">
+          <thead>
+            <tr class="border-b border-[#2b2b2b] text-[11px] font-mono uppercase text-[#888888]">
+              <th class="py-3 px-3 w-1/4">Término / Derecho</th>
+              <th class="py-3 px-3 text-center">Básica</th>
+              <th class="py-3 px-3 text-center">Estándar</th>
+              <th class="py-3 px-3 text-center bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20 text-[#4EFFAE] font-bold">
+                Premium ⭐
+              </th>
+              <th class="py-3 px-3 text-center">Ilimitada</th>
+              <th class="py-3 px-3 text-center">Exclusiva</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[#222222]">
+            <!-- Row: Precio -->
+            <tr>
+              <td class="py-3 px-3 font-semibold text-white">Precio por Beat</td>
+              <td class="py-3 px-3 text-center font-bold text-white text-sm">$19.99</td>
+              <td class="py-3 px-3 text-center font-bold text-[#00BFFF] text-sm">$39.99</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE] text-sm bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">$59.99</td>
+              <td class="py-3 px-3 text-center font-bold text-[#a074ff] text-sm">$119.99</td>
+              <td class="py-3 px-3 text-center font-bold text-white text-sm">Negociable</td>
+            </tr>
+            <!-- Row: Formatos -->
+            <tr>
+              <td class="py-3 px-3 font-medium text-neutral-400">Archivos entregados</td>
+              <td class="py-3 px-3 text-center font-mono">MP3 Master</td>
+              <td class="py-3 px-3 text-center font-mono">WAV + MP3</td>
+              <td class="py-3 px-3 text-center font-mono font-semibold text-white bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">WAV + MP3 + STEMS</td>
+              <td class="py-3 px-3 text-center font-mono font-semibold text-white">WAV + MP3 + STEMS</td>
+              <td class="py-3 px-3 text-center font-mono font-semibold text-white">Sesión Completa</td>
+            </tr>
+            <!-- Row: Grabación Comercial -->
+            <tr>
+              <td class="py-3 px-3 font-medium text-neutral-400">Grabación vocal comercial</td>
+              <td class="py-3 px-3 text-center text-[#4EFFAE]">✓ Permitida</td>
+              <td class="py-3 px-3 text-center text-[#4EFFAE]">✓ Permitida</td>
+              <td class="py-3 px-3 text-center text-[#4EFFAE] bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">✓ Permitida</td>
+              <td class="py-3 px-3 text-center text-[#4EFFAE]">✓ Permitida</td>
+              <td class="py-3 px-3 text-center text-[#4EFFAE]">✓ Exclusiva Total</td>
+            </tr>
+            <!-- Row: Streams -->
+            <tr>
+              <td class="py-3 px-3 font-medium text-neutral-400">Streams de audio online</td>
+              <td class="py-3 px-3 text-center text-neutral-500">0 (Solo maquetas)</td>
+              <td class="py-3 px-3 text-center">Hasta 100,000</td>
+              <td class="py-3 px-3 text-center font-bold text-white bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">Hasta 500,000</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">ILIMITADOS</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">ILIMITADOS</td>
+            </tr>
+            <!-- Row: Copias -->
+            <tr>
+              <td class="py-3 px-3 font-medium text-neutral-400">Copias físicas / descargas</td>
+              <td class="py-3 px-3 text-center text-neutral-500">0 copias</td>
+              <td class="py-3 px-3 text-center">Hasta 5,000</td>
+              <td class="py-3 px-3 text-center font-bold text-white bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">Hasta 10,000</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">ILIMITADAS</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">ILIMITADAS</td>
+            </tr>
+            <!-- Row: Videos -->
+            <tr>
+              <td class="py-3 px-3 font-medium text-neutral-400">Videos musicales</td>
+              <td class="py-3 px-3 text-center">1 Video</td>
+              <td class="py-3 px-3 text-center">1 Video</td>
+              <td class="py-3 px-3 text-center bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">1 Video</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">ILIMITADOS</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">ILIMITADOS</td>
+            </tr>
+            <!-- Row: Shows -->
+            <tr>
+              <td class="py-3 px-3 font-medium text-neutral-400">Presentaciones en vivo</td>
+              <td class="py-3 px-3 text-center text-neutral-500">No lucrativas</td>
+              <td class="py-3 px-3 text-center text-neutral-500">No lucrativas</td>
+              <td class="py-3 px-3 text-center font-semibold text-white bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">Con fines de lucro</td>
+              <td class="py-3 px-3 text-center font-semibold text-white">Con fines de lucro</td>
+              <td class="py-3 px-3 text-center font-semibold text-white">Con fines de lucro</td>
+            </tr>
+            <!-- Row: Radio -->
+            <tr>
+              <td class="py-3 px-3 font-medium text-neutral-400">Transmisión en radio</td>
+              <td class="py-3 px-3 text-center text-neutral-500">✕ No</td>
+              <td class="py-3 px-3 text-center text-neutral-500">✕ No</td>
+              <td class="py-3 px-3 text-center text-white bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">Hasta 2 emisoras</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">ILIMITADAS</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">ILIMITADAS</td>
+            </tr>
+            <!-- Row: Stems -->
+            <tr>
+              <td class="py-3 px-3 font-medium text-neutral-400">Pistas separadas (Trackout)</td>
+              <td class="py-3 px-3 text-center text-neutral-500">✕ No</td>
+              <td class="py-3 px-3 text-center text-neutral-500">✕ No</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE] bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">✓ Sí (WAV 24-Bit)</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">✓ Sí (WAV 24-Bit)</td>
+              <td class="py-3 px-3 text-center font-bold text-[#4EFFAE]">✓ Sesión de Estudio</td>
+            </tr>
+            <!-- Row: Exclusividad -->
+            <tr>
+              <td class="py-3 px-3 font-medium text-neutral-400">Retiro de tienda pública</td>
+              <td class="py-3 px-3 text-center text-neutral-500">✕ No</td>
+              <td class="py-3 px-3 text-center text-neutral-500">✕ No</td>
+              <td class="py-3 px-3 text-center text-neutral-500 bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">✕ No</td>
+              <td class="py-3 px-3 text-center text-neutral-500">✕ No</td>
+              <td class="py-3 px-3 text-center font-bold text-[#ffd000]">✓ Retiro Inmediato</td>
+            </tr>
+            <!-- Action Row -->
+            <tr class="pt-4">
+              <td class="py-4 px-3 font-bold text-white">Seleccionar Licencia</td>
+              <td class="py-4 px-3 text-center">
+                <a href="#catalogo" class="modal-cta-close px-3 py-1.5 rounded-lg bg-[#262626] hover:bg-white text-white hover:text-black font-heading font-bold text-[10px] uppercase transition-colors inline-block">Elegir</a>
+              </td>
+              <td class="py-4 px-3 text-center">
+                <a href="#catalogo" class="modal-cta-close px-3 py-1.5 rounded-lg bg-[#262626] hover:bg-[#00BFFF] text-white hover:text-black font-heading font-bold text-[10px] uppercase transition-colors inline-block">Elegir</a>
+              </td>
+              <td class="py-4 px-3 text-center bg-[#4EFFAE]/5 border-x border-[#4EFFAE]/20">
+                <a href="#catalogo" class="modal-cta-close px-3 py-1.5 rounded-lg bg-[#4EFFAE] hover:bg-[#3bf09d] text-black font-heading font-bold text-[10px] uppercase transition-colors inline-block shadow-md">Elegir</a>
+              </td>
+              <td class="py-4 px-3 text-center">
+                <a href="#catalogo" class="modal-cta-close px-3 py-1.5 rounded-lg bg-[#262626] hover:bg-[#a074ff] text-white hover:text-black font-heading font-bold text-[10px] uppercase transition-colors inline-block">Elegir</a>
+              </td>
+              <td class="py-4 px-3 text-center">
+                <a href="https://wa.me/50498700953?text=Hola%207lite%20Music,%20me%20interesa%20negociar%20una%20Licencia%20Exclusiva" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-white text-black hover:bg-neutral-200 font-heading font-bold text-[10px] uppercase transition-colors inline-block">Negociar</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
